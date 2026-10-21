@@ -1,0 +1,411 @@
+{
+  "date": "2026-10-21",
+  "reviewer": "Codex; no independent human review",
+  "upstream_sha256": "9d7ff838c88d479b649b60c4bc80ecfab929546b31ee5a176282d0d9de57a5a5",
+  "upstream_entries": 80,
+  "active_imported": 43,
+  "originals": 35,
+  "active_total": 78,
+  "items": [
+    {
+      "id": "architect-professional-practice-1",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-2",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-3",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-4",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-5",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-6",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-7",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-8",
+      "status": "archived",
+      "reason": "La eliminación de PHI no queda garantizada por una capa genérica; exige requisitos y revisión especializada."
+    },
+    {
+      "id": "architect-professional-practice-9",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-10",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-11",
+      "status": "archived",
+      "reason": "La afirmación de inferencia dentro de la cuenta AWS no queda demostrada por elegir Bedrock; requiere verificar fronteras y servicio."
+    },
+    {
+      "id": "architect-professional-practice-12",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-13",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-14",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-15",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-16",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-17",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-18",
+      "status": "archived",
+      "reason": "La afirmación universal sobre regulación y garantías requiere especificar el control concreto, no una conclusión legal genérica."
+    },
+    {
+      "id": "architect-professional-practice-19",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-20",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-21",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-22",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-23",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-24",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-25",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-26",
+      "status": "archived",
+      "reason": "Responsabilidad legal demasiado absoluta sin contexto ni jurisdicción; no publicar como regla universal."
+    },
+    {
+      "id": "architect-professional-practice-27",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-28",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-29",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-30",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-31",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-32",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-33",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-34",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-practice-35",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock1-1",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock1-2",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock1-3",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock1-4",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock1-5",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock1-6",
+      "status": "archived",
+      "reason": "Mismo problema de garantía de desidentificación que practice-8."
+    },
+    {
+      "id": "architect-professional-mock1-7",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock1-8",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock1-9",
+      "status": "archived",
+      "reason": "Referencia normativa específica no revisada; necesita contraste con fuente legal primaria y alcance explícito."
+    },
+    {
+      "id": "architect-professional-mock1-10",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock1-11",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock1-12",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock1-13",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock1-14",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock1-15",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock2-1",
+      "status": "archived",
+      "reason": "Variante de practice-11: la frontera de inferencia no se prueba con la mera elección de Bedrock."
+    },
+    {
+      "id": "architect-professional-mock2-2",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock2-3",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock2-4",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock2-5",
+      "status": "archived",
+      "reason": "Variante de practice-18, sin precisar el control normativo."
+    },
+    {
+      "id": "architect-professional-mock2-6",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock2-7",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock2-8",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock2-9",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock2-10",
+      "status": "archived",
+      "reason": "Variante de practice-26, responsabilidad jurídica sin matices."
+    },
+    {
+      "id": "architect-professional-mock2-11",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock2-12",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock2-13",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock2-14",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock2-15",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock3-1",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock3-2",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock3-3",
+      "status": "archived",
+      "reason": "Residencia formulada como solución universal sin definir procesamiento, almacenamiento, registros ni políticas del servicio."
+    },
+    {
+      "id": "architect-professional-mock3-4",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock3-5",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock3-6",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock3-7",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock3-8",
+      "status": "active",
+      "reason": "activa: revisión técnica por agente, sin revisión humana independiente"
+    },
+    {
+      "id": "architect-professional-mock3-9",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock3-10",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock3-11",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock3-12",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock3-13",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock3-14",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    },
+    {
+      "id": "architect-professional-mock3-15",
+      "status": "archived",
+      "reason": "Variante semántica de un concepto y decisión ya representados en las preguntas practice; se conserva en archivo, no aumenta el banco activo."
+    }
+  ]
+}

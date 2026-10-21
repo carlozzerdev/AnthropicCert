@@ -1,0 +1,48 @@
+ANTHROPICCERT 1.0.0 - WINDOWS 11 x64
+
+INICIO
+1. Extrae TODO el ZIP en una carpeta propia con permiso de escritura.
+2. Ejecuta AnthropicCert.exe. No necesita instalar .NET, Python ni Visual Studio.
+3. Elige práctica por dominio o simulacro de práctica.
+
+PRÁCTICA
+Selecciona opciones y pulsa Confirmar respuesta. Lee Ver explicación y la ayuda
+del concepto. En selección múltiple el enunciado indica cuántas elegir.
+
+SIMULACRO
+63 preguntas, 120 minutos, con soluciones ocultas hasta finalizar. Es un perfil
+provisional de práctica; todavía no se ha contrastado la guía oficial por acceso
+directo. El reloj continúa si cierras o suspendes el equipo.
+Guardar y volver conserva el intento. Reanúdalo desde Inicio o Historial.
+Finalizar y puntuar cierra el examen; las preguntas pendientes valen cero.
+
+PUNTUACIÓN Y ESTADÍSTICAS
+1 punto por pregunta correcta, sin penalización. Las múltiples requieren el
+conjunto exacto. La nota sobre 100 NO equivale a la escala oficial.
+Historial permite revisar preguntas. Estadísticas filtra por modo, versión,
+perfil y fechas, y muestra aciertos, fallos, blancos, tiempos y evolución.
+Ayudas ofrece material conceptual local. Las URLs son ampliación opcional.
+
+PROGRESO PORTABLE
+Data/ se crea junto al ejecutable. Cierra la aplicación antes de copiar o mover
+la carpeta. Para actualizar conserva Data/ y sustituye el resto de archivos.
+Los guardados .attempt.json tienen copia anterior .bak; no borres tus copias.
+Si un guardado se daña, cierra la aplicación, guarda una copia de Data, y restaura
+el .bak correspondiente quitando su terminación .bak. No mezcles IDs de intentos.
+No compartas Data si no deseas compartir tu historial. Una sola instancia por carpeta.
+
+CONTENIDO
+78 preguntas activas: 43 adaptaciones de material MIT y 35 originales.
+Las preguntas importadas y sus razonamientos están en inglés; las originales y
+las ayudas están en español. 80 entradas de origen completas están archivadas
+en Content/Sources/professional-upstream.json; 37 no están activas por repetición
+o por requerir reformulación/contraste adicional. Ver review-report.json.
+El objetivo de 350 preguntas NO está completado en esta versión.
+La revisión técnica fue realizada por Codex, sin revisión humana independiente.
+No es un banco oficial, ni contiene preguntas del examen real, ni garantiza aprobar.
+Las webs sin permiso de copia se incluyen solo como enlaces en el catálogo.
+
+FUENTES Y LICENCIAS
+Content/Sources/ contiene procedencia, informe de revisión y licencia del texto
+de Amey Thakur. El runtime .NET y sus avisos están incluidos en la distribución.
+Consulta THIRD-PARTY-NOTICES.txt.

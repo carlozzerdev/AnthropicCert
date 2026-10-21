@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>AnthropicCert</AssemblyName>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="../AnthropicCert.Infrastructure/AnthropicCert.Infrastructure.csproj" /></ItemGroup>
+  <ItemGroup><Content Include="../../Content/bank.json" Link="Content/bank.json" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
+</Project>

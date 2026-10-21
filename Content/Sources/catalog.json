@@ -1,0 +1,13 @@
+{
+  "checkedOn": "2026-10-21",
+  "upstream": "https://raw.githubusercontent.com/Amey-Thakur/CLAUDE-CERTIFICATIONS/main/question-bank.json",
+  "snapshotNote": "Extracto Professional recuperado vía herramienta web; descarga de terminal bloqueada. No se ha verificado commit inmutable. SHA256 del extracto en review-report.json.",
+  "externalOnly": [
+    {"url":"https://www.examtopics.com/exams/anthropic/ccar-p/","reason":"Acceso 403; sin contenido ni licencia comprobables"},
+    {"url":"https://www.claudemockexams.com/architect-professional/sample-questions","reason":"28 muestras públicas; sin permiso de redistribución verificado"},
+    {"url":"https://certsafari.com/anthropic/claude-architect-professional/practice-questions","reason":"35 muestras públicas; sin permiso de redistribución verificado"},
+    {"url":"https://szymonpaluch.com/claude-certified-architect-professional-practice-exam","reason":"Banco interactivo; sin permiso de redistribución verificado"},
+    {"url":"https://learn.techwithdarin.com/certs/claude-architect-professional/","reason":"Banco interactivo; sin permiso de redistribución verificado"},
+    {"url":"https://claudetestprep.com/architect-professional","reason":"Sin permiso de redistribución verificado"}
+  ]
+}

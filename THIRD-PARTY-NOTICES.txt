@@ -1,0 +1,23 @@
+AnthropicCert es una aplicación independiente. Claude y Anthropic pertenecen a
+sus respectivos titulares. No existe afiliación ni aval del proveedor del examen.
+
+CONTENIDO ADAPTADO
+Amey Thakur, CLAUDE-CERTIFICATIONS, texto del repositorio bajo licencia MIT.
+https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS
+Copyright (c) 2026 Amey Thakur.
+Licencia completa: Content/Sources/LICENSE-Amey-Thakur.txt.
+Se filtra Professional, se añaden referencias y ayudas y se excluyen entradas
+repetidas o pendientes de reformulación. El extracto de origen se conserva.
+Los documentos reflejados del proveedor y sus marcas no están cubiertos por
+esta licencia y no se redistribuyen aquí.
+
+RUNTIME
+La distribución portable contiene archivos del runtime Microsoft.NETCore.App y
+Microsoft.WindowsDesktop.App instalados en el entorno de construcción.
+Sus avisos y licencia se incluyen como LICENSE.txt y ThirdPartyNotices.txt
+cuando los proporciona la instalación del runtime. Versiones y hashes exactos
+en manifest.json. Código fuente y licencias: https://github.com/dotnet/runtime
+y https://github.com/dotnet/winforms.
+
+No se redistribuyen bancos de ExamTopics, CertSafari, Claude Mock Exams ni otras
+plataformas sin permiso explícito. El catálogo contiene enlaces externos.
