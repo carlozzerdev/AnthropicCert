@@ -1,11 +1,11 @@
 {
   "date": "2026-10-21",
   "reviewer": "Codex; no independent human review",
-  "upstream_sha256": "9d7ff838c88d479b649b60c4bc80ecfab929546b31ee5a176282d0d9de57a5a5",
+  "upstream_sha256": "e7462e697b4e03de774c4158d64da7350cc863a26a0ec6817c285dd4a9e54433",
   "upstream_entries": 80,
   "active_imported": 43,
-  "originals": 35,
-  "active_total": 78,
+  "originals": 42,
+  "active_total": 85,
   "items": [
     {
       "id": "architect-professional-practice-1",

@@ -10,7 +10,7 @@ internal sealed class SessionPresenter(ExamService service, Attempt attempt)
     public bool Revealed => Attempt.State == AttemptState.Completed ||
         (Attempt.Mode == ExamMode.Practice && Response.Confirmed);
     public bool Editable => Attempt.State == AttemptState.InProgress && !Revealed;
-    public string DomainTitle => service.Bank.Domains.Single(d => d.Id == Current.DomainId).Title;
+    public string DomainTitle => Attempt.Domains.FirstOrDefault(d => d.Id == Current.DomainId)?.Title ?? Current.DomainId;
     public void Select(IEnumerable<string> ids, bool confirm, bool flagged) => service.SaveResponse(Attempt, Current, ids, confirm, flagged);
     public void Move(int position) => service.SavePosition(Attempt, position);
     public void Complete() => service.Complete(Attempt);
@@ -21,7 +21,7 @@ internal sealed class SessionPresenter(ExamService service, Attempt attempt)
             (Attempt.Mode == ExamMode.Mock || r.Confirmed));
         var time = Attempt.Deadline is { } d && Attempt.State == AttemptState.InProgress
             ? $" · Restante {Ui.Duration((d - DateTimeOffset.UtcNow).TotalSeconds)}" : "";
-        return $"{Ui.Mode(Attempt.Mode)} · {Ui.State(Attempt.State)} · {Attempt.Position + 1}/{Attempt.Questions.Count} · Contestadas {answered} · Pendientes {Attempt.Questions.Count - answered} · Marcadas {Attempt.Responses.Values.Count(r => r.Flagged)}{time}";
+        return $"{Attempt.Certification} · {Ui.Mode(Attempt.Mode)} · {Ui.State(Attempt.State)} · {Attempt.Position + 1}/{Attempt.Questions.Count} · Contestadas {answered} · Pendientes {Attempt.Questions.Count - answered} · Marcadas {Attempt.Responses.Values.Count(r => r.Flagged)}{time}";
     }
     public string Explanation()
     {

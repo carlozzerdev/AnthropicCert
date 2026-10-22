@@ -1,10 +1,10 @@
 # Constitución del proyecto
 
-Versión: 0.2 · Actualización: 2026-10-21 · Estado: borrador con WinForms y objetivo pedagógico confirmados por el usuario.
+Versión: 0.3 · Actualización: 2026-10-21 · Estado: borrador con WinForms y objetivo pedagógico confirmados por el usuario.
 
 ## Principios
-1. **Aprendizaje verificable.** La aplicación debe ser una ayuda sólida para preparar y aprobar CCAR-P mediante comprensión y práctica. Cada pregunta publicada incluye respuesta correcta, explicación del acierto y de los distractores y ayudas conceptuales locales. Las URLs de ampliación son opcionales para el estudiante; la evidencia y la revisión editorial siguen formando parte del contenido. No prometer aprobación garantizada.
-2. **Identidad de certificación.** CCAR-P Professional es el objetivo. No mezclar guías, pesos ni preguntas de Foundations. Versionar el blueprint y declarar su nivel de verificación.
+1. **Aprendizaje verificable.** La aplicación debe ser una ayuda sólida para preparar y aprobar CCAR-P y CCAR-F mediante comprensión y práctica. Cada pregunta publicada incluye respuesta correcta, explicación del acierto y de los distractores y ayudas conceptuales locales. Las URLs de ampliación son opcionales para el estudiante; la evidencia y la revisión editorial siguen formando parte del contenido. No prometer aprobación garantizada.
+2. **Identidad de certificación.** CCAR-P Professional y CCAR-F Foundations son objetivos seleccionables por petición del usuario del 2026-10-21, especificada en [01_multiexamen](01_multiexamen/spec.md). Mantener separados bancos, guías, pesos, preguntas, intentos y estadísticas por certificación. Versionar cada blueprint y declarar su nivel de verificación. La selección multiexamen está implementada en 1.1.0; las verificaciones pendientes se registran en specs/01_multiexamen/tests/results.md.
 3. **Portabilidad Windows 11.** Extraer ZIP y ejecutar como usuario estándar. El destinatario no instala herramientas de desarrollo ni runtime. Arquitecturas soportadas y carpeta de datos deben declararse.
 4. **Separación de responsabilidades.** Presentación WinForms, por decisión del usuario. UI → aplicación → dominio; infraestructura implementa puertos definidos hacia el interior. El punto de composición conecta implementaciones. Nada de SQL, archivos o navegación de ventanas en el dominio. Formularios y eventos no contienen reglas de examen.
 5. **DRY con criterio.** Una sola definición de reglas de puntuación, selección de preguntas, validaciones y esquema de contenido. Reutilizar comportamiento real; no generalizar por semejanza accidental.

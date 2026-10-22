@@ -11,7 +11,7 @@ public static class Statistics
 {
     public static StatisticsResult Calculate(IEnumerable<Attempt> history, QuestionBank bank, StatisticsFilter filter)
     {
-        var attempts = history.Where(a => a.State == AttemptState.Completed && a.Result != null &&
+        var attempts = history.Where(a => a.Certification == bank.Certification && a.State == AttemptState.Completed && a.Result != null &&
             a.Result.Total > 0 && a.Result.Correct + a.Result.Wrong + a.Result.Blank == a.Result.Total &&
             (filter.Mode == null || a.Mode == filter.Mode) &&
             (filter.From == null || a.Finished >= filter.From) && (filter.To == null || a.Finished < filter.To) &&

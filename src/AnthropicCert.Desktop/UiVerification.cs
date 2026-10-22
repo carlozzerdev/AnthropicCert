@@ -8,13 +8,13 @@ internal static class UiVerification
 {
     static IEnumerable<Control> Descendants(Control c) => c.Controls.Cast<Control>().SelectMany(x => new[] { x }.Concat(Descendants(x)));
     static Button Find(Form f, string text) => Descendants(f).OfType<Button>().First(b => b.Text == text);
-    public static int Run(QuestionBank bank, string output)
+    public static int Run(QuestionBank bank, string output, IReadOnlyList<AvailableExam>? catalog = null)
     {
         output = Path.GetFullPath(output); Directory.CreateDirectory(output);
         var data = Path.Combine(output, "isolated-data");
         using var repo = new FileAttemptRepository(data);
         var service = new ExamService(bank, repo, new SystemClock(), new Random(112));
-        using var main = new MainForm(service);
+        using var main = new MainForm(service, catalog);
         using var timer = new System.Windows.Forms.Timer { Interval = 300 };
         var step = 0; var ticks = 0; var exitCode = 1; var busy = false;
         void Capture(Form f, string name)
@@ -51,7 +51,7 @@ internal static class UiVerification
                         var completed = service.History.Single(a => a.State == AttemptState.InProgress); service.Complete(completed);
                         Find(main, "Historial").PerformClick(); Capture(main, "04-history");
                         Find(main, "Estadísticas").PerformClick();
-                        var combos = Descendants(main).OfType<ComboBox>().ToList(); combos[0].SelectedIndex = 1;
+                        Descendants(main).OfType<ComboBox>().Single(c => c.Name == "StatisticsMode").SelectedIndex = 1;
                         Find(main, "Aplicar filtros").PerformClick(); Capture(main, "05-statistics"); step++; break;
                     case 5:
                         Find(main, "Ayudas").PerformClick(); Descendants(main).OfType<ListBox>().Single().SelectedIndex = 0;
@@ -67,7 +67,41 @@ internal static class UiVerification
                             throw new Exception("Mock reveals solution actions");
                         mock.Size = new Size(1000, 720); Capture(mock, "07-mock-small-window"); step++; mock.Close(); break;
                     case 9:
-                        File.WriteAllText(Path.Combine(output, "result.txt"), "PASS: home, selection, confirmation, explanation, persistence, history, statistics, aids, mock concealment. Screenshots rendered at current desktop DPI.");
+                        service.Complete(service.History.Single(a => a.State == AttemptState.InProgress));
+                        if (catalog == null || catalog.All(e => e.Entry.Certification != "CCAR-F")) { step = 15; break; }
+                        Descendants(main).OfType<ComboBox>().Single(c => c.Name == "ExamSelector").SelectedIndex = catalog.ToList().FindIndex(e => e.Entry.Certification == "CCAR-F");
+                        if (service.Bank.Certification != "CCAR-F") throw new Exception("Selector did not select Foundations");
+                        Capture(main, "08-foundations-home"); step++; Find(main, "Empezar práctica").PerformClick(); break;
+                    case 10:
+                        var foundationSession = System.Windows.Forms.Application.OpenForms.OfType<SessionForm>().Single();
+                        var foundationAttempt = service.History.Single(a => a.State == AttemptState.InProgress);
+                        if (foundationAttempt.Certification != "CCAR-F" || foundationAttempt.Questions.Any(q => q.Language != "en")) throw new Exception("Wrong Foundations content");
+                        foreach (var c in Descendants(foundationSession).OfType<CheckBox>().Where(c => c.Tag is string id && foundationAttempt.Questions[0].Correct.Contains(id))) c.Checked = true;
+                        Find(foundationSession, "Confirmar respuesta").PerformClick(); Capture(foundationSession, "09-foundations-practice");
+                        step++; foundationSession.Close(); break;
+                    case 11:
+                        service.Complete(service.History.Single(a => a.State == AttemptState.InProgress));
+                        Find(main, "Historial").PerformClick();
+                        if (Descendants(main).OfType<DataGridView>().Single().RowCount != 1) throw new Exception("History mixed certifications");
+                        Capture(main, "10-foundations-history");
+                        Find(main, "Inicio y exámenes").PerformClick(); step++; Find(main, "Comenzar simulacro").PerformClick(); break;
+                    case 12:
+                        var foundationMock = System.Windows.Forms.Application.OpenForms.OfType<SessionForm>().Single();
+                        var fAttempt = service.History.Single(a => a.State == AttemptState.InProgress);
+                        if (fAttempt.Certification != "CCAR-F" || fAttempt.Questions.Count != 60) throw new Exception("Wrong Foundations mock profile");
+                        if (Descendants(foundationMock).OfType<Button>().Any(b => b.Text is "Ver explicación" or "Leer ayuda del concepto" or "Confirmar respuesta")) throw new Exception("Foundations mock reveals solutions");
+                        Capture(foundationMock, "11-foundations-mock"); step++; foundationMock.Close(); break;
+                    case 13:
+                        service.Abandon(service.History.Single(a => a.State == AttemptState.InProgress));
+                        Find(main, "Estadísticas").PerformClick();
+                        Descendants(main).OfType<ComboBox>().Single(c => c.Name == "StatisticsMode").SelectedIndex = 1;
+                        Find(main, "Aplicar filtros").PerformClick(); Capture(main, "12-foundations-statistics"); step++; break;
+                    case 14:
+                        Descendants(main).OfType<ComboBox>().Single(c => c.Name == "ExamSelector").SelectedIndex = 0;
+                        if (service.Bank.Certification != bank.Certification) throw new Exception("Return selector failed");
+                        step++; break;
+                    case 15:
+                        File.WriteAllText(Path.Combine(output, "result.txt"), "PASS: both certifications, selector, English questions, confirmation, explanation, persistence, isolated history/statistics, aids, 63/60-question mocks and solution concealment. Screenshots at current desktop DPI; not the full DPI/keyboard matrix.");
                         exitCode = 0; timer.Stop(); main.Close(); break;
                 }
             }

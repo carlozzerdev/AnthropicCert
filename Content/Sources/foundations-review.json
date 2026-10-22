@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-21",
+  "sourceSha256": "6f75ed68253680d63a82a0f703dc3062c0e5d18f2e8679f7428d57b10ee7a57c",
+  "sourceUrl": "https://raw.githubusercontent.com/Amey-Thakur/CLAUDE-CERTIFICATIONS/main/architect-foundations/practice-questions.md",
+  "license": "MIT; copyright y aviso en LICENSE-Amey-Thakur.txt",
+  "sourceEntries": 35,
+  "activeImported": 34,
+  "originals": 30,
+  "activeTotal": 64,
+  "items": [
+    {
+      "number": 1,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 2,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 3,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 4,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 5,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 6,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 7,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 8,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 9,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 10,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 11,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 12,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 13,
+      "status": "archived",
+      "reason": "Misma decisión y control de terminación que la pregunta 1."
+    },
+    {
+      "number": 14,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 15,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 16,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 17,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 18,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 19,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 20,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 21,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 22,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 23,
+      "status": "active",
+      "changes": "Contrato estricto y validación explícitos"
+    },
+    {
+      "number": 24,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 25,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 26,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 27,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 28,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 29,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 30,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 31,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 32,
+      "status": "active",
+      "changes": "Matizada explicación del diagnóstico"
+    },
+    {
+      "number": 33,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 34,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    },
+    {
+      "number": 35,
+      "status": "active",
+      "changes": "Adaptación de formato; razonamiento del autor conservado"
+    }
+  ],
+  "examtopics": "30 candidatas locales de usuario en specs; no incluidas en banco activo ni ZIP"
+}

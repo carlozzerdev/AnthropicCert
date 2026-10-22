@@ -1,22 +1,41 @@
 using AnthropicCert.Application;
 using AnthropicCert.Domain;
+using AnthropicCert.Infrastructure;
 
 namespace AnthropicCert.Desktop;
 internal sealed class MainForm : Form
 {
     readonly ExamService exams;
+    readonly IReadOnlyList<AvailableExam> catalog;
+    readonly ComboBox examSelector = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 430, Name = "ExamSelector", AccessibleName = "Certificación" };
+    AvailableExam Selected => catalog[examSelector.SelectedIndex];
     readonly Panel body = new() { Dock = DockStyle.Fill, Padding = new Padding(12) };
-    public MainForm(ExamService exams)
+    public MainForm(ExamService exams, IReadOnlyList<AvailableExam>? catalog = null)
     {
-        this.exams = exams; Ui.Style(this, "AnthropicCert · Preparación CCAR-P");
+        this.exams = exams;
+        this.catalog = catalog ?? [new(new ExamEntry { Certification = exams.Bank.Certification, Name = exams.Bank.Certification }, exams.Bank, null)];
+        Ui.Style(this, "AnthropicCert · Preparación Architect");
         var header = new Panel { Dock = DockStyle.Top, Height = 90, BackColor = Ui.Ink, Padding = new Padding(20, 10, 20, 10) };
-        header.Controls.Add(new Label { Text = "ANTHROPICCERT   /   ARCHITECT PROFESSIONAL\nPractica · comprende · mide tu progreso", Dock = DockStyle.Fill,
+        header.Controls.Add(new Label { Text = "ANTHROPICCERT   /   ARCHITECT\nPractica · comprende · mide tu progreso", Dock = DockStyle.Fill,
             ForeColor = Color.White, Font = new Font("Segoe UI", 15), AutoSize = false });
         var nav = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true, Padding = new Padding(12, 5, 12, 5), BackColor = Color.White };
         nav.Controls.Add(Ui.Button("Inicio y exámenes", Home, true)); nav.Controls.Add(Ui.Button("Historial", History));
-        nav.Controls.Add(Ui.Button("Estadísticas", Stats)); nav.Controls.Add(Ui.Button("Ayudas", Helps));
-        nav.Controls.Add(Ui.Button("Acerca del banco", About));
-        Controls.Add(body); Controls.Add(nav); Controls.Add(header); Home();
+        nav.Controls.Add(Ui.Button("Estadísticas", () => { RequireBank(); Stats(); })); nav.Controls.Add(Ui.Button("Ayudas", () => { RequireBank(); Helps(); }));
+        nav.Controls.Add(Ui.Button("Acerca del banco", () => { RequireBank(); About(); }));
+        var chooser = Ui.Row(); chooser.Dock = DockStyle.Top; chooser.BackColor = Color.White;
+        chooser.Controls.Add(Ui.Label("Certificación:")); chooser.Controls.Add(examSelector);
+        examSelector.Items.AddRange(this.catalog.Cast<object>().ToArray());
+        examSelector.SelectedIndex = Math.Max(0, this.catalog.ToList().FindIndex(e => e.Bank == exams.Bank));
+        examSelector.SelectedIndexChanged += (_, _) => Ui.Guard(() =>
+        {
+            if (Selected.Bank is { } bank) exams.SelectBank(bank);
+            Home();
+        });
+        Controls.Add(body); Controls.Add(nav); Controls.Add(chooser); Controls.Add(header); Home();
+    }
+    void RequireBank()
+    {
+        if (Selected.Bank == null) throw new InvalidOperationException(Selected.Error ?? "Banco pendiente de incorporación.");
     }
     void Clear()
     {
@@ -26,12 +45,14 @@ internal sealed class MainForm : Form
     {
         Clear(); var column = Ui.Column(); body.Controls.Add(column);
         column.Controls.Add(Ui.Label("Tu próxima sesión de estudio", 22));
-        column.Controls.Add(Ui.Label($"{exams.Bank.Questions.Count} preguntas locales · 7 dominios · sin conexión · progreso portable", 12));
+        column.Controls.Add(Ui.Label(Selected.ToString(), 15));
+        if (Selected.Bank is { } selectedBank)
+            column.Controls.Add(Ui.Label($"{selectedBank.Questions.Count} preguntas · {selectedBank.Domains.Count} dominios · banco {selectedBank.Version} · {selectedBank.ProfileLabel}", 12));
         column.Controls.Add(Ui.Label("Practica con corrección inmediata o haz un simulacro cronometrado. Lee el razonamiento y las ayudas para entender cada decisión."));
         var pending = exams.History.FirstOrDefault(a => a.State == AttemptState.InProgress);
         if (pending != null)
         {
-            column.Controls.Add(Ui.Label($"Tienes un intento pendiente: {Ui.Mode(pending.Mode)}, {pending.Questions.Count} preguntas.", 13));
+            column.Controls.Add(Ui.Label($"Tienes un intento pendiente: {pending.Certification} · {Ui.Mode(pending.Mode)}, {pending.Questions.Count} preguntas.", 13));
             var pendingActions = Ui.Row();
             pendingActions.Controls.Add(Ui.Button("Reanudar intento", () => Open(pending.Id), true));
             pendingActions.Controls.Add(Ui.Button("Abandonar intento", () =>
@@ -39,6 +60,11 @@ internal sealed class MainForm : Form
                 if (MessageBox.Show("¿Abandonar sin guardar puntuación? El intento permanecerá en el historial.", "Abandonar", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 { exams.Abandon(pending); Home(); }
             })); column.Controls.Add(pendingActions);
+        }
+        if (Selected.Bank == null)
+        {
+            column.Controls.Add(Ui.Label("Banco pendiente o no válido: " + Selected.Error));
+            return;
         }
         column.Controls.Add(Ui.Label("Configura tu práctica", 16));
         var domain = Ui.Combo(new[] { "Todos los dominios" }.Concat(exams.Bank.Domains.Select(d => $"{d.Id} · {d.Title}")));
@@ -58,8 +84,8 @@ internal sealed class MainForm : Form
             Start(ExamMode.Practice, Math.Min((int)count.Value, available), id, errors);
         })); column.Controls.Add(actions);
         column.Controls.Add(Ui.Label("Simulacro de práctica", 16));
-        column.Controls.Add(Ui.Label("63 preguntas · 120 minutos · selección por pesos de dominio · respuestas ocultas hasta finalizar.\nPerfil provisional: formato y pesos pendientes de verificar con acceso directo a la guía oficial."));
-        column.Controls.Add(Ui.Button("Comenzar simulacro", () => Start(ExamMode.Mock, 63), true));
+        column.Controls.Add(Ui.Label($"{exams.Bank.MockQuestionCount} preguntas · {exams.Bank.DurationMinutes} minutos · selección por pesos de dominio · respuestas ocultas hasta finalizar.\n{exams.Bank.ProfileStatus}"));
+        column.Controls.Add(Ui.Button("Comenzar simulacro", () => Start(ExamMode.Mock, exams.Bank.MockQuestionCount), true));
         column.Controls.Add(Ui.Label("Puntuación: 1 punto por acierto, 0 por fallo o sin responder. En preguntas múltiples debes acertar todo el conjunto.\nLas preguntas importadas están en inglés; las ayudas locales están en español. No requiere cuenta ni API de IA.", 10));
     }
     void Start(ExamMode mode, int count, string? domain = null, IReadOnlySet<string>? ids = null)
@@ -73,10 +99,10 @@ internal sealed class MainForm : Form
     }
     void History()
     {
-        Clear(); var grid = Ui.Grid(); var attempts = exams.History.OrderByDescending(a => a.Started).ToList();
+        Clear(); var grid = Ui.Grid(); var attempts = exams.History.Where(a => a.Certification == Selected.Entry.Certification).OrderByDescending(a => a.Started).ToList();
         grid.DataSource = attempts.Select(a => new
         {
-            Fecha = a.Started.LocalDateTime.ToString("g"), Modo = Ui.Mode(a.Mode), Estado = Ui.State(a.State),
+            Examen = a.Certification, Fecha = a.Started.LocalDateTime.ToString("g"), Modo = Ui.Mode(a.Mode), Estado = Ui.State(a.State),
             Preguntas = a.Questions.Count, Aciertos = a.Result?.Correct.ToString() ?? "—",
             Fallos = a.Result?.Wrong.ToString() ?? "—", SinResponder = a.Result?.Blank.ToString() ?? "—",
             Puntos = a.Result == null ? "—" : $"{a.Result.Correct}/{a.Result.Total}",
@@ -106,11 +132,11 @@ internal sealed class MainForm : Form
         var button = Ui.Button("Leer ayuda seleccionada", Read, true); button.Dock = DockStyle.Bottom;
         body.Controls.Add(list); body.Controls.Add(button);
     }
-    void About() => Ui.ReadText("Contenido y procedencia", $"ANTHROPICCERT 1.0\n\nBanco {exams.Bank.Version}: {exams.Bank.Questions.Count} preguntas activas.\n" +
+    void About() => Ui.ReadText("Contenido y procedencia", $"ANTHROPICCERT 1.1\n\n{exams.Bank.Certification} · Banco {exams.Bank.Version}: {exams.Bank.Questions.Count} preguntas activas.\n" +
         "Aplicación independiente, no afiliada ni avalada por Anthropic. No contiene preguntas del examen real.\n\n" +
         "Incluye adaptaciones del texto MIT de Amey Thakur y preguntas originales del proyecto, con fuentes y revisión identificadas en cada ítem. " +
         "Las entradas repetidas o pendientes de contraste se conservan en el archivo de fuentes y no se ofrecen como nuevas preguntas.\n\n" +
-        "La revisión técnica realizada por el agente no equivale a una revisión humana independiente ni a validación oficial. El objetivo de 350 sigue siendo una ampliación pendiente.\n\n" +
+        "La revisión técnica realizada por el agente no equivale a una revisión humana independiente ni a validación oficial. El objetivo de 350 Professional sigue siendo una ampliación pendiente.\n\n" +
         "El ZIP incluye el catálogo de fuentes, el informe de revisión y sus licencias en Content/Sources. Las webs sin permiso de reproducción se conservan como enlaces externos.\n\n" +
         "Tus intentos se guardan en Data junto al ejecutable. Cierra la aplicación antes de copiar la carpeta. Para actualizar, conserva Data.\n\n" +
         exams.Bank.ProfileStatus, owner: this);
@@ -120,10 +146,10 @@ internal sealed class MainForm : Form
         layout.RowStyles.Add(new RowStyle(SizeType.AutoSize)); layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         layout.RowStyles.Add(new RowStyle(SizeType.Percent, 55)); layout.RowStyles.Add(new RowStyle(SizeType.Percent, 45));
         var filters = Ui.Row(); filters.Dock = DockStyle.Fill;
-        var mode = Ui.Combo(["Simulacros", "Prácticas", "Ambos modos"]); mode.Width = 140;
-        var versions = new[] { exams.Bank.Version }.Concat(exams.History.Select(a => a.BankVersion)).Distinct().ToArray();
+        var mode = Ui.Combo(["Simulacros", "Prácticas", "Ambos modos"]); mode.Width = 140; mode.Name = "StatisticsMode";
+        var versions = new[] { exams.Bank.Version }.Concat(exams.SelectedHistory.Select(a => a.BankVersion)).Distinct().ToArray();
         var version = Ui.Combo(versions.Prepend("Todas las versiones")); version.Width = 170; version.SelectedIndex = 1;
-        var profiles = exams.History.Select(a => a.Profile).Append("CCAR-P · provisional v1").Distinct().ToArray();
+        var profiles = exams.SelectedHistory.Select(a => a.Profile).Prepend(exams.Bank.ProfileLabel).Distinct().ToArray();
         var profile = Ui.Combo(profiles); profile.Width = 240;
         var from = new DateTimePicker { ShowCheckBox = true, Checked = false, Format = DateTimePickerFormat.Short, Width = 160 };
         var to = new DateTimePicker { ShowCheckBox = true, Checked = false, Format = DateTimePickerFormat.Short, Width = 160 };

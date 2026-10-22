@@ -12,20 +12,25 @@ public interface IClock { DateTimeOffset UtcNow { get; } }
 public sealed class SystemClock : IClock { public DateTimeOffset UtcNow => DateTimeOffset.UtcNow; }
 public sealed class ExamService(QuestionBank bank, IAttemptRepository repository, IClock clock, Random random)
 {
-    public QuestionBank Bank { get; } = bank;
+    public QuestionBank Bank { get; private set; } = bank;
     public IReadOnlyList<Attempt> History => repository.Load();
+    public IReadOnlyList<Attempt> SelectedHistory => History.Where(a => a.Certification == Bank.Certification).ToList();
+    public void SelectBank(QuestionBank value) { value.Validate(); Bank = value; }
     public Attempt Start(ExamMode mode, int count, string? domain = null, IReadOnlySet<string>? onlyIds = null)
     {
         if (History.Any(a => a.State == AttemptState.InProgress))
             throw new InvalidOperationException("Reanuda o abandona el intento pendiente antes de crear otro.");
+        if (mode == ExamMode.Mock) { count = Bank.MockQuestionCount; domain = null; onlyIds = null; }
         var selected = ExamRules.Select(Bank, count, domain, mode == ExamMode.Mock, random, onlyIds);
         // Snapshots are independent from the live bank, including their study aids and references.
         var snapshot = JsonSerializer.Deserialize<List<Question>>(JsonSerializer.Serialize(selected))!;
         foreach (var q in snapshot) q.Options = q.Options.OrderBy(_ => random.Next()).ToList();
         var attempt = new Attempt
         {
-            Mode = mode, BankVersion = Bank.Version, Started = clock.UtcNow, LastSeen = clock.UtcNow,
-            Deadline = mode == ExamMode.Mock ? clock.UtcNow.AddMinutes(120) : null, Questions = snapshot,
+            Mode = mode, Certification = Bank.Certification, BankId = Bank.Id, BankVersion = Bank.Version,
+            Profile = Bank.ProfileLabel, ProfileId = Bank.ProfileId, ProfileVersion = Bank.ProfileVersion,
+            BlueprintVersion = Bank.BlueprintVersion, Domains = Bank.Domains.ToList(), Started = clock.UtcNow, LastSeen = clock.UtcNow,
+            Deadline = mode == ExamMode.Mock ? clock.UtcNow.AddMinutes(Bank.DurationMinutes) : null, Questions = snapshot,
             Responses = snapshot.ToDictionary(q => q.Id, _ => new Response())
         };
         repository.Save(attempt); return attempt;
@@ -92,7 +97,7 @@ public sealed class ExamService(QuestionBank bank, IAttemptRepository repository
         try { repository.Save(a); }
         catch { a.State = AttemptState.InProgress; a.Finished = null; throw; }
     }
-    public HashSet<string> Errors() => History.Where(a => a.State == AttemptState.Completed)
+    public HashSet<string> Errors() => SelectedHistory.Where(a => a.State == AttemptState.Completed)
         .SelectMany(a => a.Questions.Where(q => !ExamRules.IsCorrect(q, a.Answer(q))))
         .Select(q => q.Id).ToHashSet();
     static void EnsureActive(Attempt a)

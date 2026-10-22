@@ -6,8 +6,10 @@ Amey Thakur, CLAUDE-CERTIFICATIONS, texto del repositorio bajo licencia MIT.
 https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS
 Copyright (c) 2026 Amey Thakur.
 Licencia completa: Content/Sources/LICENSE-Amey-Thakur.txt.
-Se filtra Professional, se añaden referencias y ayudas y se excluyen entradas
-repetidas o pendientes de reformulación. El extracto de origen se conserva.
+Se filtran Professional y Foundations, se añaden referencias y ayudas, se adapta
+el formato y se excluyen variantes repetidas o pendientes de reformulación.
+Foundations 23 y 32 tienen matices registrados en foundations-review.json.
+Los archivos de origen y sus hashes se conservan en Content/Sources.
 Los documentos reflejados del proveedor y sus marcas no están cubiertos por
 esta licencia y no se redistribuyen aquí.
 

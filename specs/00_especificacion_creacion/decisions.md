@@ -32,3 +32,9 @@ Alternativas y costes: [plan.md](plan.md). No hay necesidad identificada de C/C+
 
 ## Cómo registrar respuestas
 Actualizar la fila correspondiente con respuesta exacta o síntesis fiel, fecha y cambios afectados. Las respuestas nuevas reemplazan propuestas, no requieren una aprobación adicional del mismo asunto. Resolver decisiones que cambien implementación antes de construir esa parte.
+
+## Evolución en especificación 01
+
+2026-10-21: el usuario solicita preguntas y opciones en inglés y selección entre Professional y Foundations. [01_multiexamen](../01_multiexamen/spec.md) sustituye D05 respecto al idioma de preguntas nuevas y amplía el objetivo exclusivo Professional; conserva snapshots históricos. La aplicación 1.0.0 mantiene su comportamiento hasta implementar 01.
+
+Actualización: la implementación 01 está autorizada y creada como 1.1.0; ver ../01_multiexamen/implementation.md. Las decisiones históricas anteriores describen 1.0.0.

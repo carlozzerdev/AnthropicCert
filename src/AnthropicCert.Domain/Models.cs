@@ -19,19 +19,32 @@ public sealed class Question
     public string Review { get; set; } = "";
     public string Language { get; set; } = "en";
     public string Family { get; set; } = "";
+    public string ObjectiveId { get; set; } = "";
+    public string License { get; set; } = "";
+    public string SourceUrl { get; set; } = "";
 }
 public sealed class QuestionBank
 {
-    public int SchemaVersion { get; set; } = 1;
+    public int SchemaVersion { get; set; } = 2;
     public string Id { get; set; } = "ccarp-local";
     public string Version { get; set; } = "1.0.0";
     public string Certification { get; set; } = "CCAR-P";
     public string ProfileStatus { get; set; } = "Provisional: guía oficial pendiente de acceso directo";
+    public string ProfileId { get; set; } = "ccarp-practice";
+    public string ProfileVersion { get; set; } = "1";
+    public string BlueprintVersion { get; set; } = "provisional-2026-10-21";
+    public int MockQuestionCount { get; set; } = 63;
+    public int DurationMinutes { get; set; } = 120;
+    public List<string> Objectives { get; set; } = [];
+    public string ProfileLabel => $"{Certification} · perfil de práctica v{ProfileVersion}";
     public List<DomainInfo> Domains { get; set; } = [];
     public List<Question> Questions { get; set; } = [];
     public void Validate()
     {
-        if (SchemaVersion != 1 || Certification != "CCAR-P" || string.IsNullOrWhiteSpace(Version))
+        if (SchemaVersion != 2 || Certification is not ("CCAR-P" or "CCAR-F") || string.IsNullOrWhiteSpace(Version) ||
+            string.IsNullOrWhiteSpace(Id) || string.IsNullOrWhiteSpace(ProfileId) || string.IsNullOrWhiteSpace(ProfileVersion) ||
+            string.IsNullOrWhiteSpace(BlueprintVersion) || MockQuestionCount <= 0 || DurationMinutes <= 0 ||
+            Objectives.Count == 0 || Objectives.Distinct().Count() != Objectives.Count)
             throw new InvalidDataException("Versión de banco o certificación no compatible.");
         if (Domains.Count == 0 || Domains.Select(d => d.Id).Distinct().Count() != Domains.Count ||
             Domains.Any(d => d.Weight <= 0) || Domains.Sum(d => d.Weight) != 100)
@@ -41,14 +54,20 @@ public sealed class QuestionBank
         foreach (var q in Questions)
         {
             if (string.IsNullOrWhiteSpace(q.Id) || string.IsNullOrWhiteSpace(q.Text) || q.Revision < 1 ||
-                !Domains.Any(d => d.Id == q.DomainId) || q.Options.Count < 2 ||
+                !Domains.Any(d => d.Id == q.DomainId) || q.Language != "en" || !Objectives.Contains(q.ObjectiveId) ||
+                !q.ObjectiveId.StartsWith(q.DomainId + ".", StringComparison.Ordinal) || q.Options.Count < 2 ||
                 q.Options.Select(o => o.Id).Distinct().Count() != q.Options.Count ||
                 q.Options.Any(o => string.IsNullOrWhiteSpace(o.Text) || string.IsNullOrWhiteSpace(o.Explanation)) ||
                 q.Correct.Count == 0 || q.Correct.Distinct().Count() != q.Correct.Count ||
                 q.Correct.Any(c => !q.Options.Any(o => o.Id == c)) ||
                 string.IsNullOrWhiteSpace(q.Explanation) || string.IsNullOrWhiteSpace(q.Help.Text) ||
-                string.IsNullOrWhiteSpace(q.Origin) || string.IsNullOrWhiteSpace(q.Review) || q.References.Count == 0)
+                string.IsNullOrWhiteSpace(q.Origin) || string.IsNullOrWhiteSpace(q.Review) ||
+                string.IsNullOrWhiteSpace(q.License) || string.IsNullOrWhiteSpace(q.SourceUrl) ||
+                q.Help.DomainId != q.DomainId || string.IsNullOrWhiteSpace(q.Help.Id) || q.References.Count == 0)
                 throw new InvalidDataException($"Pregunta inválida: {q.Id}.");
+            if (q.SourceUrl != "project:AnthropicCert" &&
+                (!Uri.TryCreate(q.SourceUrl, UriKind.Absolute, out var source) || source.Scheme is not ("http" or "https")))
+                throw new InvalidDataException($"Procedencia no válida en {q.Id}.");
             foreach (var r in q.References.Concat(q.Help.References))
                 if (!Uri.TryCreate(r.Url, UriKind.Absolute, out var u) || u.Scheme is not ("http" or "https"))
                     throw new InvalidDataException($"URL no permitida en {q.Id}.");
@@ -65,6 +84,13 @@ public sealed class Response
 }
 public sealed class Attempt
 {
+    public int SchemaVersion { get; set; } = 2;
+    public string Certification { get; set; } = "CCAR-P";
+    public string BankId { get; set; } = "ccarp-local";
+    public string ProfileId { get; set; } = "ccarp-practice";
+    public string ProfileVersion { get; set; } = "1";
+    public string BlueprintVersion { get; set; } = "provisional-2026-10-21";
+    public List<DomainInfo> Domains { get; set; } = [];
     public Guid Id { get; set; } = Guid.NewGuid();
     public ExamMode Mode { get; set; }
     public AttemptState State { get; set; }

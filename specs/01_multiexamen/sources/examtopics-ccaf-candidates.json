@@ -1,0 +1,1285 @@
+{
+  "format": "examtopics-user-capture-candidates-v1",
+  "archiveSha256": "fe7f5ab63fe9e2b935a89b04e1eea8a01cacbd65b48ba93c97a14e529dc49d0b",
+  "origin": "user-supplied archive",
+  "captures": [
+    {
+      "file": "CCA-F_01.mhtml",
+      "sha256": "4fe76e20f7a15f77c3a13a520df68121c47c12fbc44482b8b3b802f4879cb0f7",
+      "questions": 10
+    },
+    {
+      "file": "CCA-F_02.mhtml",
+      "sha256": "48608867342bc9db40d41ae00c60a40578cd2760a79279a09e5277866fe65997",
+      "questions": 10
+    },
+    {
+      "file": "CCA-F_03.mhtml",
+      "sha256": "c563001ab4c9710dd97535d78479e9a6515632aee184ad486e54f57e64602db8",
+      "questions": 10
+    }
+  ],
+  "note": "Source answers are unverified. Not a production bank or distribution permission.",
+  "questions": [
+    {
+      "id": "examtopics-ccaf-001",
+      "number": 1,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "The synthesis agent receives summarized findings from the web search and document analysis agents, then passes a consolidated summary to the report generator. During testing, you discover the generated reports make factual claims without proper citations – the report generator cannot attribute statements to their original sources because that metadata was lost during the summarization steps. What’s the most effective approach to ensure proper source attribution in the final reports?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Have the report generator query the web search agent to re-locate sources for claims in the final report."
+        },
+        {
+          "id": "B",
+          "text": "Have each agent output structured data separating content summaries from source metadata (URLs, document names, page numbers)."
+        },
+        {
+          "id": "C",
+          "text": "Skip summarization and pass full raw outputs from web search and document analysis directly to the report generator."
+        },
+        {
+          "id": "D",
+          "text": "Instruct the synthesis agent to embed source references inline within its summary text using a consistent citation format."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "B"
+      ],
+      "communityVotes": [
+        {
+          "answer": "B",
+          "percent": 100,
+          "votes": 3
+        }
+      ],
+      "capture": "CCA-F_01.mhtml",
+      "sourceItemId": "1007729",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-002",
+      "number": 2,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "After the web search agent finds 25 sources (120K tokens of raw content), the document analysis agent extracts key insights (15K tokens), and the synthesis agent produces a coherent narrative draft (3K tokens), the coordinator must pass context to the report generation agent for the final output with proper source citations. What context-passing strategy provides the best balance of completeness and efficiency?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pass the full accumulated context from all prior agents."
+        },
+        {
+          "id": "B",
+          "text": "Pass the synthesis draft along with a structured source index that maps key claims to their source URLs and relevant excerpts."
+        },
+        {
+          "id": "C",
+          "text": "Pass only the synthesis draft and have a separate post-processing pipeline match claims to sources and insert citations after the report is generated."
+        },
+        {
+          "id": "D",
+          "text": "Pass a condensed summary of all prior stages that preserves the main findings and attributes them to sources by name only."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "B"
+      ],
+      "communityVotes": [
+        {
+          "answer": "B",
+          "percent": 100,
+          "votes": 2
+        }
+      ],
+      "capture": "CCA-F_01.mhtml",
+      "sourceItemId": "1007730",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-003",
+      "number": 3,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your multi-agent research pipeline crashed after processing12 of 28 documents. The web search agent had identified relevant sources, the document analyzer had partially completed extraction, and the synthesizer had begun pattern identification. You need to resume processing without repeating work or losing fidelity of prior findings. What state management approach best balances information fidelity with context efficiency when restoring agent state?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Have each agent persist a structured export to a known location. On resume, the coordinator loads the manifest and injects relevant state into agent prompts."
+        },
+        {
+          "id": "B",
+          "text": "Index all agent outputs in a shared vector store. When resuming, each agent queries the store using semantic search to retrieve relevant prior findings."
+        },
+        {
+          "id": "C",
+          "text": "Have each agent maintain its own persistent state file and reload it independently at the start of each session."
+        },
+        {
+          "id": "D",
+          "text": "Persist the coordinator’s conversation log containing all task delegations and responses, providing this to agents when resuming."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "A"
+      ],
+      "communityVotes": [
+        {
+          "answer": "A",
+          "percent": 100,
+          "votes": 1
+        }
+      ],
+      "capture": "CCA-F_01.mhtml",
+      "sourceItemId": "1007731",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-004",
+      "number": 4,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "You’ve configured the system so that all four subagents have access to the complete set of 18 tools. During testing, agents frequently call tools outside their specialization – the synthesis agent attempts web searches, and the report generator tries to analyze documents. What is the primary cause of this poor tool selection behavior?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Choosing from 18 tools instead of 4-5 relevant ones increases decision complexity beyond reliable selection thresholds."
+        },
+        {
+          "id": "B",
+          "text": "The tool definitions consume too much context window space, leaving insufficient room for task content."
+        },
+        {
+          "id": "C",
+          "text": "The agents’ role descriptions in their system prompts conflict with having access to tools outside that role."
+        },
+        {
+          "id": "D",
+          "text": "The coordinator cannot track which capabilities each subagent has, leading to misrouted tasks."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "A"
+      ],
+      "communityVotes": [
+        {
+          "answer": "A",
+          "percent": 100,
+          "votes": 1
+        }
+      ],
+      "capture": "CCA-F_01.mhtml",
+      "sourceItemId": "1007732",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-005",
+      "number": 5,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "The coordinator provides detailed step-by-step instructions to the web search subagent, specifying exact search queries, source priorities, and date filters. Production monitoring reveals three issues: (1) the subagent reports “insufficient results” rather than trying alternative approaches when pre-specified searches fail, (2) research quality drops for emerging topics that don’t match expected patterns, and (3) the subagent rarely surfaces valuable tangential sources. What’s the most effective way to improve subagent adaptability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Implement a topic classification step where the coordinator categorizes requests as “well-defined” or “exploratory” and uses different instruction styles for each category."
+        },
+        {
+          "id": "B",
+          "text": "Add explicit fallback directives to the detailed instructions: “If specified searches yield fewer than N results, attempt alternative query formulations before reporting failure.”"
+        },
+        {
+          "id": "C",
+          "text": "Remove procedural details entirely, delegating with simple goals like “research X thoroughly” and relying on the subagent’s general capabilities."
+        },
+        {
+          "id": "D",
+          "text": "Specify research goals and quality criteria (coverage breadth, source diversity, recency) rather than procedural steps, letting the subagent determine its search strategy."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "D"
+      ],
+      "communityVotes": [],
+      "capture": "CCA-F_01.mhtml",
+      "sourceItemId": "1007733",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-006",
+      "number": 6,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "The synthesis agent completes its initial pass but flags that three key research questions remain unanswered because the web search and document analysis agents didn’t find relevant information on those specific subtopics. The coordinator currently proceeds directly to report generation, producing reports with incomplete coverage. What change would most effectively improve research completeness?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Have the report generation agent note which research questions couldn’t be answered, so users understand the limitations of the final output."
+        },
+        {
+          "id": "B",
+          "text": "Increase the initial breadth of queries sent to web search and document analysis to reduce the probability of missing relevant information."
+        },
+        {
+          "id": "C",
+          "text": "Have the coordinator evaluate synthesis output for gaps, then re-delegate to web search and document analysis with targeted queries before invoking synthesis again."
+        },
+        {
+          "id": "D",
+          "text": "Give the synthesis agent direct access to web search tools so it can autonomously fill knowledge gaps without returning control to the coordinator."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "C"
+      ],
+      "communityVotes": [
+        {
+          "answer": "C",
+          "percent": 100,
+          "votes": 1
+        }
+      ],
+      "capture": "CCA-F_01.mhtml",
+      "sourceItemId": "1007734",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-007",
+      "number": 7,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "The web search agent has gathered several relevant sources for a research topic. The document analysis agent now needs to examine these sources. How does information typically flow between these two specialized subagents?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The agents communicate through an event-driven message queue, with the document analysis agent subscribing to web search completion events."
+        },
+        {
+          "id": "B",
+          "text": "The web search agent directly invokes the document analysis agent, passing the discovered sources as parameters."
+        },
+        {
+          "id": "C",
+          "text": "The coordinator agent receives the web search agent’s output and includes relevant findings in the prompt when invoking the document analysis agent."
+        },
+        {
+          "id": "D",
+          "text": "Both agents access a shared memory store where the web search agent writes findings and the document analysis agent reads them."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "C"
+      ],
+      "communityVotes": [
+        {
+          "answer": "C",
+          "percent": 100,
+          "votes": 2
+        }
+      ],
+      "capture": "CCA-F_01.mhtml",
+      "sourceItemId": "1007735",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-008",
+      "number": 8,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Production reviews reveal inconsistent handling of uncertainty in final reports. Sometimes conflicting subagent findings are synthesized into a single confident statement (losing nuance), while other times reports over-hedge with excessive qualifications (becoming unhelpful). When the web search agent returns “industry analysts estimate $50B market size (methodology varies)” and the document analysis agent returns “peer-reviewed study estimates $35B (±$7B, 95% CI),” the coordinator either picks one arbitrarily or produces vague statements like “the market may be $35B-$50B depending on factors.” What systematic approach best addresses this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Configure subagents to only report findings meeting a high-confidence threshold, filtering uncertain information before it reaches the coordinator."
+        },
+        {
+          "id": "B",
+          "text": "Add a verification subagent that cross-references findings across sources, only passing claims to synthesis that are corroborated by at least two independent sources."
+        },
+        {
+          "id": "C",
+          "text": "Instruct the synthesis agent to structure reports with explicit sections distinguishing well-established findings from contested ones, preserving original source characterizations and methodological context."
+        },
+        {
+          "id": "D",
+          "text": "Implement a confidence calibration layer that normalizes subagent uncertainty expressions to standardized probability scores (0.0-1.0), then weight-average findings by their calibrated confidence."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "C"
+      ],
+      "communityVotes": [
+        {
+          "answer": "B",
+          "percent": 14,
+          "votes": 1
+        },
+        {
+          "answer": "C",
+          "percent": 71,
+          "votes": 5
+        },
+        {
+          "answer": "D",
+          "percent": 14,
+          "votes": 1
+        }
+      ],
+      "capture": "CCA-F_01.mhtml",
+      "sourceItemId": "1007736",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-009",
+      "number": 9,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "In production, final reports frequently contain claims without proper source attribution. Investigation shows that while the web search and document analysis agents correctly attach citations to their outputs, the synthesis agent loses track of which sources support which conclusions when combining findings. What’s the most effective architectural change?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Require all subagents to output structured claim-source mappings that the synthesis agent must preserve and merge when combining findings from multiple sources."
+        },
+        {
+          "id": "B",
+          "text": "Maintain complete transcripts of all subagent interactions and add a citation-resolution agent to analyze logs and determine attributions before report generation."
+        },
+        {
+          "id": "C",
+          "text": "Add a verification step where the report generator uses semantic similarity matching against original sources to reconstruct which claims came from which documents."
+        },
+        {
+          "id": "D",
+          "text": "Have the coordinator inject source identifier prefixes into text before each handoff, then parse these prefixes at report generation to reconstruct citations."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "D"
+      ],
+      "communityVotes": [
+        {
+          "answer": "A",
+          "percent": 40,
+          "votes": 4
+        },
+        {
+          "answer": "D",
+          "percent": 60,
+          "votes": 6
+        }
+      ],
+      "capture": "CCA-F_01.mhtml",
+      "sourceItemId": "1007737",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-010",
+      "number": 10,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "After the web search agent and document analysis agent complete their tasks, the coordinator invokes the synthesis agent. However, the synthesis agent responds that it cannot complete the task because no research findings were provided. What is the most likely cause of this issue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The subagents need to share a single API connection to enable automatic context sharing between invocations."
+        },
+        {
+          "id": "B",
+          "text": "The synthesis agent needs tools that can fetch results directly from the other agents’ conversation histories."
+        },
+        {
+          "id": "C",
+          "text": "The coordinator did not include the outputs from the previous agents in the synthesis agent’s prompt."
+        },
+        {
+          "id": "D",
+          "text": "The synthesis agent’s context window is not large enough to hold the combined outputs from both previous agents."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "C"
+      ],
+      "communityVotes": [
+        {
+          "answer": "C",
+          "percent": 100,
+          "votes": 1
+        }
+      ],
+      "capture": "CCA-F_01.mhtml",
+      "sourceItemId": "1007738",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-011",
+      "number": 11,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Users report that final reports sometimes lack depth on specific subtopics. Investigation shows that the document analysis agent frequently identifies gaps – for instance, noting “the retrieved sources discuss API authentication but lack details on token refresh patterns” – but under the current strict pipeline, this insight isn’t actionable since search has already completed. What’s the most effective architectural change?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Add a research planning agent before the search phase that decomposes topics into specific sub-questions."
+        },
+        {
+          "id": "B",
+          "text": "Have the analysis agent report specific gaps to the coordinator, which triggers targeted searches and re-invokes analysis until sufficient."
+        },
+        {
+          "id": "C",
+          "text": "Have the coordinator review analysis output for gap indicators and re-invoke search with gap-informed queries when gaps are detected."
+        },
+        {
+          "id": "D",
+          "text": "Have the synthesis agent attach confidence scores to each section and flag areas with insufficient coverage for manual review."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "B"
+      ],
+      "communityVotes": [
+        {
+          "answer": "A",
+          "percent": 5,
+          "votes": 1
+        },
+        {
+          "answer": "B",
+          "percent": 75,
+          "votes": 15
+        },
+        {
+          "answer": "C",
+          "percent": 20,
+          "votes": 4
+        }
+      ],
+      "capture": "CCA-F_02.mhtml",
+      "sourceItemId": "1007739",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-012",
+      "number": 12,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "After the web search and document analysis subagents complete their tasks, the coordinator needs to spawn the synthesis subagent to synthesize the findings. What is the correct approach for providing the synthesis subagent with the information it needs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spawn the subagent with only a brief task description, relying on automatic context inheritance from the coordinator"
+        },
+        {
+          "id": "B",
+          "text": "Provide the subagent with tool definitions that allow it to request outputs from other subagents via callbacks"
+        },
+        {
+          "id": "C",
+          "text": "Pass reference identifiers and configure the subagent with read access to a shared memory store where other subagents deposited their results"
+        },
+        {
+          "id": "D",
+          "text": "Include the complete findings from both subagents directly in the synthesis subagent’s prompt"
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "D"
+      ],
+      "communityVotes": [
+        {
+          "answer": "C",
+          "percent": 38,
+          "votes": 5
+        },
+        {
+          "answer": "D",
+          "percent": 62,
+          "votes": 8
+        }
+      ],
+      "capture": "CCA-F_02.mhtml",
+      "sourceItemId": "1007740",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-013",
+      "number": 13,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "When the agent calls lookup_order and receives order details showing the item was purchased 45 days ago, how does the agentic loop determine whether to call process_refund or escalate_to_human next?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The orchestration layer automatically routes to the next tool based on the order’s status field."
+        },
+        {
+          "id": "B",
+          "text": "The order details are added to the conversation and the model reasons about which action to take."
+        },
+        {
+          "id": "C",
+          "text": "The agent executes the remaining steps in a tool sequence planned at the start of the request."
+        },
+        {
+          "id": "D",
+          "text": "The agent follows a pre-configured decision tree mapping order attributes to specific tool calls."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "B"
+      ],
+      "communityVotes": [
+        {
+          "answer": "B",
+          "percent": 60,
+          "votes": 6
+        },
+        {
+          "answer": "D",
+          "percent": 40,
+          "votes": 4
+        }
+      ],
+      "capture": "CCA-F_02.mhtml",
+      "sourceItemId": "1007741",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-014",
+      "number": 14,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "After investigating a billing dispute over 25+ turns, you’ve identified that duplicate charges occurred due to a payment gateway timeout triggering retry logic. The required refund ($847) exceeds your $500 authorization limit You need to call escalate_to_human, and the human agent won’t have access to your conversation transcript. What context should you pass to enable effective resolution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A structured summary: customer ID, root cause, refund amount, and recommended action."
+        },
+        {
+          "id": "B",
+          "text": "Your diagnosis and the refund amount only."
+        },
+        {
+          "id": "C",
+          "text": "The customer’s original complaint verbatim plus the tool result excerpts showing duplicate transactions."
+        },
+        {
+          "id": "D",
+          "text": "The complete conversation transcript with all tool results."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "A"
+      ],
+      "communityVotes": [
+        {
+          "answer": "A",
+          "percent": 100,
+          "votes": 2
+        }
+      ],
+      "capture": "CCA-F_02.mhtml",
+      "sourceItemId": "1007742",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-015",
+      "number": 15,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your agent is handling a billing dispute. After calling get_customer and lookup_order, it identifies that the dispute involves a promotional pricing error requiring manager approval – beyond the agent’s authorization level. How should the workflow handle this mid-process escalation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Compile a structured handoff with customer details, order info, and the identified issue before calling escalate_to_human."
+        },
+        {
+          "id": "B",
+          "text": "Persist the complete conversation and tool response history to a database, then call escalate_to_human with a reference ID."
+        },
+        {
+          "id": "C",
+          "text": "Call escalate_to_human passing only the customer’s original message."
+        },
+        {
+          "id": "D",
+          "text": "Attempt the refund with process_refund anyway, escalating only if the system rejects the transaction."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "A"
+      ],
+      "communityVotes": [
+        {
+          "answer": "A",
+          "percent": 100,
+          "votes": 2
+        }
+      ],
+      "capture": "CCA-F_02.mhtml",
+      "sourceItemId": "1007743",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-016",
+      "number": 16,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "You’re implementing the escalation logic for when the agent should call escalate_to_human. Your team proposes four different approaches for triggering escalation. Which approach will most reliably identify cases that genuinely require human intervention?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Implement sentiment analysis that monitors for frustration indicators (negative language, repeated questions, exclamation marks) and trigger escalation when the frustration score exceeds a configured threshold."
+        },
+        {
+          "id": "B",
+          "text": "Configure the agent to escalate after three consecutive tool calls that fail to resolve the customer’s stated issue, ensuring a reasonable attempt before involving a human."
+        },
+        {
+          "id": "C",
+          "text": "Instruct the agent to escalate when the customer requests a human, when the issue requires policy exceptions, or when the agent cannot make meaningful progress."
+        },
+        {
+          "id": "D",
+          "text": "Build a rules engine that maps specific issue types, customer segments, and product categories to escalation decisions, removing the need for model judgment calls."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "C"
+      ],
+      "communityVotes": [
+        {
+          "answer": "C",
+          "percent": 100,
+          "votes": 1
+        }
+      ],
+      "capture": "CCA-F_02.mhtml",
+      "sourceItemId": "1007744",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-017",
+      "number": 17,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your order management system requires tools for three distinct operations: issuing refunds (requires amount and reason), canceling orders (requires reason), and requesting reshipments (requires shipping address). Each operation shares an order_id parameter but has different additional requirements. You notice during testing that with your current unified tool design, the agent frequently omits required parameters or includes irrelevant ones. What design change will most effectively improve parameter accuracy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Keep one unified tool with a nested operation_details object parameter whose internal structure varies by operation type, documented in the tool description."
+        },
+        {
+          "id": "B",
+          "text": "Keep one unified tool but add JSON Schema if-then-else conditionals to enforce that parameters like amount are required only when the operation type is “refund”."
+        },
+        {
+          "id": "C",
+          "text": "Split into three separate tools (issue_refund, cancel_order, request_reshipment), each defining only the parameters required for that specific operation."
+        },
+        {
+          "id": "D",
+          "text": "Keep one unified tool with all parameters marked optional, but add detailed few-shot examples in the system prompt showing correct parameter combinations for each operation type."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "C"
+      ],
+      "communityVotes": [
+        {
+          "answer": "C",
+          "percent": 100,
+          "votes": 2
+        }
+      ],
+      "capture": "CCA-F_02.mhtml",
+      "sourceItemId": "1007745",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-018",
+      "number": 18,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your post_content tool requires user confirmation before publishing. The current workflow displays “Ready to post to social media. Confirm?” and analytics show users approve 98% of requests within 2 seconds. Post-mortems reveal incidents where posts went to wrong accounts, were scheduled for wrong times, or contained errors – all confirmed by users without catching the mistakes. How should you redesign the confirmation workflow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Auto-approve routine posts and only require explicit confirmation for unusual patterns like posting to new accounts or large audiences"
+        },
+        {
+          "id": "B",
+          "text": "Require users to type a confirmation phrase instead of clicking a button"
+        },
+        {
+          "id": "C",
+          "text": "Add a mandatory waiting period before the confirm option becomes available"
+        },
+        {
+          "id": "D",
+          "text": "Include the complete post text, target account, scheduled time, and platform in the confirmation request"
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "D"
+      ],
+      "communityVotes": [
+        {
+          "answer": "D",
+          "percent": 100,
+          "votes": 1
+        }
+      ],
+      "capture": "CCA-F_02.mhtml",
+      "sourceItemId": "1007746",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-019",
+      "number": 19,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your agent uses three tools: get_property_details(property_id) returns data including street address, get_price_history(property_id) returns historical pricing, and get_neighborhood_info(address) returns area statistics. You observe that get_neighborhood_info always requires get_property_details first just to extract the address, even when users specify the property by ID. This creates unnecessary latency and failure coupling – if the first call fails, the neighborhood request also fails. What tool design change best addresses this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Create a lookup_address(property_id) helper tool for retrieving addresses."
+        },
+        {
+          "id": "B",
+          "text": "Add retry logic and timeout handling to get_property_details."
+        },
+        {
+          "id": "C",
+          "text": "Change get_neighborhood_info to accept property_id, resolving the address internally."
+        },
+        {
+          "id": "D",
+          "text": "Consolidate into a single get_property_with_neighborhood(property_id) tool returning both datasets."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "C"
+      ],
+      "communityVotes": [
+        {
+          "answer": "A",
+          "percent": 25,
+          "votes": 1
+        },
+        {
+          "answer": "C",
+          "percent": 75,
+          "votes": 3
+        }
+      ],
+      "capture": "CCA-F_02.mhtml",
+      "sourceItemId": "1007747",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-020",
+      "number": 20,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your update_user_profile tool accepts a user_id (required) and an optional fields_to_update object. In testing, Claude frequently omits user_id or passes incorrectly structured data. What is most critical for helping Claude understand what parameter values to provide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Strict JSON Schema type constraints marking user_id as required and defining fields_to_update as an object type"
+        },
+        {
+          "id": "B",
+          "text": "Verbose parameter names encoding format hints, such as user_id_string_uuid_format"
+        },
+        {
+          "id": "C",
+          "text": "Detailed error responses explaining why invalid parameter values were rejected"
+        },
+        {
+          "id": "D",
+          "text": "Clear parameter descriptions explaining expected format, such as “user_id: UUID of the user to update (required)”"
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "D"
+      ],
+      "communityVotes": [
+        {
+          "answer": "A",
+          "percent": 50,
+          "votes": 12
+        },
+        {
+          "answer": "D",
+          "percent": 50,
+          "votes": 12
+        }
+      ],
+      "capture": "CCA-F_02.mhtml",
+      "sourceItemId": "1007748",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-021",
+      "number": 21,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your document extraction tool uses ML models to extract invoice fields (vendor, amount, date). The models return confidence scores (0.0-1.0) for each extracted field. In production, you observe: (1) the agent proceeds with low-confidence extractions that are incorrect 23% of the time, and (2) the agent requests unnecessary human review for 31% of extractions that were actually correct. How should you restructure the tool’s output?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Return fields with their raw confidence scores and add detailed few-shot examples to your system prompt demonstrating how to interpret different confidence ranges and when to request human review."
+        },
+        {
+          "id": "B",
+          "text": "Return fields with confidence scores, plus a request_review boolean computed using your tested confidence thresholds, along with a review_reasons array explaining which fields triggered review."
+        },
+        {
+          "id": "C",
+          "text": "Compute an aggregate extraction_quality score across all fields and return it alongside the extracted values. Include a text summary describing the overall extraction reliability."
+        },
+        {
+          "id": "D",
+          "text": "Return fields organized into verified and needs_verification objects based on confidence thresholds."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "B"
+      ],
+      "communityVotes": [
+        {
+          "answer": "B",
+          "percent": 100,
+          "votes": 2
+        }
+      ],
+      "capture": "CCA-F_03.mhtml",
+      "sourceItemId": "1007749",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-022",
+      "number": 22,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your product search tool queries an external catalog API and returns matching items. In production, you observe the agent frequently retries searches immediately after receiving zero results, treating “no matches found” as a failure requiring retry. The external API returns HTTP 200 with an empty results array – a valid response. How should you restructure the tool’s result to help the agent correctly interpret empty result sets?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Add a suggestions field containing alternative search strategies when results are empty, helping guide the agent toward more productive follow-up queries."
+        },
+        {
+          "id": "B",
+          "text": "Return a natural language string describing the outcome, allowing the agent to interpret the result contextually based on the message content."
+        },
+        {
+          "id": "C",
+          "text": "Return a result object with isError: true and a message explaining no products matched."
+        },
+        {
+          "id": "D",
+          "text": "Return a structured result with a success boolean and results array, reserving isError: true for actual execution failures only."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "D"
+      ],
+      "communityVotes": [
+        {
+          "answer": "C",
+          "percent": 50,
+          "votes": 1
+        },
+        {
+          "answer": "D",
+          "percent": 50,
+          "votes": 1
+        }
+      ],
+      "capture": "CCA-F_03.mhtml",
+      "sourceItemId": "1007750",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-023",
+      "number": 23,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your MCP server includes archive_file(file_id) and delete_file(file_id) tools. Production logs show the agent calls delete_file when users ask to “remove old backups,” but company policy requires archiving backup files. Both tools currently have minimal descriptions: “Archives a file” and “Deletes a file.” Which change most directly improves tool selection for this scenario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Expand tool descriptions to clarify use cases, adding guidance like “Do not use for backup files” to delete_file."
+        },
+        {
+          "id": "B",
+          "text": "Add a confirmation step that requires users to type “CONFIRM DELETE” before delete_file executes."
+        },
+        {
+          "id": "C",
+          "text": "Implement server-side validation that rejects delete_file calls for files tagged as backups, returning an error message suggesting archive_file."
+        },
+        {
+          "id": "D",
+          "text": "Add few-shot examples to the system prompt demonstrating that requests involving “backup” or “old” should use archive_file."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "A"
+      ],
+      "communityVotes": [
+        {
+          "answer": "A",
+          "percent": 67,
+          "votes": 6
+        },
+        {
+          "answer": "C",
+          "percent": 33,
+          "votes": 3
+        }
+      ],
+      "capture": "CCA-F_03.mhtml",
+      "sourceItemId": "1007751",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-024",
+      "number": 24,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your track_shipment(tracking_id) tool queries an external logistics API that sometimes fails – the API may be temporarily unavailable, the tracking ID may be malformed, or the shipment may not exist. Currently, your tool raises a Python exception when errors occur. Users report the agent gives unhelpful responses like “I’m having trouble with that request” instead of suggesting alternatives such as verifying the tracking number format or checking by order number. How should you handle errors in tool results?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Return a generic error response (e.g., {\"success\": false, \"error\": \"lookup_failed\"}) for all failure cases to maintain a consistent schema and avoid exposing internal error details."
+        },
+        {
+          "id": "B",
+          "text": "Return structured error information as normal tool output including error type, recoverability status, and actionable context for the user."
+        },
+        {
+          "id": "C",
+          "text": "Create dedicated error-recovery tools (retry_tracking_lookup, search_by_order_number) that the model can invoke after the primary tracking tool returns a failure indicator."
+        },
+        {
+          "id": "D",
+          "text": "Implement retry logic with exponential backoff inside the tool implementation so transient errors are automatically handled and only return a result after all retry attempts are exhausted."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "B"
+      ],
+      "communityVotes": [
+        {
+          "answer": "B",
+          "percent": 100,
+          "votes": 1
+        }
+      ],
+      "capture": "CCA-F_03.mhtml",
+      "sourceItemId": "1007752",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-025",
+      "number": 25,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your MCP server implements a check_availability tool that queries an external calendar API. During testing, you encounter three error conditions: (1) the tool is called with a malformed request missing the required user_email parameter, (2) the calendar API returns a 404 because the specified user doesn’t exist in the calendar system, and (3) the calendar API returns a 503 because the service is temporarily unavailable. How should each error be reported according to MCP’s error handling design?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Report all three as tool results with isError: true."
+        },
+        {
+          "id": "B",
+          "text": "Report errors 1 and 2 as JSON-RPC protocol errors; report error 3 as a tool result with isError: true."
+        },
+        {
+          "id": "C",
+          "text": "Report error 1 as a JSON-RPC protocol error; report errors 2 and 3 as tool results with isError: true."
+        },
+        {
+          "id": "D",
+          "text": "Report all three as JSON-RPC protocol errors."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "C"
+      ],
+      "communityVotes": [
+        {
+          "answer": "A",
+          "percent": 50,
+          "votes": 2
+        },
+        {
+          "answer": "C",
+          "percent": 50,
+          "votes": 2
+        }
+      ],
+      "capture": "CCA-F_03.mhtml",
+      "sourceItemId": "1007753",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-026",
+      "number": 26,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your send_notification tool calls third-party messaging APIs. When these services time out during delivery, you cannot determine whether the message was actually sent. Currently, the tool returns is_error: true with a generic “Notification failed” message for all timeouts. Production monitoring reveals agents automatically retry these failures, frequently causing users to receive duplicate notifications. How should you modify the error response?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Return is_error: true with a structured field retry_safe: true for timeouts, distinguishing them from permanent failures that should not be retried."
+        },
+        {
+          "id": "B",
+          "text": "Return is_error: true with a message communicating uncertainty: “Timeout – status unknown. Message may have been sent. Avoid retry.”"
+        },
+        {
+          "id": "C",
+          "text": "Return is_error: true with a message encouraging retry: “Delivery service temporarily unavailable. Please retry the notification.”"
+        },
+        {
+          "id": "D",
+          "text": "Return is_error: true with the original message content echoed back."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "B"
+      ],
+      "communityVotes": [
+        {
+          "answer": "B",
+          "percent": 100,
+          "votes": 5
+        }
+      ],
+      "capture": "CCA-F_03.mhtml",
+      "sourceItemId": "1007754",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-027",
+      "number": 27,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your control_device tool manages smart home devices through external APIs. When a device doesn’t respond within the timeout period, the tool returns an error. Production logs show that the agent simply tells users “the device is not responding” without offering helpful next steps. Which error response structure would best enable the agent to provide useful follow-up?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Set is_error: true with a structured technical error containing the device ID, timeout duration, and raw API response code for debugging purposes."
+        },
+        {
+          "id": "B",
+          "text": "Set is_error: true with a brief “Device offline” message and provide a separate tool the agent can call to retrieve context-specific troubleshooting suggestions."
+        },
+        {
+          "id": "C",
+          "text": "Set is_error: false with an optimistic message indicating the command was dispatched successfully but device acknowledgment is still pending."
+        },
+        {
+          "id": "D",
+          "text": "Set is_error: true with a message explaining the likely cause and suggesting troubleshooting steps the agent can offer the user."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "D"
+      ],
+      "communityVotes": [],
+      "capture": "CCA-F_03.mhtml",
+      "sourceItemId": "1007755",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-028",
+      "number": 28,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your expense reimbursement agent processes employee requests using a process_reimbursement tool. Company policy requires that reimbursements above $500 must be approved by a manager before funds are disbursed. The agent handles hundreds of requests daily, and you need the threshold enforcement to be tamper-proof regardless of how the agent is prompted. Which design ensures the $500 approval threshold cannot be bypassed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The process_reimbursement tool accepts amount and details, and internally enforces the threshold: amounts <$500 are auto-disbursed and the tool returns a success confirmation; amounts >$500 cause the tool to create a pending approval request and return a status indicating manager review is pending."
+        },
+        {
+          "id": "B",
+          "text": "The process_reimbursement tool accepts an approved_by_manager: boolean parameter. The system prompt instructs the agent to only set this to true after confirming that a manager has approved the request. A nightly audit script reviews all reimbursements where approved_by_manager was set to true."
+        },
+        {
+          "id": "C",
+          "text": "Provide two tools: auto_reimburse (hard-coded limit of $500) and request_manager_approval. Include detailed system prompt instructions telling the agent to check the amount and call the appropriate tool. Add a PostToolUse hook that logs which tool was called for auditing."
+        },
+        {
+          "id": "D",
+          "text": "Implement the threshold check in a PreToolUse hook that inspects the amount parameter before process_reimbursement executes. If the amount exceeds $500, the hook modifies the tool call to add a requires_approval: true flag, which the tool checks before disbursing."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "A"
+      ],
+      "communityVotes": [],
+      "capture": "CCA-F_03.mhtml",
+      "sourceItemId": "1007756",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-029",
+      "number": 29,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "Your content curation agent discovers articles, analyzes each for relevance, then adds selected articles to themed collections. With separate discover_articles(topic), analyze_article(id), and add_to_collection(article_id, collection_id) tools, you observe 18+ sequential tool calls per request, causing latency issues. The agent must make editorial judgments about which articles fit a collection’s theme – this requires seeing all candidates with their analysis scores simultaneously to select a cohesive set. What tool composition best addresses efficiency while preserving editorial judgment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Keep all tools separate but implement response caching for analyze_article calls."
+        },
+        {
+          "id": "B",
+          "text": "Create a curate_collection(topic, collection_id) tool that handles discovery, analysis, and selection internally using configurable quality thresholds."
+        },
+        {
+          "id": "C",
+          "text": "Create a discover_and_analyze(topic) composite tool that returns all candidates with their analysis scores, keeping add_to_collection separate for selective calls."
+        },
+        {
+          "id": "D",
+          "text": "Add a preview_curation(topic, collection_id) tool that shows what would be added based on predefined rules, with an approve_curation() tool to confirm."
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "C"
+      ],
+      "communityVotes": [],
+      "capture": "CCA-F_03.mhtml",
+      "sourceItemId": "1007757",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    },
+    {
+      "id": "examtopics-ccaf-030",
+      "number": 30,
+      "certification": "CCAR-F",
+      "language": "en",
+      "text": "The document analysis agent has a single analyze_documnet tool that takes a document and a free-text instruction parameter. During evaluation, requests like “extract the key financial metrics” often return narrative summaries, while “summarize the methodology” sometimes returns raw data tables. The synthesis agent reports that 35% of analysis results require re-requests with clarified instructions. What’s the most effective way to improve reliability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Have the coordinator pre-classify each analysis request before passing instructions to the document analysis agent"
+        },
+        {
+          "id": "B",
+          "text": "Keep the single tool but add an analyze_type enum parameter requiring explicit selection between extraction, summarization, and verification modes"
+        },
+        {
+          "id": "C",
+          "text": "Enhance the tool description with detailed examples showing how different instruction phrasings should map to different output formats"
+        },
+        {
+          "id": "D",
+          "text": "Split the generic tool into purpose-specific tools – extract_data_points, summarize_content, verify_claim_against_source – each with defined input/output contracts"
+        }
+      ],
+      "sourceSuggestedCorrect": [
+        "D"
+      ],
+      "communityVotes": [],
+      "capture": "CCA-F_03.mhtml",
+      "sourceItemId": "1007758",
+      "sourceUrl": "https://www.examtopics.com/exams/anthropic/cca-f/view/",
+      "reviewStatus": "pending-technical-and-editorial-review",
+      "distributionPermission": "not-verified",
+      "active": false
+    }
+  ]
+}

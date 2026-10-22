@@ -7,4 +7,6 @@
     <ProjectReference Include="../../src/AnthropicCert.Infrastructure/AnthropicCert.Infrastructure.csproj" />
   </ItemGroup>
   <ItemGroup><Content Include="../../Content/bank.json" Link="bank.json" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
+  <ItemGroup><Content Include="../../Content/foundations.json" Link="foundations.json" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
+  <ItemGroup><Content Include="../../Content/exams.json" Link="exams.json" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
 </Project>

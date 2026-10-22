@@ -98,9 +98,9 @@ public sealed class ExamTests : IDisposable
     {
         using var repo = new FileAttemptRepository(path); var service = new ExamService(bank, repo, new Clock(), new Random());
         var a = service.Start(ExamMode.Practice, 2); service.SavePosition(a, 1);
-        Assert.Single(Directory.GetFiles(path, "*.bak"));
-        File.WriteAllText(Directory.GetFiles(path, "*.attempt.json").Single(), "broken");
-        Assert.Throws<InvalidDataException>(() => repo.Load()); Assert.Single(Directory.GetFiles(path, "*.bak"));
+        Assert.Single(Directory.GetFiles(path, "*.bak", SearchOption.AllDirectories));
+        File.WriteAllText(Directory.GetFiles(path, "*.attempt.json", SearchOption.AllDirectories).Single(), "broken");
+        Assert.Throws<InvalidDataException>(() => repo.Load()); Assert.Single(Directory.GetFiles(path, "*.bak", SearchOption.AllDirectories));
     }
     [Fact] public void WeightedStatisticsAreNotMeanOfPercentages()
     {

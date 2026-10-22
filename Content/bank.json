@@ -1,8 +1,22 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "ccarp-local",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "certification": "CCAR-P",
+  "profileId": "ccarp-practice",
+  "profileVersion": "1",
+  "blueprintVersion": "provisional-2026-10-21",
+  "mockQuestionCount": 63,
+  "durationMinutes": 120,
+  "objectives": [
+    "D1.local",
+    "D2.local",
+    "D3.local",
+    "D4.local",
+    "D5.local",
+    "D6.local",
+    "D7.local"
+  ],
   "profileStatus": "Perfil provisional de práctica, 63 preguntas/120 minutos. Datos de terceros; pendiente contraste directo con guía oficial.",
   "domains": [
     {
@@ -96,7 +110,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-1"
+      "family": "architect-professional-practice-1",
+      "objectiveId": "D3.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-2",
@@ -152,7 +169,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-2"
+      "family": "architect-professional-practice-2",
+      "objectiveId": "D3.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-3",
@@ -208,7 +228,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-3"
+      "family": "architect-professional-practice-3",
+      "objectiveId": "D3.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-4",
@@ -264,7 +287,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-4"
+      "family": "architect-professional-practice-4",
+      "objectiveId": "D1.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-5",
@@ -320,7 +346,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-5"
+      "family": "architect-professional-practice-5",
+      "objectiveId": "D1.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-6",
@@ -376,7 +405,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-6"
+      "family": "architect-professional-practice-6",
+      "objectiveId": "D4.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-7",
@@ -432,7 +464,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-7"
+      "family": "architect-professional-practice-7",
+      "objectiveId": "D4.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-9",
@@ -488,7 +523,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-9"
+      "family": "architect-professional-practice-9",
+      "objectiveId": "D6.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-10",
@@ -544,7 +582,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-10"
+      "family": "architect-professional-practice-10",
+      "objectiveId": "D7.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-12",
@@ -600,7 +641,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-12"
+      "family": "architect-professional-practice-12",
+      "objectiveId": "D3.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-13",
@@ -656,7 +700,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-13"
+      "family": "architect-professional-practice-13",
+      "objectiveId": "D3.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-14",
@@ -712,7 +759,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-14"
+      "family": "architect-professional-practice-14",
+      "objectiveId": "D3.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-15",
@@ -768,7 +818,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-15"
+      "family": "architect-professional-practice-15",
+      "objectiveId": "D3.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-16",
@@ -824,7 +877,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-16"
+      "family": "architect-professional-practice-16",
+      "objectiveId": "D1.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-17",
@@ -880,7 +936,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-17"
+      "family": "architect-professional-practice-17",
+      "objectiveId": "D1.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-19",
@@ -936,7 +995,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-19"
+      "family": "architect-professional-practice-19",
+      "objectiveId": "D1.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-20",
@@ -992,7 +1054,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-20"
+      "family": "architect-professional-practice-20",
+      "objectiveId": "D4.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-21",
@@ -1048,7 +1113,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-21"
+      "family": "architect-professional-practice-21",
+      "objectiveId": "D4.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-22",
@@ -1104,7 +1172,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-22"
+      "family": "architect-professional-practice-22",
+      "objectiveId": "D4.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-23",
@@ -1160,7 +1231,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-23"
+      "family": "architect-professional-practice-23",
+      "objectiveId": "D4.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-24",
@@ -1216,7 +1290,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-24"
+      "family": "architect-professional-practice-24",
+      "objectiveId": "D5.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-25",
@@ -1272,7 +1349,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-25"
+      "family": "architect-professional-practice-25",
+      "objectiveId": "D5.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-27",
@@ -1328,7 +1408,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-27"
+      "family": "architect-professional-practice-27",
+      "objectiveId": "D6.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-28",
@@ -1384,7 +1467,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-28"
+      "family": "architect-professional-practice-28",
+      "objectiveId": "D6.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-29",
@@ -1440,7 +1526,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-29"
+      "family": "architect-professional-practice-29",
+      "objectiveId": "D6.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-30",
@@ -1496,7 +1585,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-30"
+      "family": "architect-professional-practice-30",
+      "objectiveId": "D2.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-31",
@@ -1552,7 +1644,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-31"
+      "family": "architect-professional-practice-31",
+      "objectiveId": "D2.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-32",
@@ -1608,7 +1703,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-32"
+      "family": "architect-professional-practice-32",
+      "objectiveId": "D2.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-33",
@@ -1664,7 +1762,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-33"
+      "family": "architect-professional-practice-33",
+      "objectiveId": "D7.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-34",
@@ -1720,7 +1821,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-34"
+      "family": "architect-professional-practice-34",
+      "objectiveId": "D7.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-practice-35",
@@ -1776,7 +1880,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-practice-35"
+      "family": "architect-professional-practice-35",
+      "objectiveId": "D7.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-mock1-1",
@@ -1832,7 +1939,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-mock1-1"
+      "family": "architect-professional-mock1-1",
+      "objectiveId": "D1.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-mock1-7",
@@ -1888,7 +1998,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-mock1-7"
+      "family": "architect-professional-mock1-7",
+      "objectiveId": "D5.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-mock1-11",
@@ -1944,7 +2057,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-mock1-11"
+      "family": "architect-professional-mock1-11",
+      "objectiveId": "D2.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-mock1-12",
@@ -2000,7 +2116,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-mock1-12"
+      "family": "architect-professional-mock1-12",
+      "objectiveId": "D6.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-mock1-13",
@@ -2056,7 +2175,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-mock1-13"
+      "family": "architect-professional-mock1-13",
+      "objectiveId": "D4.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-mock1-15",
@@ -2112,7 +2234,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-mock1-15"
+      "family": "architect-professional-mock1-15",
+      "objectiveId": "D3.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-mock3-1",
@@ -2168,7 +2293,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-mock3-1"
+      "family": "architect-professional-mock3-1",
+      "objectiveId": "D3.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-mock3-2",
@@ -2224,7 +2352,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-mock3-2"
+      "family": "architect-professional-mock3-2",
+      "objectiveId": "D3.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-mock3-5",
@@ -2280,7 +2411,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-mock3-5"
+      "family": "architect-professional-mock3-5",
+      "objectiveId": "D1.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-mock3-6",
@@ -2336,7 +2470,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-mock3-6"
+      "family": "architect-professional-mock3-6",
+      "objectiveId": "D5.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-mock3-7",
@@ -2392,7 +2529,10 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-mock3-7"
+      "family": "architect-professional-mock3-7",
+      "objectiveId": "D5.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "architect-professional-mock3-8",
@@ -2448,35 +2588,38 @@
       "origin": "Amey Thakur · CLAUDE-CERTIFICATIONS · MIT · adaptación del banco recuperado 2026-10-21",
       "review": "Revisión técnica por Codex 2026-10-21; fuente técnica por concepto. No es validación oficial ni revisión humana independiente.",
       "language": "en",
-      "family": "architect-professional-mock3-8"
+      "family": "architect-professional-mock3-8",
+      "objectiveId": "D4.local",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS"
     },
     {
       "id": "original-001",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D1",
-      "text": "Un proceso de clasificación utiliza reglas fijas para los códigos conocidos y el modelo solo para los casos ambiguos. ¿Cómo organizarlo?",
+      "text": "A classification process uses fixed rules for known codes and the model only for ambiguous cases. How should it be organized?",
       "correct": [
         "B"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Enviar todo al modelo más grande",
+          "text": "Send everything to the largest model",
           "explanation": "Ignora que parte de la tarea ya tiene una solución determinista."
         },
         {
           "id": "B",
-          "text": "Aplicar reglas primero y derivar los casos no resueltos al modelo",
+          "text": "Apply the rules first and route unresolved cases to the model",
           "explanation": "Separa trabajo conocido y ambiguo, reservando el modelo para donde aporta valor."
         },
         {
           "id": "C",
-          "text": "Crear un agente por cada código",
+          "text": "Create an agent for each code",
           "explanation": "Añade coordinación sin una necesidad del problema."
         },
         {
           "id": "D",
-          "text": "Eliminar las reglas aunque funcionan",
+          "text": "Remove the rules even though they work",
           "explanation": "Descarta controles útiles sin evidencia de mejora."
         }
       ],
@@ -2501,38 +2644,41 @@
           "section": "When (and when not) to use agents; workflows"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-001"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-001",
+      "objectiveId": "D1.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-002",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D1",
-      "text": "Tres análisis independientes de un documento tardan 8, 6 y 5 segundos. No dependen entre sí y el servicio admite concurrencia. ¿Qué patrón reduce la latencia del conjunto?",
+      "text": "Three independent document analyses take 8, 6, and 5 seconds. They have no dependencies and the service supports concurrency. Which pattern reduces their combined latency?",
       "correct": [
         "A"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Ejecutarlos en paralelo y agregar los resultados",
+          "text": "Run them in parallel and aggregate their results",
           "explanation": "Las subtareas independientes pueden solaparse; la agregación sigue siendo necesaria."
         },
         {
           "id": "B",
-          "text": "Encadenarlos siempre en serie",
+          "text": "Always chain them sequentially",
           "explanation": "Suma tiempos aunque no haya dependencias."
         },
         {
           "id": "C",
-          "text": "Hacer que cada análisis espere al anterior",
+          "text": "Make each analysis wait for the previous one",
           "explanation": "Introduce dependencias que no existen."
         },
         {
           "id": "D",
-          "text": "Repetir el documento hasta llenar el contexto",
+          "text": "Repeat the document until the context is full",
           "explanation": "No cambia la dependencia temporal entre análisis."
         }
       ],
@@ -2557,38 +2703,41 @@
           "section": "When (and when not) to use agents; workflows"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-002"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-002",
+      "objectiveId": "D1.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-003",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D1",
-      "text": "Una tarea necesita que un crítico detecte defectos y un generador revise el borrador hasta cumplir una rúbrica. ¿Qué patrón encaja mejor?",
+      "text": "A task requires a critic to identify defects and a generator to revise a draft until it meets a rubric. Which pattern fits best?",
       "correct": [
         "C"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Routing sin revisión",
+          "text": "Routing without review",
           "explanation": "Solo deriva la entrada y no mejora iterativamente un borrador."
         },
         {
           "id": "B",
-          "text": "Una llamada sin criterio de aceptación",
+          "text": "A single call without acceptance criteria",
           "explanation": "No permite decidir si se alcanzó la calidad pedida."
         },
         {
           "id": "C",
-          "text": "Evaluator-optimizer con límite de iteraciones",
+          "text": "Evaluator-optimizer with an iteration limit",
           "explanation": "Combina revisión y mejora, con una condición de parada."
         },
         {
           "id": "D",
-          "text": "Una cola que almacene borradores sin evaluarlos",
+          "text": "A queue that stores drafts without evaluating them",
           "explanation": "Conserva datos pero no mejora la calidad."
         }
       ],
@@ -2613,16 +2762,19 @@
           "section": "When (and when not) to use agents; workflows"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-003"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-003",
+      "objectiveId": "D1.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-004",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D1",
-      "text": "Un asistente debe emitir siempre una resolución con revisión humana antes de una acción irreversible. ¿Qué dos piezas necesita la orquestación?",
+      "text": "An assistant must always obtain human review before an irreversible action. Which TWO orchestration components are required?",
       "correct": [
         "A",
         "D"
@@ -2630,22 +2782,22 @@
       "options": [
         {
           "id": "A",
-          "text": "Un estado de espera que exija aprobación antes de ejecutar",
+          "text": "A waiting state that requires approval before execution",
           "explanation": "Hace explícita la frontera entre propuesta y acción."
         },
         {
           "id": "B",
-          "text": "Una frase del prompt que autorice al modelo a saltarse la revisión",
+          "text": "A prompt instruction allowing the model to skip review",
           "explanation": "Contradice el requisito de revisión obligatoria."
         },
         {
           "id": "C",
-          "text": "Un bucle sin límite hasta que el modelo se declare satisfecho",
+          "text": "An unlimited loop until the model declares itself satisfied",
           "explanation": "No impone la aprobación ni acota el trabajo."
         },
         {
           "id": "D",
-          "text": "Una transición validada desde aprobación hasta ejecución",
+          "text": "A validated transition from approval to execution",
           "explanation": "El código debe comprobar la aprobación real, no suponerla."
         }
       ],
@@ -2670,38 +2822,41 @@
           "section": "When (and when not) to use agents; workflows"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-004"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-004",
+      "objectiveId": "D1.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-005",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D1",
-      "text": "La misma solución puede acertar con una llamada o con seis agentes. La primera cumple los objetivos medidos de calidad y tiempo. ¿Qué justifica adoptar seis agentes?",
+      "text": "A solution can succeed with one call or six agents. The single-call version meets measured quality and latency goals. What would justify adopting six agents?",
       "correct": [
         "D"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Que seis agentes son más modernos",
+          "text": "Six agents are more modern",
           "explanation": "La novedad no demuestra valor."
         },
         {
           "id": "B",
-          "text": "Que el diagrama parezca más completo",
+          "text": "The diagram would look more complete",
           "explanation": "La apariencia no satisface requisitos."
         },
         {
           "id": "C",
-          "text": "Que probablemente habrá nuevas necesidades sin definir",
+          "text": "There will probably be unspecified future needs",
           "explanation": "La especulación no prueba la necesidad actual."
         },
         {
           "id": "D",
-          "text": "Una necesidad adicional demostrada que compense la complejidad",
+          "text": "An additional demonstrated requirement that outweighs the complexity",
           "explanation": "El beneficio debe medirse frente a los costes de coordinación y operación."
         }
       ],
@@ -2726,38 +2881,41 @@
           "section": "When (and when not) to use agents; workflows"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-005"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-005",
+      "objectiveId": "D1.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-006",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D2",
-      "text": "Se añade una entrada de usuario variable antes de un prefijo que se esperaba reutilizar en caché. ¿Qué conviene revisar primero?",
+      "text": "Variable user input is placed before a prompt prefix intended for cache reuse. What should be checked first?",
       "correct": [
         "B"
       ],
       "options": [
         {
           "id": "A",
-          "text": "El color de la consola",
+          "text": "The console color",
           "explanation": "No afecta a la identidad del prefijo enviado."
         },
         {
           "id": "B",
-          "text": "El orden de bloques estáticos y variables",
+          "text": "The ordering of static and variable blocks",
           "explanation": "Cambiar contenido temprano puede impedir reutilizar el prefijo previsto."
         },
         {
           "id": "C",
-          "text": "La cantidad de personas conectadas al IDE",
+          "text": "The number of people connected to the IDE",
           "explanation": "No determina la coincidencia del contenido."
         },
         {
           "id": "D",
-          "text": "El nombre del archivo local del prompt",
+          "text": "The local prompt filename",
           "explanation": "El nombre local no identifica por sí mismo el prefijo remoto."
         }
       ],
@@ -2782,38 +2940,41 @@
           "section": "Cache prompt prefixes; cache_control"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-006"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-006",
+      "objectiveId": "D2.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-007",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D2",
-      "text": "Un equipo cree que la caché de prompts conserva automáticamente todas las respuestas anteriores del modelo. ¿Qué explicación es correcta?",
+      "text": "A team believes prompt caching automatically preserves all previous model responses. Which explanation is correct?",
       "correct": [
         "A"
       ],
       "options": [
         {
           "id": "A",
-          "text": "La caché reutiliza procesamiento de prefijos; no sustituye el historial de conversación",
+          "text": "Caching reuses prefix processing; it does not replace conversation history",
           "explanation": "El cliente sigue siendo responsable de enviar el contexto necesario."
         },
         {
           "id": "B",
-          "text": "La caché es una base de datos de respuestas finales",
+          "text": "The cache is a database of final answers",
           "explanation": "Confunde caching de entrada con almacenamiento de respuestas."
         },
         {
           "id": "C",
-          "text": "La caché garantiza la misma salida en todas las llamadas",
+          "text": "Caching guarantees identical output on every call",
           "explanation": "No elimina la generación ni su variabilidad."
         },
         {
           "id": "D",
-          "text": "Una entrada en caché autoriza herramientas adicionales",
+          "text": "A cache entry authorizes additional tools",
           "explanation": "No modifica permisos de ejecución."
         }
       ],
@@ -2838,16 +2999,19 @@
           "section": "Cache prompt prefixes; cache_control"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-007"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-007",
+      "objectiveId": "D2.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-008",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D2",
-      "text": "En una sesión larga el agente olvida qué operaciones ya terminó. ¿Qué información debe conservar una compactación útil? Selecciona dos.",
+      "text": "During a long session, an agent forgets which operations it has completed. Which TWO kinds of information should useful compaction retain?",
       "correct": [
         "A",
         "C"
@@ -2855,22 +3019,22 @@
       "options": [
         {
           "id": "A",
-          "text": "Decisiones vigentes y restricciones del trabajo",
+          "text": "Current decisions and task constraints",
           "explanation": "Son necesarias para mantener la coherencia del objetivo."
         },
         {
           "id": "B",
-          "text": "Solo saludos y frases de cortesía",
+          "text": "Only greetings and polite phrases",
           "explanation": "No conservan el estado operativo."
         },
         {
           "id": "C",
-          "text": "Tareas completadas, pendientes e identificadores necesarios",
+          "text": "Completed tasks, pending tasks, and required identifiers",
           "explanation": "Permiten continuar sin repetir trabajo ni perder referencias."
         },
         {
           "id": "D",
-          "text": "Únicamente la última respuesta sin contexto",
+          "text": "Only the last response without context",
           "explanation": "Puede omitir compromisos y acciones previas."
         }
       ],
@@ -2895,38 +3059,41 @@
           "section": "The anatomy of effective context; retrieval"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-008"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-008",
+      "objectiveId": "D2.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-009",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D2",
-      "text": "El contexto incluye resultados completos de herramientas que ya no aportan información al siguiente paso. ¿Qué criterio debe guiar la limpieza?",
+      "text": "The context contains full tool outputs that no longer help the next step. Which principle should guide cleanup?",
       "correct": [
         "C"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Eliminar siempre las instrucciones del sistema primero",
+          "text": "Always remove system instructions first",
           "explanation": "Puede quitar restricciones esenciales."
         },
         {
           "id": "B",
-          "text": "Conservar todos los bytes por si acaso",
+          "text": "Keep every byte just in case",
           "explanation": "Compite con información útil y puede saturar el contexto."
         },
         {
           "id": "C",
-          "text": "Retener la información necesaria y retirar resultados obsoletos preservando sus conclusiones útiles",
+          "text": "Retain necessary information and remove obsolete results while preserving useful conclusions",
           "explanation": "Reduce ruido sin perder estado operativo."
         },
         {
           "id": "D",
-          "text": "Borrar el objetivo para ahorrar tokens",
+          "text": "Delete the objective to save tokens",
           "explanation": "Sin objetivo el agente no puede orientar la tarea."
         }
       ],
@@ -2951,38 +3118,41 @@
           "section": "The anatomy of effective context; retrieval"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-009"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-009",
+      "objectiveId": "D2.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-010",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D2",
-      "text": "Un prompt pide un resumen, pero no indica destinatario, extensión ni estructura. Las respuestas son inconsistentes. ¿Cuál es el primer cambio razonable?",
+      "text": "A prompt requests a summary without specifying its audience, length, or structure. Results are inconsistent. What is a reasonable first change?",
       "correct": [
         "D"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Subir el tamaño del contexto sin cambiar instrucciones",
+          "text": "Increase context size without changing instructions",
           "explanation": "No expresa los requisitos ausentes."
         },
         {
           "id": "B",
-          "text": "Elegir al azar una respuesta que parezca buena",
+          "text": "Randomly choose an answer that looks good",
           "explanation": "No hace el proceso reproducible."
         },
         {
           "id": "C",
-          "text": "Ocultar los ejemplos correctos al modelo",
+          "text": "Hide correct examples from the model",
           "explanation": "Quita orientación que podría resultar útil."
         },
         {
           "id": "D",
-          "text": "Explicitar objetivo, destinatario y formato, y evaluar ejemplos representativos",
+          "text": "Specify the objective, audience, and format, then evaluate representative examples",
           "explanation": "Vuelve observables las expectativas que antes eran implícitas."
         }
       ],
@@ -3007,38 +3177,41 @@
           "section": "The anatomy of effective context; retrieval"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-010"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-010",
+      "objectiveId": "D2.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-011",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D2",
-      "text": "Un conjunto de ejemplos de formato contiene instrucciones contradictorias. ¿Qué se debe hacer antes de aumentar su cantidad?",
+      "text": "A set of formatting examples contains contradictory instructions. What should be done before adding more examples?",
       "correct": [
         "A"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Eliminar contradicciones y conservar ejemplos representativos coherentes",
+          "text": "Remove contradictions and keep coherent representative examples",
           "explanation": "Más ejemplos inconsistentes no aclaran el objetivo."
         },
         {
           "id": "B",
-          "text": "Duplicar todos los ejemplos",
+          "text": "Duplicate every example",
           "explanation": "Repite la contradicción."
         },
         {
           "id": "C",
-          "text": "Añadir resultados aleatorios",
+          "text": "Add random outputs",
           "explanation": "Introduciría más ruido."
         },
         {
           "id": "D",
-          "text": "Mover las contradicciones a otro archivo y seguir enviándolas",
+          "text": "Move the contradictions to another file and keep sending them",
           "explanation": "El problema permanece en el contexto."
         }
       ],
@@ -3063,38 +3236,41 @@
           "section": "The anatomy of effective context; retrieval"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-011"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-011",
+      "objectiveId": "D2.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-012",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D2",
-      "text": "Un asistente encuentra el documento correcto pero omite su condición de excepción porque nunca se recupera ese párrafo. ¿Qué componente conviene revisar?",
+      "text": "An assistant finds the right document but omits an exception because the relevant paragraph is never retrieved. Which component should be reviewed?",
       "correct": [
         "B"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Solo el estilo de la respuesta final",
+          "text": "Only the style of the final answer",
           "explanation": "No recupera el párrafo ausente."
         },
         {
           "id": "B",
-          "text": "La selección y organización del contexto recuperado",
+          "text": "Selection and organization of retrieved context",
           "explanation": "La generación no puede apoyarse en evidencia que no recibe."
         },
         {
           "id": "C",
-          "text": "El nombre comercial del asistente",
+          "text": "The assistant's commercial name",
           "explanation": "No modifica la evidencia disponible."
         },
         {
           "id": "D",
-          "text": "La animación de la interfaz",
+          "text": "The interface animation",
           "explanation": "No aporta el contenido omitido."
         }
       ],
@@ -3119,16 +3295,19 @@
           "section": "The anatomy of effective context; retrieval"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-012"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-012",
+      "objectiveId": "D2.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-013",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D2",
-      "text": "Dos tareas tienen distinta dificultad. Antes de asignarlas a modelos por coste, ¿qué dos datos son necesarios?",
+      "text": "Two tasks have different difficulty levels. Before routing them to models by cost, which TWO pieces of information are needed?",
       "correct": [
         "B",
         "D"
@@ -3136,22 +3315,22 @@
       "options": [
         {
           "id": "A",
-          "text": "El orden alfabético de sus nombres",
+          "text": "The alphabetical order of their names",
           "explanation": "No mide adecuación."
         },
         {
           "id": "B",
-          "text": "La calidad mínima requerida por tarea",
+          "text": "The minimum quality required for each task",
           "explanation": "Permite establecer si un modelo satisface el caso de uso."
         },
         {
           "id": "C",
-          "text": "El número de caracteres del nombre del proveedor",
+          "text": "The number of characters in the provider's name",
           "explanation": "No informa de rendimiento ni coste operativo."
         },
         {
           "id": "D",
-          "text": "Calidad y coste medidos en ejemplos de cada tarea",
+          "text": "Measured quality and cost on examples of each task",
           "explanation": "Permite comparar alternativas con evidencia."
         }
       ],
@@ -3176,38 +3355,41 @@
           "section": "Define success criteria; build evaluations"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-013"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-013",
+      "objectiveId": "D2.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-014",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D3",
-      "text": "Una herramienta cliente devuelve una llamada estructurada del modelo. ¿Qué debe hacer la aplicación antes de producir un efecto en el sistema externo?",
+      "text": "The model emits a structured call for a client tool. What must the application do before causing an effect in an external system?",
       "correct": [
         "C"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Ejecutarla porque el JSON es sintácticamente válido",
+          "text": "Execute it because the JSON is syntactically valid",
           "explanation": "Sintaxis válida no implica autorización."
         },
         {
           "id": "B",
-          "text": "Pedir al modelo que se conceda permisos",
+          "text": "Ask the model to grant itself permissions",
           "explanation": "El modelo no es la autoridad de acceso."
         },
         {
           "id": "C",
-          "text": "Validar parámetros y permisos del usuario, y aplicar el control requerido",
+          "text": "Validate parameters and user permissions, and apply required controls",
           "explanation": "La aplicación es responsable de ejecutar la operación dentro de su frontera."
         },
         {
           "id": "D",
-          "text": "Tratar la descripción de herramienta como un control de acceso",
+          "text": "Treat the tool description as an access control",
           "explanation": "La descripción orienta al modelo pero no impone permisos."
         }
       ],
@@ -3232,16 +3414,19 @@
           "section": "Client and server tools"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-014"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-014",
+      "objectiveId": "D3.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-015",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D3",
-      "text": "Una búsqueda interna debe devolver fragmentos para que Claude cite sus fuentes. ¿Qué dos elementos conviene incluir?",
+      "text": "An internal search must return excerpts that Claude can cite. Which TWO elements should be included?",
       "correct": [
         "A",
         "D"
@@ -3249,22 +3434,22 @@
       "options": [
         {
           "id": "A",
-          "text": "Contenido recuperado acompañado de fuente y título",
+          "text": "Retrieved content with its source and title",
           "explanation": "El bloque necesita datos y metadatos identificables."
         },
         {
           "id": "B",
-          "text": "Solo una afirmación de que la fuente es fiable",
+          "text": "Only a statement that the source is trustworthy",
           "explanation": "No aporta el texto que respalda la respuesta."
         },
         {
           "id": "C",
-          "text": "Una instrucción para inventar una URL cuando falte",
+          "text": "An instruction to invent a URL when one is missing",
           "explanation": "Produce atribución falsa."
         },
         {
           "id": "D",
-          "text": "Configuración de citas habilitada en los resultados",
+          "text": "Citation configuration enabled on the results",
           "explanation": "La disponibilidad de metadatos no basta si las citas están desactivadas."
         }
       ],
@@ -3289,38 +3474,41 @@
           "section": "How it works; citation control"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-015"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-015",
+      "objectiveId": "D3.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-016",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D3",
-      "text": "Una herramienta mezcla 'no se encontró ningún pedido' y 'falló el servidor' devolviendo siempre una lista vacía. ¿Qué problema crea?",
+      "text": "A tool returns an empty list both when no order exists and when the server fails. What problem does this create?",
       "correct": [
         "B"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Garantiza que el modelo distinguirá ambos casos",
+          "text": "It guarantees the model can distinguish both cases",
           "explanation": "La respuesta no contiene esa distinción."
         },
         {
           "id": "B",
-          "text": "Oculta si hay ausencia de datos o un error recuperable",
+          "text": "It hides whether data is absent or a recoverable error occurred",
           "explanation": "El llamador no puede escoger correctamente entre informar o reintentar."
         },
         {
           "id": "C",
-          "text": "Evita la necesidad de contratos",
+          "text": "It removes the need for contracts",
           "explanation": "Precisamente falta un contrato de error útil."
         },
         {
           "id": "D",
-          "text": "Demuestra que no hacen falta pruebas",
+          "text": "It proves tests are unnecessary",
           "explanation": "Los casos de error también deben verificarse."
         }
       ],
@@ -3345,38 +3533,41 @@
           "section": "Client and server tools"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-016"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-016",
+      "objectiveId": "D3.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-017",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D3",
-      "text": "Dos herramientas tienen descripciones casi idénticas pero efectos diferentes. El modelo elige con frecuencia la equivocada. ¿Qué cambio ataca el problema?",
+      "text": "Two tools have nearly identical descriptions but different effects. The model frequently chooses the wrong one. Which change addresses the problem?",
       "correct": [
         "D"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Ocultar aún más los efectos secundarios",
+          "text": "Hide side effects even further",
           "explanation": "Aumenta la ambigüedad."
         },
         {
           "id": "B",
-          "text": "Añadir más herramientas indistinguibles",
+          "text": "Add more indistinguishable tools",
           "explanation": "Amplía el espacio de selección ambiguo."
         },
         {
           "id": "C",
-          "text": "Cambiar solo el icono de la aplicación",
+          "text": "Change only the application icon",
           "explanation": "No modifica lo que ve el modelo."
         },
         {
           "id": "D",
-          "text": "Diferenciar propósito, entradas, restricciones y efectos en su contrato",
+          "text": "Distinguish purpose, inputs, constraints, and effects in their contracts",
           "explanation": "Proporciona criterios explícitos de selección."
         }
       ],
@@ -3401,38 +3592,41 @@
           "section": "Client and server tools"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-017"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-017",
+      "objectiveId": "D3.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-018",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D3",
-      "text": "Un flujo ejecuta una herramienta de lectura y otra que requiere confirmación para escribir. ¿Dónde debe comprobarse esa confirmación?",
+      "text": "A workflow uses a read tool and a write tool that requires confirmation. Where should that confirmation be checked?",
       "correct": [
         "A"
       ],
       "options": [
         {
           "id": "A",
-          "text": "En el código que autoriza la operación de escritura",
+          "text": "In the code that authorizes the write operation",
           "explanation": "La comprobación debe impedir el efecto si falta aprobación."
         },
         {
           "id": "B",
-          "text": "Solo en el texto generado al usuario",
+          "text": "Only in text generated for the user",
           "explanation": "El texto puede no corresponder a una aprobación real."
         },
         {
           "id": "C",
-          "text": "Solo en el nombre de la herramienta",
+          "text": "Only in the tool's name",
           "explanation": "Un nombre no impide ejecutar."
         },
         {
           "id": "D",
-          "text": "Después de escribir, sin posibilidad de revertir",
+          "text": "After writing, with no way to roll back",
           "explanation": "El control llegaría demasiado tarde."
         }
       ],
@@ -3457,38 +3651,41 @@
           "section": "Client and server tools"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-018"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-018",
+      "objectiveId": "D3.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-019",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D4",
-      "text": "Una respuesta debe devolver exactamente uno de cinco códigos permitidos. ¿Qué comprobación primaria es adecuada?",
+      "text": "A response must contain exactly one of five allowed codes. Which primary check is appropriate?",
       "correct": [
         "B"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Un juez que premie respuestas largas",
+          "text": "A judge that rewards long answers",
           "explanation": "La longitud no valida el código."
         },
         {
           "id": "B",
-          "text": "Una validación de pertenencia al conjunto y comparación con la etiqueta esperada",
+          "text": "Validate set membership and compare with the expected label",
           "explanation": "La salida tiene una condición objetiva y comprobable."
         },
         {
           "id": "C",
-          "text": "El color del gráfico de resultados",
+          "text": "The color of the results chart",
           "explanation": "No verifica la predicción."
         },
         {
           "id": "D",
-          "text": "La confianza verbal del modelo",
+          "text": "The model's verbal confidence",
           "explanation": "No sustituye la etiqueta de referencia."
         }
       ],
@@ -3513,38 +3710,41 @@
           "section": "Define success criteria; build evaluations"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-019"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-019",
+      "objectiveId": "D4.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-020",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D4",
-      "text": "El equipo ajusta el prompt repetidamente con los mismos casos y presenta ese resultado como calidad final. ¿Qué falta?",
+      "text": "A team repeatedly tunes a prompt on the same cases and presents that result as final quality. What is missing?",
       "correct": [
         "C"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Cambiar el nombre del experimento",
+          "text": "Renaming the experiment",
           "explanation": "No crea independencia de evaluación."
         },
         {
           "id": "B",
-          "text": "Copiar los mismos casos a otro archivo",
+          "text": "Copying the same cases to another file",
           "explanation": "No cambia la información usada al ajustar."
         },
         {
           "id": "C",
-          "text": "Un conjunto de prueba reservado que no se use durante el ajuste",
+          "text": "A held-out test set that is not used during tuning",
           "explanation": "Permite medir generalización más allá de los casos optimizados."
         },
         {
           "id": "D",
-          "text": "Elegir el mejor intento sin registrar los demás",
+          "text": "Selecting the best attempt without recording the others",
           "explanation": "Introduce sesgo adicional."
         }
       ],
@@ -3569,16 +3769,19 @@
           "section": "Define success criteria; build evaluations"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-020"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-020",
+      "objectiveId": "D4.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-021",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D4",
-      "text": "Una evaluación global mejora del 90% al 93%, pero empeora un grupo crítico. ¿Qué dos acciones son apropiadas?",
+      "text": "Overall evaluation improves from 90% to 93%, but a critical subgroup gets worse. Which TWO actions are appropriate?",
       "correct": [
         "A",
         "D"
@@ -3586,22 +3789,22 @@
       "options": [
         {
           "id": "A",
-          "text": "Presentar métricas segmentadas y el impacto de los errores",
+          "text": "Present segmented metrics and the impact of errors",
           "explanation": "Hace visible el riesgo oculto por el promedio."
         },
         {
           "id": "B",
-          "text": "Ocultar el grupo porque el promedio es mejor",
+          "text": "Hide the subgroup because the average improved",
           "explanation": "Impide una decisión informada."
         },
         {
           "id": "C",
-          "text": "Aprobar automáticamente cualquier subida global",
+          "text": "Automatically approve any overall improvement",
           "explanation": "Ignora restricciones de calidad por segmento."
         },
         {
           "id": "D",
-          "text": "Comprobar el umbral acordado para ese grupo antes de desplegar",
+          "text": "Check the agreed threshold for that subgroup before deployment",
           "explanation": "El criterio de aceptación debe considerar los casos importantes."
         }
       ],
@@ -3626,38 +3829,41 @@
           "section": "Define success criteria; build evaluations"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-021"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-021",
+      "objectiveId": "D4.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-022",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D4",
-      "text": "Un fallo de producción no aparecía en los tests. Se conoce su causa y se corrige. ¿Cómo evitar perder la corrección en el futuro?",
+      "text": "A production failure was absent from the tests. Its cause is known and fixed. How can the fix be preserved in future changes?",
       "correct": [
         "D"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Borrar el incidente del registro",
+          "text": "Delete the incident record",
           "explanation": "Elimina evidencia útil."
         },
         {
           "id": "B",
-          "text": "Conservar solo una captura sin un caso reproducible",
+          "text": "Keep only a screenshot without a reproducible case",
           "explanation": "No detectará automáticamente una regresión."
         },
         {
           "id": "C",
-          "text": "Prohibir cualquier cambio futuro",
+          "text": "Prohibit all future changes",
           "explanation": "No es una estrategia sostenible de calidad."
         },
         {
           "id": "D",
-          "text": "Añadir un caso representativo de regresión y comprobarlo en cambios posteriores",
+          "text": "Add a representative regression case and run it on subsequent changes",
           "explanation": "Convierte el fallo conocido en una comprobación persistente."
         }
       ],
@@ -3682,38 +3888,41 @@
           "section": "Define success criteria; build evaluations"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-022"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-022",
+      "objectiveId": "D4.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-023",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D5",
-      "text": "Un documento recuperado ordena enviar secretos a una URL externa. ¿Cómo debe tratarlo el asistente?",
+      "text": "A retrieved document instructs the assistant to send secrets to an external URL. How should the assistant treat it?",
       "correct": [
         "A"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Como contenido no fiable, sin concederle autoridad sobre herramientas o secretos",
+          "text": "As untrusted content with no authority over tools or secrets",
           "explanation": "Una fuente de datos no puede ampliar permisos."
         },
         {
           "id": "B",
-          "text": "Como una orden superior por venir de un documento",
+          "text": "As a higher-priority instruction because it comes from a document",
           "explanation": "Confunde contenido con instrucciones autorizadas."
         },
         {
           "id": "C",
-          "text": "Como seguro si está escrito en tono profesional",
+          "text": "As safe if it is professionally worded",
           "explanation": "El estilo no demuestra legitimidad."
         },
         {
           "id": "D",
-          "text": "Como autorizado si el documento es largo",
+          "text": "As authorized if the document is long",
           "explanation": "La longitud no concede permisos."
         }
       ],
@@ -3738,38 +3947,41 @@
           "section": "Guardrails and input controls"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-023"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-023",
+      "objectiveId": "D5.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-024",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D5",
-      "text": "Un equipo ha añadido un detector de frases de ataque. ¿Qué afirmación sobre su defensa es adecuada?",
+      "text": "A team adds a detector for attack phrases. Which statement accurately describes the defense?",
       "correct": [
         "C"
       ],
       "options": [
         {
           "id": "A",
-          "text": "El detector garantiza que ningún ataque nuevo tendrá éxito",
+          "text": "The detector guarantees no new attack can succeed",
           "explanation": "No cubre automáticamente todas las formas de ataque."
         },
         {
           "id": "B",
-          "text": "Ya se pueden eliminar los permisos de herramienta",
+          "text": "Tool permissions can now be removed",
           "explanation": "La detección no sustituye la autorización."
         },
         {
           "id": "C",
-          "text": "Es una capa adicional que debe evaluarse junto con permisos y límites",
+          "text": "It is an additional layer to evaluate alongside permissions and boundaries",
           "explanation": "Las defensas deben complementarse y verificarse."
         },
         {
           "id": "D",
-          "text": "Si no detecta nada, el texto es necesariamente fiable",
+          "text": "If it detects nothing, the text is necessarily trustworthy",
           "explanation": "La ausencia de alerta no es prueba de confianza."
         }
       ],
@@ -3794,16 +4006,19 @@
           "section": "Guardrails and input controls"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-024"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-024",
+      "objectiveId": "D5.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-025",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D5",
-      "text": "Una herramienta de consulta de inventario dispone también de permisos para eliminar existencias, aunque nunca los necesita. ¿Qué dos decisiones reducen la autoridad innecesaria?",
+      "text": "An inventory lookup tool also has permission to delete stock, which it never needs. Which TWO decisions reduce unnecessary authority?",
       "correct": [
         "B",
         "D"
@@ -3811,22 +4026,22 @@
       "options": [
         {
           "id": "A",
-          "text": "Añadir una nota pidiendo no eliminar",
+          "text": "Add a note asking it not to delete",
           "explanation": "La capacidad seguirá concedida."
         },
         {
           "id": "B",
-          "text": "Retirar el permiso de eliminación a la identidad usada por la herramienta",
+          "text": "Remove delete permission from the identity used by the tool",
           "explanation": "Reduce la autoridad real del proceso."
         },
         {
           "id": "C",
-          "text": "Mantener permisos por si se necesitan algún día",
+          "text": "Keep the permissions in case they are needed someday",
           "explanation": "No justifica el riesgo presente."
         },
         {
           "id": "D",
-          "text": "Exponer únicamente las operaciones necesarias para consultar",
+          "text": "Expose only the operations required for lookup",
           "explanation": "Reduce la superficie visible y ejecutable."
         }
       ],
@@ -3851,38 +4066,41 @@
           "section": "Guardrails and input controls"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-025"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-025",
+      "objectiveId": "D5.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-026",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D5",
-      "text": "Un agente se declara muy seguro al proponer una transferencia irreversible. La política exige aprobación humana. ¿Qué sucede?",
+      "text": "An agent is highly confident about an irreversible transfer. Policy requires human approval. What should happen?",
       "correct": [
         "D"
       ],
       "options": [
         {
           "id": "A",
-          "text": "La confianza sustituye la aprobación",
+          "text": "Confidence replaces approval",
           "explanation": "No satisface la política."
         },
         {
           "id": "B",
-          "text": "Se ejecuta si la respuesta es larga",
+          "text": "Execute if the response is long",
           "explanation": "La longitud no es una autorización."
         },
         {
           "id": "C",
-          "text": "Se ejecuta si otro modelo está de acuerdo",
+          "text": "Execute if another model agrees",
           "explanation": "El acuerdo no equivale a aprobación humana."
         },
         {
           "id": "D",
-          "text": "Se bloquea la ejecución hasta verificar la aprobación requerida",
+          "text": "Block execution until the required approval is verified",
           "explanation": "El requisito de autorización permanece aunque el modelo esté seguro."
         }
       ],
@@ -3907,38 +4125,41 @@
           "section": "Guardrails and input controls"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-026"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-026",
+      "objectiveId": "D5.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-027",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D5",
-      "text": "Una aplicación tiene acceso de solo lectura a documentos no fiables. ¿Qué efecto tiene sobre una posible inyección?",
+      "text": "An application has read-only access to untrusted documents. How does this affect a possible prompt injection?",
       "correct": [
         "B"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Impide cualquier error de respuesta",
+          "text": "It prevents every answer error",
           "explanation": "Aún puede generar contenido incorrecto."
         },
         {
           "id": "B",
-          "text": "Reduce las acciones externas posibles, aunque no elimina la necesidad de defender las respuestas",
+          "text": "It reduces possible external actions but does not remove the need to defend answer integrity",
           "explanation": "Acota consecuencias sin garantizar corrección total."
         },
         {
           "id": "C",
-          "text": "Garantiza inmunidad a todas las instrucciones hostiles",
+          "text": "It guarantees immunity to all hostile instructions",
           "explanation": "Solo lectura no implica inmunidad."
         },
         {
           "id": "D",
-          "text": "Permite ignorar la validación de entradas",
+          "text": "It allows input validation to be ignored",
           "explanation": "Las entradas siguen pudiendo ser hostiles."
         }
       ],
@@ -3963,38 +4184,41 @@
           "section": "Guardrails and input controls"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-027"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-027",
+      "objectiveId": "D5.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-028",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D5",
-      "text": "Para probar defensas contra inyección indirecta, ¿qué caso debe incluirse?",
+      "text": "Which case should be included when testing defenses against indirect prompt injection?",
       "correct": [
         "A"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Un resultado de herramienta con instrucciones hostiles mezcladas con información útil",
+          "text": "A tool result mixing hostile instructions with useful information",
           "explanation": "Representa una frontera real entre datos externos y autoridad."
         },
         {
           "id": "B",
-          "text": "Únicamente un saludo benigno",
+          "text": "Only a benign greeting",
           "explanation": "No ejercita el vector de ataque."
         },
         {
           "id": "C",
-          "text": "Solo preguntas sin herramientas ni documentos",
+          "text": "Only questions without tools or documents",
           "explanation": "Omite la fuente de contenido hostil considerada."
         },
         {
           "id": "D",
-          "text": "La latencia del icono de carga",
+          "text": "The latency of the loading icon",
           "explanation": "No verifica el comportamiento de seguridad."
         }
       ],
@@ -4019,16 +4243,19 @@
           "section": "Guardrails and input controls"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-028"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-028",
+      "objectiveId": "D5.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-029",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D6",
-      "text": "El patrocinador pide reducir el tiempo de atención sin empeorar la calidad. ¿Qué dos métricas deben acordarse?",
+      "text": "A sponsor wants shorter handling time without worse quality. Which TWO metrics should be agreed on?",
       "correct": [
         "A",
         "C"
@@ -4036,22 +4263,22 @@
       "options": [
         {
           "id": "A",
-          "text": "Tiempo de resolución medido sobre casos comparables",
+          "text": "Resolution time measured on comparable cases",
           "explanation": "Mide el objetivo operativo."
         },
         {
           "id": "B",
-          "text": "Número de conversaciones iniciadas por día como único indicador de ahorro",
+          "text": "Conversations started per day as the only savings indicator",
           "explanation": "El volumen de uso no mide cuánto se tarda en resolver ni garantiza comparabilidad."
         },
         {
           "id": "C",
-          "text": "Criterio de calidad y frecuencia de errores relevantes",
+          "text": "Quality criteria and the frequency of relevant errors",
           "explanation": "Comprueba que la ganancia de tiempo no incumple el límite de calidad."
         },
         {
           "id": "D",
-          "text": "Tokens de salida por respuesta como sustituto de la calidad final",
+          "text": "Output tokens per response as a substitute for final quality",
           "explanation": "La longitud no demuestra que el problema quede resuelto correctamente."
         }
       ],
@@ -4076,38 +4303,41 @@
           "section": "Define success criteria; build evaluations"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-029"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-029",
+      "objectiveId": "D6.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-030",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D6",
-      "text": "Un informe solo muestra el mejor resultado obtenido entre muchas pruebas. ¿Qué debe añadirse para orientar una decisión de despliegue?",
+      "text": "A report shows only the best result from many tests. What should be added to support a deployment decision?",
       "correct": [
         "B"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Una promesa de que siempre se repetirá el mejor caso",
+          "text": "A promise that the best case will always repeat",
           "explanation": "No hay evidencia de ese comportamiento."
         },
         {
           "id": "B",
-          "text": "Método de evaluación, distribución de resultados y límites de la muestra",
+          "text": "The evaluation method, distribution of results, and sample limitations",
           "explanation": "Permite interpretar la representatividad de la cifra."
         },
         {
           "id": "C",
-          "text": "Más adjetivos positivos",
+          "text": "More positive adjectives",
           "explanation": "No añade evidencia."
         },
         {
           "id": "D",
-          "text": "Eliminar los fallos de la muestra",
+          "text": "Removal of failed cases from the sample",
           "explanation": "Sesga la evaluación."
         }
       ],
@@ -4132,38 +4362,41 @@
           "section": "Define success criteria; build evaluations"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-030"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-030",
+      "objectiveId": "D6.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-031",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D6",
-      "text": "El usuario quiere automatización total, pero hay casos que requieren criterio humano. ¿Qué propuesta es más útil?",
+      "text": "A user requests full automation, but some cases require human judgment. Which proposal is most useful?",
       "correct": [
         "D"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Prometer automatizar todo sin medir",
+          "text": "Promise to automate everything without measurement",
           "explanation": "Oculta el riesgo."
         },
         {
           "id": "B",
-          "text": "Rechazar cualquier automatización",
+          "text": "Reject all automation",
           "explanation": "Descarta beneficios que podrían ser viables."
         },
         {
           "id": "C",
-          "text": "Mostrar solo una demostración del caso más fácil",
+          "text": "Show only a demonstration of the easiest case",
           "explanation": "No aborda el límite."
         },
         {
           "id": "D",
-          "text": "Precisar el tramo automatizable y la ruta de escalado, con impacto medido",
+          "text": "Define the automatable scope and escalation path, with measured impact",
           "explanation": "Ofrece un alcance verificable y una frontera explícita."
         }
       ],
@@ -4188,38 +4421,41 @@
           "section": "When (and when not) to use agents; workflows"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-031"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-031",
+      "objectiveId": "D6.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-032",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D6",
-      "text": "Una mejora ahorra tiempo al modelo pero aumenta el trabajo de revisión humana. ¿Cómo valorar su beneficio real?",
+      "text": "An optimization saves model time but increases human review work. How should its real benefit be assessed?",
       "correct": [
         "C"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Contar únicamente los tokens ahorrados",
+          "text": "Count only tokens saved",
           "explanation": "Omite una parte del coste del proceso."
         },
         {
           "id": "B",
-          "text": "Ignorar a los revisores porque están fuera del software",
+          "text": "Ignore reviewers because they are outside the software",
           "explanation": "Su trabajo forma parte del resultado operativo."
         },
         {
           "id": "C",
-          "text": "Medir el proceso completo con coste, tiempo y errores finales",
+          "text": "Measure the complete process, including cost, time, and final errors",
           "explanation": "Permite comparar el beneficio neto para la tarea."
         },
         {
           "id": "D",
-          "text": "Elegir la variante con la demostración más corta",
+          "text": "Choose the version with the shortest demonstration",
           "explanation": "Una demo no mide el proceso completo."
         }
       ],
@@ -4244,38 +4480,41 @@
           "section": "Define success criteria; build evaluations"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-032"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-032",
+      "objectiveId": "D6.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-033",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D7",
-      "text": "El repositorio documenta cómo ejecutar las pruebas, pero el comando quedó obsoleto. ¿Qué debe hacer el equipo?",
+      "text": "A repository documents a test command that is now obsolete. What should the team do?",
       "correct": [
         "A"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Actualizar la instrucción versionada y comprobar que funciona",
+          "text": "Update the versioned instruction and verify it works",
           "explanation": "El contexto compartido debe representar el estado real del proyecto."
         },
         {
           "id": "B",
-          "text": "Mantenerla para no cambiar documentación",
+          "text": "Keep it to avoid changing documentation",
           "explanation": "Perpetúa el error."
         },
         {
           "id": "C",
-          "text": "Pedir a cada persona que memorice la excepción",
+          "text": "Ask everyone to memorize the exception",
           "explanation": "La convención no será reproducible."
         },
         {
           "id": "D",
-          "text": "Eliminar todas las pruebas",
+          "text": "Remove all tests",
           "explanation": "Descarta el control en vez de corregir el contexto."
         }
       ],
@@ -4300,38 +4539,41 @@
           "section": "CLAUDE.md; shared instructions"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-033"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-033",
+      "objectiveId": "D7.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-034",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D7",
-      "text": "Un desarrollador quiere añadir una clave API al archivo de instrucciones compartido para facilitar el trabajo. ¿Cuál es la alternativa adecuada?",
+      "text": "A developer wants to add an API key to shared project instructions for convenience. What is the appropriate alternative?",
       "correct": [
         "D"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Publicar la clave dentro de un ejemplo",
+          "text": "Publish the key inside an example",
           "explanation": "Seguiría divulgando el secreto."
         },
         {
           "id": "B",
-          "text": "Cambiar su nombre y guardarla igualmente",
+          "text": "Rename it and save it anyway",
           "explanation": "No evita exposición."
         },
         {
           "id": "C",
-          "text": "Pedir al asistente que no la muestre nunca",
+          "text": "Ask the assistant never to display it",
           "explanation": "No convierte el archivo compartido en un almacén seguro."
         },
         {
           "id": "D",
-          "text": "Documentar cómo configurar el secreto por un canal adecuado sin incluir su valor",
+          "text": "Document how to configure the secret through an appropriate channel without including its value",
           "explanation": "Las instrucciones pueden describir configuración sin contener credenciales."
         }
       ],
@@ -4356,38 +4598,41 @@
           "section": "CLAUDE.md; shared instructions"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-034"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-034",
+      "objectiveId": "D7.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
     },
     {
       "id": "original-035",
-      "revision": 1,
+      "revision": 2,
       "domainId": "D7",
-      "text": "Dos equipos necesitan reglas comunes y convenciones locales distintas. ¿Qué organización facilita el mantenimiento?",
+      "text": "Two teams need shared rules and different local conventions. Which organization supports maintenance?",
       "correct": [
         "B"
       ],
       "options": [
         {
           "id": "A",
-          "text": "Copiar todas las reglas a cada archivo sin responsables",
+          "text": "Copy every rule into every file without ownership",
           "explanation": "La duplicación favorece divergencias."
         },
         {
           "id": "B",
-          "text": "Mantener una base común revisada y reglas locales con alcance explícito",
+          "text": "Maintain a reviewed common base and explicitly scoped local rules",
           "explanation": "Combina coherencia y necesidades específicas."
         },
         {
           "id": "C",
-          "text": "Prohibir cualquier regla local aunque esté justificada",
+          "text": "Prohibit every local rule even when justified",
           "explanation": "No resuelve las diferencias de contexto."
         },
         {
           "id": "D",
-          "text": "Usar únicamente instrucciones personales no compartidas",
+          "text": "Use only unshared personal instructions",
           "explanation": "Impide reproducir la base común."
         }
       ],
@@ -4412,10 +4657,427 @@
           "section": "CLAUDE.md; shared instructions"
         }
       ],
-      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21",
-      "review": "Autoría y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
-      "language": "es",
-      "family": "original-035"
+      "origin": "Contenido original del proyecto AnthropicCert · 2026-10-21 · traducido de español a inglés en revisión 2",
+      "review": "Autoría, traducción y revisión técnica por Codex; sin revisión humana independiente. Referencia conceptual oficial enlazada.",
+      "language": "en",
+      "family": "original-035",
+      "objectiveId": "D7.local",
+      "license": "Original del proyecto",
+      "sourceUrl": "project:AnthropicCert"
+    },
+    {
+      "id": "professional-extra-001",
+      "revision": 1,
+      "domainId": "D1",
+      "objectiveId": "D1.local",
+      "text": "A document review service has a two-second interactive SLA and a slower workflow that achieves higher quality on ambiguous cases. A representative evaluation shows most requests are simple and only a small minority need deeper review. Which design best preserves the SLA while providing a path for difficult cases?",
+      "correct": [
+        "B"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Put every request through the slowest workflow",
+          "explanation": "This ignores the measured latency constraint for the majority of requests."
+        },
+        {
+          "id": "B",
+          "text": "Route validated simple cases through the fast path and handle ambiguous cases through an explicitly asynchronous review path",
+          "explanation": "The design separates service expectations using measured task complexity and makes slower handling explicit."
+        },
+        {
+          "id": "C",
+          "text": "Promise the slow workflow will always finish within two seconds",
+          "explanation": "The observation contradicts that promise."
+        },
+        {
+          "id": "D",
+          "text": "Remove quality checks from the slow path",
+          "explanation": "This sacrifices the purpose of the deeper review."
+        }
+      ],
+      "explanation": "A: This ignores the measured latency constraint for the majority of requests. B: The design separates service expectations using measured task complexity and makes slower handling explicit. C: The observation contradicts that promise. D: This sacrifices the purpose of the deeper review.",
+      "help": {
+        "id": "help-D1",
+        "title": "Elegir una arquitectura por sus requisitos",
+        "domainId": "D1",
+        "text": "Comienza por la tarea, las restricciones y el criterio de éxito. Usa pasos predefinidos cuando el camino se conoce; autonomía cuando hace falta decidirlo durante la ejecución.\n\nCómo decidir: compara alternativas con calidad medida, coste, latencia, control y mantenimiento.\nError habitual: añadir agentes o componentes sin una necesidad demostrable.\nEjemplo: extracción y validación con un revisor final puede resolverse con un workflow, sin un agente que invente pasos.",
+        "references": [
+          {
+            "title": "Patrones de agentes y workflows",
+            "url": "https://www.anthropic.com/research/building-effective-agents",
+            "section": "When (and when not) to use agents; workflows"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Patrones de agentes y workflows",
+          "url": "https://www.anthropic.com/research/building-effective-agents",
+          "section": "When (and when not) to use agents; workflows"
+        }
+      ],
+      "origin": "Original AnthropicCert · inglés · ampliación 01 · 2026-10-21",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Original del proyecto",
+      "review": "Autoría y revisión técnica/editorial Codex 2026-10-21; no revisión humana independiente; objetivo conceptual local.",
+      "language": "en",
+      "family": "professional-extra-001"
+    },
+    {
+      "id": "professional-extra-002",
+      "revision": 1,
+      "domainId": "D2",
+      "objectiveId": "D2.local",
+      "text": "A customer-support context contains current policy, an outdated policy retrieved from an archive, and a user message. Evaluation finds answers sometimes follow the archived policy. Which change most directly addresses the cause while retaining the archive for audit?",
+      "correct": [
+        "C"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase the output token limit",
+          "explanation": "This does not resolve conflicting policy applicability."
+        },
+        {
+          "id": "B",
+          "text": "Repeat both policies several times",
+          "explanation": "Repetition increases conflicting context without defining precedence."
+        },
+        {
+          "id": "C",
+          "text": "Filter or label retrieval by effective version and supply the currently applicable policy as the decision context",
+          "explanation": "Version-aware retrieval makes the relevant policy explicit while the archive remains available separately."
+        },
+        {
+          "id": "D",
+          "text": "Remove the user's question",
+          "explanation": "That removes the task without resolving policy selection."
+        }
+      ],
+      "explanation": "A: This does not resolve conflicting policy applicability. B: Repetition increases conflicting context without defining precedence. C: Version-aware retrieval makes the relevant policy explicit while the archive remains available separately. D: That removes the task without resolving policy selection.",
+      "help": {
+        "id": "help-D2",
+        "title": "Diseñar el contexto y las instrucciones",
+        "domainId": "D2",
+        "text": "El contexto debe contener información útil para la tarea, no todos los datos disponibles. Define instrucciones claras, ejemplos representativos y estado de trabajo necesario.\n\nCómo decidir: identifica si falla la recuperación de información, las instrucciones o la capacidad del modelo y compara con evaluaciones.\nError habitual: aumentar el contexto o el modelo sin diagnosticar el fallo.\nEjemplo: conserva decisiones y tareas pendientes al resumir una sesión larga; no conserves únicamente las últimas frases.",
+        "references": [
+          {
+            "title": "Ingeniería de contexto",
+            "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+            "section": "The anatomy of effective context; retrieval"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Ingeniería de contexto",
+          "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+          "section": "The anatomy of effective context; retrieval"
+        }
+      ],
+      "origin": "Original AnthropicCert · inglés · ampliación 01 · 2026-10-21",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Original del proyecto",
+      "review": "Autoría y revisión técnica/editorial Codex 2026-10-21; no revisión humana independiente; objetivo conceptual local.",
+      "language": "en",
+      "family": "professional-extra-002"
+    },
+    {
+      "id": "professional-extra-003",
+      "revision": 1,
+      "domainId": "D3",
+      "objectiveId": "D3.local",
+      "text": "An integration must distinguish a tool failure from a valid result containing no matching business records. The current adapter converts both into the same empty collection. Which change provides the application with the information needed for recovery?",
+      "correct": [
+        "A"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Define separate success and failure outcomes, with error categories and retryability where applicable",
+          "explanation": "A typed outcome preserves the distinction needed to retry or report missing data."
+        },
+        {
+          "id": "B",
+          "text": "Treat every empty collection as a service outage",
+          "explanation": "Legitimate absence of records would be misclassified."
+        },
+        {
+          "id": "C",
+          "text": "Ask the model to infer server health from an empty list",
+          "explanation": "The adapter has removed the evidence needed for that inference."
+        },
+        {
+          "id": "D",
+          "text": "Make every response longer without changing the contract",
+          "explanation": "Length alone does not define distinct outcomes."
+        }
+      ],
+      "explanation": "A: A typed outcome preserves the distinction needed to retry or report missing data. B: Legitimate absence of records would be misclassified. C: The adapter has removed the evidence needed for that inference. D: Length alone does not define distinct outcomes.",
+      "help": {
+        "id": "help-D3",
+        "title": "Integración con límites claros",
+        "domainId": "D3",
+        "text": "Un servicio integra identidad, validación de entradas, contratos de herramientas y tratamiento de errores. La selección de herramientas debe corresponder al trabajo autorizado.\n\nCómo decidir: revisa frontera, autenticación, permisos y observabilidad de cada llamada.\nError habitual: asumir que cifrado o un prompt sustituye autorizaciones.\nEjemplo: una herramienta que lee pedidos no necesita poder borrarlos; un trabajo largo puede devolver un ID para consultar el resultado.",
+        "references": [
+          {
+            "title": "Uso de herramientas",
+            "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview",
+            "section": "Client and server tools"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Uso de herramientas",
+          "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview",
+          "section": "Client and server tools"
+        }
+      ],
+      "origin": "Original AnthropicCert · inglés · ampliación 01 · 2026-10-21",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Original del proyecto",
+      "review": "Autoría y revisión técnica/editorial Codex 2026-10-21; no revisión humana independiente; objetivo conceptual local.",
+      "language": "en",
+      "family": "professional-extra-003"
+    },
+    {
+      "id": "professional-extra-004",
+      "revision": 1,
+      "domainId": "D4",
+      "objectiveId": "D4.local",
+      "text": "Two prompt variants are compared on an evaluation suite. Variant B reduces average errors but introduces a new high-impact failure class that has no agreed tolerance. What should the release recommendation include?",
+      "correct": [
+        "A",
+        "D"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The new failure class, its frequency, impact, and affected inputs",
+          "explanation": "Aggregate improvements must be accompanied by material regressions and their scope."
+        },
+        {
+          "id": "B",
+          "text": "Only the improved overall average",
+          "explanation": "This hides the newly introduced risk."
+        },
+        {
+          "id": "C",
+          "text": "An assumption that any average improvement is sufficient",
+          "explanation": "No acceptance threshold for the new class has been agreed."
+        },
+        {
+          "id": "D",
+          "text": "An explicit acceptance decision and targeted validation before broad rollout",
+          "explanation": "The team needs a defined decision for the unresolved high-impact regression."
+        }
+      ],
+      "explanation": "A: Aggregate improvements must be accompanied by material regressions and their scope. B: This hides the newly introduced risk. C: No acceptance threshold for the new class has been agreed. D: The team needs a defined decision for the unresolved high-impact regression.",
+      "help": {
+        "id": "help-D4",
+        "title": "Evaluar el sistema antes de cambiarlo",
+        "domainId": "D4",
+        "text": "Define qué significa éxito, con casos representativos y fallos importantes. Escoge verificaciones objetivas cuando existan y rúbricas para calidad subjetiva.\n\nCómo decidir: analiza errores por grupo y conserva casos de regresión.\nError habitual: tratar una demostración o un promedio como prueba suficiente.\nEjemplo: separa facturas escaneadas de PDFs digitales para descubrir qué grupo causa los errores y valida la mejora en datos no usados al ajustar.",
+        "references": [
+          {
+            "title": "Criterios y evaluaciones",
+            "url": "https://platform.claude.com/docs/en/test-and-evaluate/develop-tests",
+            "section": "Define success criteria; build evaluations"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Criterios y evaluaciones",
+          "url": "https://platform.claude.com/docs/en/test-and-evaluate/develop-tests",
+          "section": "Define success criteria; build evaluations"
+        }
+      ],
+      "origin": "Original AnthropicCert · inglés · ampliación 01 · 2026-10-21",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Original del proyecto",
+      "review": "Autoría y revisión técnica/editorial Codex 2026-10-21; no revisión humana independiente; objetivo conceptual local.",
+      "language": "en",
+      "family": "professional-extra-004"
+    },
+    {
+      "id": "professional-extra-005",
+      "revision": 1,
+      "domainId": "D5",
+      "objectiveId": "D5.local",
+      "text": "An internal assistant can use a database connector with read privileges and a deployment connector with production write privileges. A retrieved troubleshooting note recommends changing production settings. Which architectural boundary should determine whether that recommendation can be executed?",
+      "correct": [
+        "D"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The confidence expressed in the retrieved note",
+          "explanation": "Confidence is not authority."
+        },
+        {
+          "id": "B",
+          "text": "The note's position at the end of the context",
+          "explanation": "Recency does not grant execution permission."
+        },
+        {
+          "id": "C",
+          "text": "The assistant's preference for the deployment connector",
+          "explanation": "Tool selection does not establish authorization."
+        },
+        {
+          "id": "D",
+          "text": "An external policy check binding the authenticated request to the allowed operation and any required approval",
+          "explanation": "The execution boundary must authorize the side effect independently of retrieved instructions."
+        }
+      ],
+      "explanation": "A: Confidence is not authority. B: Recency does not grant execution permission. C: Tool selection does not establish authorization. D: The execution boundary must authorize the side effect independently of retrieved instructions.",
+      "help": {
+        "id": "help-D5",
+        "title": "Reducir autoridad y verificar decisiones",
+        "domainId": "D5",
+        "text": "Trata documentos recuperados y respuestas del modelo como datos que pueden contener errores o instrucciones hostiles. Los permisos, validaciones y autorizaciones se aplican fuera del modelo.\n\nCómo decidir: estima consecuencias y reversibilidad; reserva confirmación humana para acciones que la política exige.\nError habitual: equiparar confianza verbal del modelo con prueba.\nEjemplo: una solicitud de reembolso requiere autorización del usuario autenticado antes de ejecutar la transferencia, aunque el modelo proponga hacerla.",
+        "references": [
+          {
+            "title": "Defensas y entradas no fiables",
+            "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks",
+            "section": "Guardrails and input controls"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Defensas y entradas no fiables",
+          "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks",
+          "section": "Guardrails and input controls"
+        }
+      ],
+      "origin": "Original AnthropicCert · inglés · ampliación 01 · 2026-10-21",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Original del proyecto",
+      "review": "Autoría y revisión técnica/editorial Codex 2026-10-21; no revisión humana independiente; objetivo conceptual local.",
+      "language": "en",
+      "family": "professional-extra-005"
+    },
+    {
+      "id": "professional-extra-006",
+      "revision": 1,
+      "domainId": "D6",
+      "objectiveId": "D6.local",
+      "text": "A pilot saves staff drafting time, but reviewers find that exceptional cases take longer to correct. A sponsor asks whether to expand to all departments. Which evidence best supports an informed decision?",
+      "correct": [
+        "B"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The fastest single demonstration",
+          "explanation": "A best case does not describe the full deployment population."
+        },
+        {
+          "id": "B",
+          "text": "End-to-end workload results by case category, review effort, remaining failure modes, and a staged expansion plan",
+          "explanation": "The recommendation connects measured benefits and limits with an actionable lifecycle decision."
+        },
+        {
+          "id": "C",
+          "text": "A count of prompts submitted",
+          "explanation": "Usage volume alone does not establish business value."
+        },
+        {
+          "id": "D",
+          "text": "Only the model's inference latency",
+          "explanation": "This excludes the review effort that drives the unresolved tradeoff."
+        }
+      ],
+      "explanation": "A: A best case does not describe the full deployment population. B: The recommendation connects measured benefits and limits with an actionable lifecycle decision. C: Usage volume alone does not establish business value. D: This excludes the review effort that drives the unresolved tradeoff.",
+      "help": {
+        "id": "help-D6",
+        "title": "Comunicar límites y mantener el servicio",
+        "domainId": "D6",
+        "text": "Relaciona resultados medidos con una decisión de negocio. Expón límites, alternativas y responsables de mantenimiento.\n\nCómo decidir: acuerda el objetivo y explica qué fallos quedan, su impacto y el siguiente paso.\nError habitual: prometer automatización total o esconder grupos problemáticos dentro del promedio.\nEjemplo: un piloto que ahorra tiempo puede ampliarse por etapas con seguimiento, responsable de incidencias y una vía de vuelta al proceso anterior.",
+        "references": [
+          {
+            "title": "Criterios y evaluaciones",
+            "url": "https://platform.claude.com/docs/en/test-and-evaluate/develop-tests",
+            "section": "Define success criteria; build evaluations"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Criterios y evaluaciones",
+          "url": "https://platform.claude.com/docs/en/test-and-evaluate/develop-tests",
+          "section": "Define success criteria; build evaluations"
+        }
+      ],
+      "origin": "Original AnthropicCert · inglés · ampliación 01 · 2026-10-21",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Original del proyecto",
+      "review": "Autoría y revisión técnica/editorial Codex 2026-10-21; no revisión humana independiente; objetivo conceptual local.",
+      "language": "en",
+      "family": "professional-extra-006"
+    },
+    {
+      "id": "professional-extra-007",
+      "revision": 1,
+      "domainId": "D7",
+      "objectiveId": "D7.local",
+      "text": "A team adopts an assistant-generated refactor across multiple services. Each service uses different local instructions and the reported productivity gain excludes regression repair. What should the enablement plan standardize first?",
+      "correct": [
+        "C"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The assistant's greeting",
+          "explanation": "Greeting text does not make changes reproducible or measure delivery quality."
+        },
+        {
+          "id": "B",
+          "text": "The number of generated lines as the sole success criterion",
+          "explanation": "Line count ignores defects and repair work."
+        },
+        {
+          "id": "C",
+          "text": "Reviewed shared guidance, service-scoped conventions, reproducible checks, and delivery metrics including repair effort",
+          "explanation": "Operational enablement needs repeatable context and measures that include the cost of errors."
+        },
+        {
+          "id": "D",
+          "text": "A rule that generated changes bypass normal review",
+          "explanation": "Bypassing review removes a quality control without demonstrating safety."
+        }
+      ],
+      "explanation": "A: Greeting text does not make changes reproducible or measure delivery quality. B: Line count ignores defects and repair work. C: Operational enablement needs repeatable context and measures that include the cost of errors. D: Bypassing review removes a quality control without demonstrating safety.",
+      "help": {
+        "id": "help-D7",
+        "title": "Hacer reproducible la ayuda al desarrollo",
+        "domainId": "D7",
+        "text": "El contexto de repositorio, las convenciones compartidas y las pruebas hacen reproducible el trabajo asistido. Mantén las instrucciones junto al proyecto y revísalas cuando cambie.\n\nCómo decidir: mide mejoras en entrega y calidad, no solo cantidad de llamadas.\nError habitual: instrucciones personales divergentes sin una base común.\nEjemplo: documenta el comando de pruebas y las reglas del servicio en CLAUDE.md, sin secretos, y valida los cambios como cualquier otra contribución.",
+        "references": [
+          {
+            "title": "Memoria de proyecto",
+            "url": "https://code.claude.com/docs/en/memory",
+            "section": "CLAUDE.md; shared instructions"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Memoria de proyecto",
+          "url": "https://code.claude.com/docs/en/memory",
+          "section": "CLAUDE.md; shared instructions"
+        }
+      ],
+      "origin": "Original AnthropicCert · inglés · ampliación 01 · 2026-10-21",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Original del proyecto",
+      "review": "Autoría y revisión técnica/editorial Codex 2026-10-21; no revisión humana independiente; objetivo conceptual local.",
+      "language": "en",
+      "family": "professional-extra-007"
     }
   ]
 }

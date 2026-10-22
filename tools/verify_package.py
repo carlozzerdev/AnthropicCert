@@ -10,14 +10,14 @@ from datetime import datetime
 ROOT = Path(__file__).resolve().parents[1]
 
 def main():
-    archive = ROOT / 'releases/AnthropicCert-1.0.0-win-x64.zip'
+    archive = ROOT / 'releases/AnthropicCert-1.1.0-win-x64.zip'
     evidence = ROOT / 'artifacts' / ('package-' + datetime.now().strftime('%Y%m%d-%H%M%S'))
     extracted = evidence / 'Extracción portable con espacios y acentos'
     extracted.mkdir(parents=True)
     with zipfile.ZipFile(archive) as z:
-        assert not any('/Data/' in name or name.endswith('.bak') for name in z.namelist()), 'Personal data in ZIP'
+        assert not any('/Data/' in name or name.endswith(('.bak', '.mhtml')) or 'examtopics-ccaf-candidates' in name or 'CCA-F.zip' in name for name in z.namelist()), 'Personal or unreviewed data in ZIP'
         z.extractall(extracted)
-    app = extracted / 'AnthropicCert-1.0.0-win-x64'
+    app = extracted / 'AnthropicCert-1.1.0-win-x64'
     manifest = json.loads((app / 'manifest.json').read_text(encoding='utf-8'))
     for filename, digest in manifest['files'].items():
         assert hashlib.sha256((app / filename).read_bytes()).hexdigest() == digest, filename

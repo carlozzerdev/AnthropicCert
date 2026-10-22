@@ -4,8 +4,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <OutputType>WinExe</OutputType>
     <AssemblyName>AnthropicCert</AssemblyName>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
   </PropertyGroup>
   <ItemGroup><ProjectReference Include="../AnthropicCert.Infrastructure/AnthropicCert.Infrastructure.csproj" /></ItemGroup>
-  <ItemGroup><Content Include="../../Content/bank.json" Link="Content/bank.json" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
+  <ItemGroup><Content Include="../../Content/**/*.json" Exclude="../../Content/Sources/**;../../Content/original-questions*.json;../../Content/foundations-original*.json" Link="Content/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
 </Project>

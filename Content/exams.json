@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "certification": "CCAR-P",
+      "name": "Architect – Professional",
+      "aliases": [
+        "CCA-P"
+      ],
+      "bankPath": "bank.json",
+      "profileId": "ccarp-practice"
+    },
+    {
+      "certification": "CCAR-F",
+      "name": "Architect – Foundations",
+      "aliases": [
+        "CCA-F"
+      ],
+      "bankPath": "foundations.json",
+      "profileId": "ccarf-practice"
+    }
+  ]
+}

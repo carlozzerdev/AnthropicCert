@@ -17,14 +17,14 @@ def main():
     env = dict(os.environ, DOTNET_CLI_HOME=str(ROOT / '.buildhome'), DOTNET_CLI_TELEMETRY_OPTOUT='1')
     subprocess.run(['python', str(ROOT / 'tools/build_bank.py')], cwd=ROOT, check=True)
     subprocess.run(['dotnet', 'publish', 'src/AnthropicCert.Desktop/AnthropicCert.Desktop.csproj',
-        '-c', 'Release', '--no-restore', '--self-contained', 'false', '-o', 'artifacts/framework-publish'],
+        '-c', 'Release', '--no-restore', '--self-contained', 'false', '-o', 'artifacts/framework-publish-1.1.0'],
         cwd=ROOT, env=env, check=True)
-    output = ROOT / 'releases/AnthropicCert-1.0.0-win-x64'
+    output = ROOT / 'releases/AnthropicCert-1.1.0-win-x64'
     # Overwrite only known build outputs; never touch a user's Data directory.
     output.mkdir(parents=True, exist_ok=True)
     if (output / 'Data').exists():
         raise RuntimeError('Release folder contains Data. Use a new release folder; never package personal progress.')
-    shutil.copytree(ROOT / 'artifacts/framework-publish', output, dirs_exist_ok=True)
+    shutil.copytree(ROOT / 'artifacts/framework-publish-1.1.0', output, dirs_exist_ok=True)
     dotnet = Path(shutil.which('dotnet')).resolve().parent
     core = sorted((dotnet / 'shared/Microsoft.NETCore.App').iterdir(), key=lambda p: tuple(int(x) for x in p.name.split('.')))[-1]
     desktop = dotnet / 'shared/Microsoft.WindowsDesktop.App' / core.name
@@ -54,7 +54,7 @@ def main():
     shutil.copytree(ROOT / 'Content/Sources', output / 'Content/Sources', dirs_exist_ok=True)
     for name in ['LEEME.txt', 'THIRD-PARTY-NOTICES.txt']:
         shutil.copy2(ROOT / name, output / name)
-    manifest = dict(version='1.0.0', platform='win-x64', runtime=core.name, packaging='offline bundled framework manifests',
+    manifest = dict(version='1.1.0', platform='win-x64', runtime=core.name, packaging='offline bundled framework manifests',
         files={str(p.relative_to(output)).replace('\\','/'): hashlib.sha256(p.read_bytes()).hexdigest()
             for p in sorted(output.rglob('*')) if p.is_file() and p.name != 'manifest.json'})
     (output / 'manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')

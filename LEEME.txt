@@ -1,16 +1,46 @@
-ANTHROPICCERT 1.0.0 - WINDOWS 11 x64
+ANTHROPICCERT 1.1.0 - WINDOWS 11 x64
+
+NOVEDADES MULTIEXAMEN
+Selector Architect Professional (CCAR-P) y Foundations (CCAR-F).
+Professional: 85 preguntas (43 adaptadas MIT y 42 originales).
+Foundations: 64 preguntas (34 adaptadas MIT y 30 originales).
+Enunciados y opciones nuevos en inglés; interfaz y ayudas en español.
+Explicaciones en el idioma editorial de cada lote; URLs opcionales.
+Historial, estadísticas, ayudas y repaso separados por examen.
+Simulacros provisionales: Professional 63 preguntas; Foundations 60; 120 minutos.
+Guías exactas y formatos pendientes de contraste directo. Los objetivos del banco
+son etiquetas conceptuales locales, no una transcripción de objetivos oficiales.
+Un único intento activo global. Cambiar examen no lo abandona: reanuda, finaliza
+o abandona explícitamente antes de comenzar otro.
+
+ACTUALIZACIÓN DESDE 1.0.0
+Cierra la aplicación y conserva una copia completa de Data.
+Extrae el ZIP nuevo en una carpeta nueva y copia allí Data antes de iniciar.
+La migración escribe en Data/attempts-v2 y conserva originales intactos y una
+copia previa en Data/migration-v1-backup. Los snapshots antiguos, incluidos
+sus textos españoles, fechas y resultados, no se traducen ni recalculan.
+Un fallo antes de confirmar mantiene el marcador v1 y permite reintentar tras
+resolver el problema. Datos desconocidos generan error, sin reinicializarlos.
+Para volver a 1.0.0 utiliza la copia previa completa: no cambies manualmente
+schema-version.txt. Los intentos nuevos v2 no se leen con la versión anterior.
+Los guardados actuales y sus .bak están en Data/attempts-v2.
+
+Las 30 preguntas ExamTopics aportadas permanecen como candidatas del proyecto,
+fuera del banco activo y del ZIP: revisión y permiso de distribución pendientes.
+
+INSTRUCCIONES GENERALES (actualizadas para 1.1.0)
 
 INICIO
 1. Extrae TODO el ZIP en una carpeta propia con permiso de escritura.
 2. Ejecuta AnthropicCert.exe. No necesita instalar .NET, Python ni Visual Studio.
-3. Elige práctica por dominio o simulacro de práctica.
+3. Selecciona certificación, práctica por dominio o simulacro de práctica.
 
 PRÁCTICA
 Selecciona opciones y pulsa Confirmar respuesta. Lee Ver explicación y la ayuda
 del concepto. En selección múltiple el enunciado indica cuántas elegir.
 
 SIMULACRO
-63 preguntas, 120 minutos, con soluciones ocultas hasta finalizar. Es un perfil
+63 preguntas Professional o 60 Foundations, 120 minutos, soluciones ocultas hasta finalizar. Perfil
 provisional de práctica; todavía no se ha contrastado la guía oficial por acceso
 directo. El reloj continúa si cierras o suspendes el equipo.
 Guardar y volver conserva el intento. Reanúdalo desde Inicio o Historial.
@@ -32,9 +62,9 @@ el .bak correspondiente quitando su terminación .bak. No mezcles IDs de intento
 No compartas Data si no deseas compartir tu historial. Una sola instancia por carpeta.
 
 CONTENIDO
-78 preguntas activas: 43 adaptaciones de material MIT y 35 originales.
-Las preguntas importadas y sus razonamientos están en inglés; las originales y
-las ayudas están en español. 80 entradas de origen completas están archivadas
+149 preguntas activas entre las dos certificaciones, sin mezclarlas.
+Todos los enunciados y opciones nuevos están en inglés; las ayudas en español.
+Las explicaciones conservan el idioma editorial de cada lote. 80 entradas Professional están archivadas
 en Content/Sources/professional-upstream.json; 37 no están activas por repetición
 o por requerir reformulación/contraste adicional. Ver review-report.json.
 El objetivo de 350 preguntas NO está completado en esta versión.

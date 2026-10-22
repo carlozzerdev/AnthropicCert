@@ -1,15 +1,16 @@
 # AnthropicCert
 
-Aplicación WinForms para practicar **Claude Certified Architect – Professional (CCAR-P)** en Windows 11 x64. Funcionamiento local, sin cuentas ni API de IA. Aplicación independiente y no oficial.
+Aplicación WinForms **1.1.0** para practicar **Claude Certified Architect – Professional (CCAR-P) y Foundations (CCAR-F)** en Windows 11 x64. Funcionamiento local, sin cuentas ni API de IA. Aplicación independiente y no oficial. [Implementación 01](specs/01_multiexamen/implementation.md).
 
 ## Ejecutar
 
-Extraer el ZIP completo de `releases/` y abrir `AnthropicCert.exe`. Leer [LEEME.txt](LEEME.txt). Los intentos se guardan en `Data/` junto al ejecutable; conservar esa carpeta al actualizar. La publicación lleva el runtime incluido.
+Extraer [AnthropicCert-1.1.0-win-x64.zip](releases/AnthropicCert-1.1.0-win-x64.zip) completo y abrir `AnthropicCert.exe`. Leer [LEEME.txt](LEEME.txt). Los intentos se guardan en `Data/` junto al ejecutable; conservar esa carpeta al actualizar. La publicación lleva el runtime incluido. Al actualizar desde 1.0.0 se conserva una copia previa y los originales v1; el formato nuevo usa `Data/attempts-v2`. Los textos y resultados históricos se conservan.
 
 ## Funciones
 
 - Práctica por dominio, selección única/múltiple, confirmación y explicaciones.
-- Simulacro provisional de 63 preguntas/120 minutos, cuotas por dominio, navegación y marcado.
+- Selector de certificación; bancos, historial, ayudas, repaso y estadísticas separados.
+- Simulacro provisional de 63 preguntas Professional o 60 Foundations, 120 minutos; cuotas por dominio, navegación y marcado.
 - Guardado y recuperación de intentos, finalización por vencimiento y revisión histórica con snapshots.
 - Historial y repaso de errores.
 - Estadísticas filtradas: C/F/U, puntos, porcentajes, tiempos, dominios, cobertura y evolución.
@@ -17,9 +18,9 @@ Extraer el ZIP completo de `releases/` y abrir `AnthropicCert.exe`. Leer [LEEME.
 
 ## Contenido y límites
 
-78 preguntas activas: 43 adaptaciones MIT de Amey Thakur y 35 originales. Las 80 entradas Professional recuperadas se conservan en [Content/Sources/professional-upstream.json](Content/Sources/professional-upstream.json); 37 se excluyen del banco activo por variantes o revisión pendiente. El [informe](Content/Sources/review-report.json) identifica los estados. Las fuentes sin permiso de copia se conservan como enlaces en el [catálogo](Content/Sources/catalog.json).
+Professional: **85 preguntas** (43 adaptaciones MIT y 42 originales). Foundations: **64** (34 adaptaciones MIT y 30 originales). Las 80 entradas Professional recuperadas se conservan en [Content/Sources/professional-upstream.json](Content/Sources/professional-upstream.json); 37 se excluyen del banco activo por variantes o revisión pendiente. Informes de [Professional](Content/Sources/review-report.json) y [Foundations](Content/Sources/foundations-review.json). Las fuentes sin permiso de copia se conservan como enlaces en el [catálogo](Content/Sources/catalog.json). Las 30 preguntas ExamTopics aportadas se conservan como candidatas locales en specs; revisión y permiso de distribución pendientes, fuera del banco activo y del ZIP.
 
-El objetivo de 350 **sigue pendiente**. Las preguntas cuentan con revisión técnica del agente y referencias conceptuales, sin revisión humana independiente ni validación oficial. Preguntas importadas y razonamientos en inglés; originales y ayudas en español. Perfil de examen provisional mientras no se contraste la guía oficial mediante acceso directo. La nota de práctica no reproduce la escala oficial.
+El objetivo de 350 Professional **sigue pendiente**. Las preguntas cuentan con revisión técnica del agente y referencias conceptuales, sin revisión humana independiente ni validación oficial. Enunciados y opciones nuevos en inglés; ayudas en español y explicaciones según el idioma editorial del lote. Perfiles provisionales mientras no se contrasten las guías exactas mediante acceso directo; objetivos del contenido locales, no transcripción oficial. La nota de práctica no reproduce la escala oficial.
 
 ## Arquitectura
 
@@ -51,4 +52,4 @@ AnthropicCert.exe --ui-test C:\ruta\a\resultados-qa-nuevos
 AnthropicCert.exe --smoke-test
 ```
 
-No usar la misma carpeta de QA dos veces: contiene historial de prueba. Las pruebas, evidencias y limitaciones se registran en [tests/results.md](specs/00_especificacion_creacion/tests/results.md).
+No usar la misma carpeta de QA dos veces: contiene historial de prueba. Las pruebas, evidencias y limitaciones actuales se registran en [tests/results.md](specs/01_multiexamen/tests/results.md); las de 1.0.0 permanecen en la especificación 00.

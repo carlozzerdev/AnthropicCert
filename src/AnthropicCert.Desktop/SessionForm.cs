@@ -11,7 +11,7 @@ internal sealed class SessionForm : Form
     bool rendering;
     public SessionForm(ExamService service, Attempt attempt)
     {
-        presenter = new(service, attempt); Ui.Style(this, "AnthropicCert · Examen");
+        presenter = new(service, attempt); Ui.Style(this, $"AnthropicCert · {attempt.Certification} · {attempt.BankVersion}");
         status.Dock = DockStyle.Top; status.Padding = new Padding(16, 4, 8, 4); status.MaximumSize = Size.Empty;
         status.AutoSize = false; status.Height = 62;
         Controls.Add(content); Controls.Add(status);
@@ -33,7 +33,7 @@ internal sealed class SessionForm : Form
         status.Text = presenter.Status();
         content.Controls.Add(Ui.Label(presenter.DomainTitle, 14));
         content.Controls.Add(Ui.Label(q.Text, 14));
-        content.Controls.Add(Ui.Label(q.Correct.Count == 1 ? "Selecciona una respuesta." : $"Selecciona {q.Correct.Count} respuestas. Se necesita el conjunto exacto."));
+        content.Controls.Add(Ui.Label(q.Correct.Count == 1 ? "Select one answer." : $"Select {q.Correct.Count} answers. Select the exact set."));
         var flag = new CheckBox { Text = "Marcar para revisar", AutoSize = true, Checked = answer.Flagged, Enabled = presenter.Editable, Margin = new Padding(5, 12, 5, 12) };
         foreach (var o in q.Options)
         {
@@ -94,7 +94,17 @@ internal sealed class SessionForm : Form
     void AdaptWidth()
     {
         var width = Math.Max(300, content.ClientSize.Width - 65);
-        foreach (var c in content.Controls.Cast<Control>().Where(c => c is Label or CheckBox)) c.MaximumSize = new Size(width, 0);
+        foreach (var label in content.Controls.OfType<Label>()) label.MaximumSize = new Size(width, 0);
+        foreach (var check in content.Controls.OfType<CheckBox>())
+        {
+            // Native checkbox AutoSize measures a single line even with MaximumSize.
+            // Give wrapped text an explicit measured height, including glyph and padding.
+            check.AutoSize = false; check.MaximumSize = Size.Empty; check.Width = width;
+            var text = TextRenderer.MeasureText(check.Text, check.Font,
+                new Size(Math.Max(100, width - check.Padding.Horizontal - 32), int.MaxValue),
+                TextFormatFlags.WordBreak | TextFormatFlags.NoPrefix);
+            check.Height = Math.Max(44, text.Height + check.Padding.Vertical + 8);
+        }
         foreach (var row in content.Controls.OfType<FlowLayoutPanel>()) row.MaximumSize = new Size(width, 0);
     }
     void ShowResult()
