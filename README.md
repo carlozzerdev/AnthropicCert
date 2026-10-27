@@ -24,6 +24,10 @@ El objetivo de 350 Professional **sigue pendiente**. Las preguntas cuentan con r
 
 ## Arquitectura
 
+Ampliación local del 2026-10-27: **79 preguntas Foundations**, incluidas 15 del EPUB aportado (cuatro opciones y una clave por pregunta). Extracción y correcciones en [spec 02](specs/02_libro_foundations/spec.md). Para usar este banco, abrir `src/AnthropicCert.Desktop/bin/Release/net10.0-windows/AnthropicCert.exe` tras compilar. El ZIP anterior conserva sus 64 preguntas. El lote del libro queda fuera de distribución pública mientras no haya licencia verificada.
+
+Reconstrucción local offline: `python tools/import_foundations_epub.py` y `python tools/build_bank.py`; la segunda operación también funciona sin el EPUB cuando ya existe `local-content/foundations-epub.json`. Con `python tools/build_bank.py --distribution` se genera el banco base sin el libro; ejecutar de nuevo sin esa opción para recuperar el banco local.
+
 `Domain`: modelos, validación del banco, corrección y cuotas. `Application`: casos de uso, repositorios abstractos, reloj y agregación estadística. `Infrastructure`: JSON versionado y guardado atómico por intento con backup y bloqueo de carpeta. `Desktop`: WinForms y presentador del examen. No hay reglas de puntuación en los formularios.
 
 SQLite se sustituyó por archivos JSON en esta entrega: sin dependencias de almacenamiento adicionales, suficientes para el historial local. Ver [decisiones de implementación](specs/00_especificacion_creacion/implementation.md).

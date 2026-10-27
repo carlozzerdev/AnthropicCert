@@ -4,6 +4,7 @@ import hashlib
 import json
 import pathlib
 import re
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 CONTENT = ROOT / 'Content'
@@ -197,7 +198,28 @@ def build_foundations():
             correct=correct, explanation=explanation, help=foundations_help(domain), references=[FOUNDATIONS_REFS[domain]],
             origin='Original AnthropicCert · inglés · 2026-10-21', sourceUrl='project:AnthropicCert', license='Original del proyecto',
             language='en', family=f'ccarf-original-{i:03}', review='Autoría y revisión técnica/editorial Codex 2026-10-21; no revisión humana independiente; objetivo conceptual local.'))
-    bank = dict(schemaVersion=2,id='ccarf-local',version='1.1.0',certification='CCAR-F',profileId='ccarf-practice',profileVersion='1',
+    local_path = ROOT / 'local-content/foundations-epub.json'
+    local_count = 0
+    if '--distribution' not in sys.argv and local_path.exists():
+        local = json.loads(local_path.read_text(encoding='utf-8'))
+        for item in local['questions']:
+            domain = {6: 'F3', 7: 'F3', 9: 'F4', 11: 'F5'}[item['chapter']]
+            rationale = re.sub(r'\[\d+(?:,\d+)*\]', '', item['explanation'])
+            reference = dict(title='Claude Code skills' if item['chapter'] == 7 else 'Claude Code memory' if item['chapter'] == 6 else FOUNDATIONS_REFS[domain]['title'],
+                url='https://code.claude.com/docs/en/skills' if item['chapter'] == 7 else 'https://code.claude.com/docs/en/memory' if item['chapter'] == 6 else FOUNDATIONS_REFS[domain]['url'],
+                section=f"Referencia conceptual; EPUB capítulo {item['chapter']}, Q{item['number']}; {item['sourceFile']}")
+            if item['chapter'] == 9:
+                reference.update(title='Prompting best practices', url='https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices')
+            if item['chapter'] == 11 and item['number'] == 3:
+                reference.update(title='Tool search tool', url='https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool')
+            questions.append(dict(id=item['id'], revision=1, domainId=domain, objectiveId=domain+'.local',
+                text=item['text'], options=[dict(**o, explanation=rationale) for o in item['options']],
+                correct=item['correct'], explanation=rationale, help=foundations_help(domain), references=[reference],
+                origin=f"Libro local del usuario: Claude Certified Architect Foundations · {local['author']} · capítulo {item['chapter']} Q{item['number']} · SHA256 {local['sha256']}",
+                sourceUrl='project:AnthropicCert', license='Uso local solicitado; redistribución no verificada',
+                language='en', family=item['id'], review='Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente.'))
+        local_count = len(local['questions'])
+    bank = dict(schemaVersion=2,id='ccarf-local',version='1.1.1-local' if local_count else '1.1.0',certification='CCAR-F',profileId='ccarf-practice',profileVersion='1',
         blueprintVersion='provisional-2026-10-21',mockQuestionCount=60,durationMinutes=120,
         profileStatus='Perfil provisional: datos oficiales indexados 60/120; guía exacta y objetivos pendientes de contraste directo. Pesos candidatos 27/18/20/20/15.',
         objectives=[d+'.local' for d,_,_ in FOUNDATIONS_DOMAINS],
@@ -208,7 +230,7 @@ def build_foundations():
     (CONTENT/'exams.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2),encoding='utf-8')
     (CONTENT/'Sources/foundations-review.json').write_text(json.dumps(dict(date='2026-10-21',sourceSha256=hashlib.sha256(path.read_bytes()).hexdigest(),
         sourceUrl=questions[0]['sourceUrl'],license='MIT; copyright y aviso en LICENSE-Amey-Thakur.txt',sourceEntries=35,
-        activeImported=34,originals=len(originals),activeTotal=len(questions),items=report,
+        activeImported=34,originals=len(originals),activeTotal=len(questions),localBook=local_count,items=report,
         examtopics='30 candidatas locales de usuario en specs; no incluidas en banco activo ni ZIP'),ensure_ascii=False,indent=2),encoding='utf-8')
     print(f'Foundations: {len(questions)} active; domains: {dict(collections.Counter(q["domainId"] for q in questions))}')
 

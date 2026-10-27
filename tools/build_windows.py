@@ -52,6 +52,16 @@ def main():
     opts['includedFrameworks'] = [dict(name=f['name'], version=core.name) for f in frameworks]
     config_path.write_text(json.dumps(config, indent=2), encoding='utf-8')
     shutil.copytree(ROOT / 'Content/Sources', output / 'Content/Sources', dirs_exist_ok=True)
+    # El EPUB aportado autoriza práctica local, no redistribución pública.
+    bank_path = output / 'Content/foundations.json'
+    bank = json.loads(bank_path.read_text(encoding='utf-8'))
+    bank['questions'] = [q for q in bank['questions'] if not q['id'].startswith('book-ccaf-')]
+    bank['version'] = '1.1.0'
+    bank_path.write_text(json.dumps(bank, ensure_ascii=False, indent=2), encoding='utf-8')
+    review_path = output / 'Content/Sources/foundations-review.json'
+    review = json.loads(review_path.read_text(encoding='utf-8'))
+    review.update(activeTotal=len(bank['questions']), localBook=0)
+    review_path.write_text(json.dumps(review, ensure_ascii=False, indent=2), encoding='utf-8')
     for name in ['LEEME.txt', 'THIRD-PARTY-NOTICES.txt']:
         shutil.copy2(ROOT / name, output / name)
     manifest = dict(version='1.1.0', platform='win-x64', runtime=core.name, packaging='offline bundled framework manifests',

@@ -22,5 +22,6 @@ Una nueva funcionalidad utiliza la siguiente carpeta libre (`01_...`, `02_...`).
 |---|---|---|
 | [00_especificacion_creacion](00_especificacion_creacion/spec.md) | Base de la aplicación de práctica | Versión 1.0.0 implementada; banco ampliado y validación oficial pendientes |
 | [01_multiexamen](01_multiexamen/spec.md) | Preguntas en inglés, selección Professional/Foundations y ampliación de contenido | 1.1.0 implementada; evidencias y pendientes en tests/results.md |
+| [02_libro_foundations](02_libro_foundations/spec.md) | Importación local de preguntas del EPUB Foundations | 15 añadidas; banco local 79; revisión y pruebas registradas |
 
 La spec 00 define el producto inicial. La implementación solicitada después de la fase documental se registra en [implementation.md](00_especificacion_creacion/implementation.md), con evidencias y pendientes.

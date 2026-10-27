@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "ccarf-local",
-  "version": "1.1.0",
+  "version": "1.1.1-local",
   "certification": "CCAR-F",
   "profileId": "ccarf-practice",
   "profileVersion": "1",
@@ -3835,6 +3835,891 @@
       "language": "en",
       "family": "ccarf-original-030",
       "review": "Autoría y revisión técnica/editorial Codex 2026-10-21; no revisión humana independiente; objetivo conceptual local."
+    },
+    {
+      "id": "book-ccaf-ch06-q01",
+      "revision": 1,
+      "domainId": "F3",
+      "objectiveId": "F3.local",
+      "text": "A team lead configured Claude Code to follow company-specific error handling conventions. After onboarding three new engineers, none of them observe Claude following these conventions. The team lead’s environment works correctly. Which configuration change resolves this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Move the error handling instructions from ~/.claude/CLAUDE.md to .claude/CLAUDE.md in the repository and commit the file.",
+          "explanation": "User-level config is personal and not shared via version control. Project-level config in .claude/CLAUDE.md is shared through the repository. CLAUDE.local.md is gitignored (C is wrong). Manually syncing user config (B) is not a durable team solution and does not address the root cause."
+        },
+        {
+          "id": "B",
+          "text": "Ask each engineer to copy the team lead’s ~/.claude/CLAUDE.md to their local machine.",
+          "explanation": "User-level config is personal and not shared via version control. Project-level config in .claude/CLAUDE.md is shared through the repository. CLAUDE.local.md is gitignored (C is wrong). Manually syncing user config (B) is not a durable team solution and does not address the root cause."
+        },
+        {
+          "id": "C",
+          "text": "Add the instructions to CLAUDE.local.md at the project root and commit that file.",
+          "explanation": "User-level config is personal and not shared via version control. Project-level config in .claude/CLAUDE.md is shared through the repository. CLAUDE.local.md is gitignored (C is wrong). Manually syncing user config (B) is not a durable team solution and does not address the root cause."
+        },
+        {
+          "id": "D",
+          "text": "Configure the managed policy file to load user-level settings from a shared network location.",
+          "explanation": "User-level config is personal and not shared via version control. Project-level config in .claude/CLAUDE.md is shared through the repository. CLAUDE.local.md is gitignored (C is wrong). Manually syncing user config (B) is not a durable team solution and does not address the root cause."
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "User-level config is personal and not shared via version control. Project-level config in .claude/CLAUDE.md is shared through the repository. CLAUDE.local.md is gitignored (C is wrong). Manually syncing user config (B) is not a durable team solution and does not address the root cause.",
+      "help": {
+        "id": "ccarf-help-F3",
+        "title": "Configurar trabajo reproducible",
+        "domainId": "F3",
+        "text": "Guarda convenciones compartidas en memoria de proyecto versionada, instrucciones específicas con alcance y secretos en un canal apropiado. Usa automatización no interactiva para tareas acotadas con salida verificable. Los hooks ejecutan código en eventos; una instrucción escrita no equivale a un control obligatorio.\n\nCriterio: procedimiento reutilizable y trabajo con contexto aislado resuelven necesidades distintas. Error habitual: depender de la configuración personal de un desarrollador. Ejemplo: el repositorio documenta pruebas y convenciones; CI recibe el contexto necesario y valida la salida estructurada antes de publicarla.",
+        "references": [
+          {
+            "title": "Memoria de proyecto",
+            "url": "https://code.claude.com/docs/en/memory",
+            "section": "CLAUDE.md; shared instructions"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Claude Code memory",
+          "url": "https://code.claude.com/docs/en/memory",
+          "section": "Referencia conceptual; EPUB capítulo 6, Q1; index_split_017.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 6 Q1 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch06-q01",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch06-q02",
+      "revision": 1,
+      "domainId": "F3",
+      "objectiveId": "F3.local",
+      "text": "A monorepo contains TypeScript test files distributed across twelve subdirectories. The team wants Claude Code to apply consistent testing conventions whenever it works with any test file, regardless of directory. Which approach is most appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Create a .claude/rules/testing.md file with paths: [\"**/*.test.ts\"] frontmatter.",
+          "explanation": "Path-scoped rules with glob patterns apply by file type regardless of directory. B requires twelve files and maintenance. C loads the testing conventions for all sessions regardless of whether tests are being worked on (correct for always-applicable rules, but wasteful here). D loads at launch unconditionally, not path-scoped."
+        },
+        {
+          "id": "B",
+          "text": "Create a CLAUDE.md in each of the twelve subdirectories containing test files.",
+          "explanation": "Path-scoped rules with glob patterns apply by file type regardless of directory. B requires twelve files and maintenance. C loads the testing conventions for all sessions regardless of whether tests are being worked on (correct for always-applicable rules, but wasteful here). D loads at launch unconditionally, not path-scoped."
+        },
+        {
+          "id": "C",
+          "text": "Add the testing conventions to the root CLAUDE.md using @import syntax.",
+          "explanation": "Path-scoped rules with glob patterns apply by file type regardless of directory. B requires twelve files and maintenance. C loads the testing conventions for all sessions regardless of whether tests are being worked on (correct for always-applicable rules, but wasteful here). D loads at launch unconditionally, not path-scoped."
+        },
+        {
+          "id": "D",
+          "text": "Create a .claude/rules/testing.md file without any frontmatter.",
+          "explanation": "Path-scoped rules with glob patterns apply by file type regardless of directory. B requires twelve files and maintenance. C loads the testing conventions for all sessions regardless of whether tests are being worked on (correct for always-applicable rules, but wasteful here). D loads at launch unconditionally, not path-scoped."
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "Path-scoped rules with glob patterns apply by file type regardless of directory. B requires twelve files and maintenance. C loads the testing conventions for all sessions regardless of whether tests are being worked on (correct for always-applicable rules, but wasteful here). D loads at launch unconditionally, not path-scoped.",
+      "help": {
+        "id": "ccarf-help-F3",
+        "title": "Configurar trabajo reproducible",
+        "domainId": "F3",
+        "text": "Guarda convenciones compartidas en memoria de proyecto versionada, instrucciones específicas con alcance y secretos en un canal apropiado. Usa automatización no interactiva para tareas acotadas con salida verificable. Los hooks ejecutan código en eventos; una instrucción escrita no equivale a un control obligatorio.\n\nCriterio: procedimiento reutilizable y trabajo con contexto aislado resuelven necesidades distintas. Error habitual: depender de la configuración personal de un desarrollador. Ejemplo: el repositorio documenta pruebas y convenciones; CI recibe el contexto necesario y valida la salida estructurada antes de publicarla.",
+        "references": [
+          {
+            "title": "Memoria de proyecto",
+            "url": "https://code.claude.com/docs/en/memory",
+            "section": "CLAUDE.md; shared instructions"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Claude Code memory",
+          "url": "https://code.claude.com/docs/en/memory",
+          "section": "Referencia conceptual; EPUB capítulo 6, Q2; index_split_017.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 6 Q2 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch06-q02",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch06-q03",
+      "revision": 1,
+      "domainId": "F3",
+      "objectiveId": "F3.local",
+      "text": "A developer imports three large reference documents into CLAUDE.md using @ syntax to keep the file itself under 200 lines. What effect does this have on the session context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The imported files are lazy-loaded only when Claude references them during the session.",
+          "explanation": "Imported files are expanded and loaded at launch. The 200-line guidance applies per file, but importing multiple files still loads all of them. @import aids organization, not context reduction."
+        },
+        {
+          "id": "B",
+          "text": "The imported files load at launch alongside CLAUDE.md, increasing total context proportionally.",
+          "explanation": "Imported files are expanded and loaded at launch. The 200-line guidance applies per file, but importing multiple files still loads all of them. @import aids organization, not context reduction."
+        },
+        {
+          "id": "C",
+          "text": "The imported files replace the content of CLAUDE.md in context, keeping total size the same.",
+          "explanation": "Imported files are expanded and loaded at launch. The 200-line guidance applies per file, but importing multiple files still loads all of them. @import aids organization, not context reduction."
+        },
+        {
+          "id": "D",
+          "text": "The imported files are summarized before loading to reduce context impact.",
+          "explanation": "Imported files are expanded and loaded at launch. The 200-line guidance applies per file, but importing multiple files still loads all of them. @import aids organization, not context reduction."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "Imported files are expanded and loaded at launch. The 200-line guidance applies per file, but importing multiple files still loads all of them. @import aids organization, not context reduction.",
+      "help": {
+        "id": "ccarf-help-F3",
+        "title": "Configurar trabajo reproducible",
+        "domainId": "F3",
+        "text": "Guarda convenciones compartidas en memoria de proyecto versionada, instrucciones específicas con alcance y secretos en un canal apropiado. Usa automatización no interactiva para tareas acotadas con salida verificable. Los hooks ejecutan código en eventos; una instrucción escrita no equivale a un control obligatorio.\n\nCriterio: procedimiento reutilizable y trabajo con contexto aislado resuelven necesidades distintas. Error habitual: depender de la configuración personal de un desarrollador. Ejemplo: el repositorio documenta pruebas y convenciones; CI recibe el contexto necesario y valida la salida estructurada antes de publicarla.",
+        "references": [
+          {
+            "title": "Memoria de proyecto",
+            "url": "https://code.claude.com/docs/en/memory",
+            "section": "CLAUDE.md; shared instructions"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Claude Code memory",
+          "url": "https://code.claude.com/docs/en/memory",
+          "section": "Referencia conceptual; EPUB capítulo 6, Q3; index_split_017.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 6 Q3 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch06-q03",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch06-q04",
+      "revision": 1,
+      "domainId": "F3",
+      "objectiveId": "F3.local",
+      "text": "After a /compact operation, a developer notices that Claude no longer follows conventions that were specified in src/api/CLAUDE.md. The project-root CLAUDE.md instructions are still being followed. What is the most likely explanation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Compact operations delete CLAUDE.md files from subdirectories.",
+          "explanation": "After /compact, the project-root CLAUDE.md is re-read from disk and re-injected. Nested subdirectory files are not re-injected; they reload the next time Claude reads a file from that directory."
+        },
+        {
+          "id": "B",
+          "text": "The project-root CLAUDE.md survives compaction and is re-injected; nested subdirectory CLAUDE.md files are not re-injected automatically and reload only when Claude next reads files from those subdirectories.",
+          "explanation": "After /compact, the project-root CLAUDE.md is re-read from disk and re-injected. Nested subdirectory files are not re-injected; they reload the next time Claude reads a file from that directory."
+        },
+        {
+          "id": "C",
+          "text": "The src/api/CLAUDE.md instructions conflict with the project-root CLAUDE.md and were suppressed.",
+          "explanation": "After /compact, the project-root CLAUDE.md is re-read from disk and re-injected. Nested subdirectory files are not re-injected; they reload the next time Claude reads a file from that directory."
+        },
+        {
+          "id": "D",
+          "text": "Compact operations only preserve the managed policy CLAUDE.md.",
+          "explanation": "After /compact, the project-root CLAUDE.md is re-read from disk and re-injected. Nested subdirectory files are not re-injected; they reload the next time Claude reads a file from that directory."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "After /compact, the project-root CLAUDE.md is re-read from disk and re-injected. Nested subdirectory files are not re-injected; they reload the next time Claude reads a file from that directory.",
+      "help": {
+        "id": "ccarf-help-F3",
+        "title": "Configurar trabajo reproducible",
+        "domainId": "F3",
+        "text": "Guarda convenciones compartidas en memoria de proyecto versionada, instrucciones específicas con alcance y secretos en un canal apropiado. Usa automatización no interactiva para tareas acotadas con salida verificable. Los hooks ejecutan código en eventos; una instrucción escrita no equivale a un control obligatorio.\n\nCriterio: procedimiento reutilizable y trabajo con contexto aislado resuelven necesidades distintas. Error habitual: depender de la configuración personal de un desarrollador. Ejemplo: el repositorio documenta pruebas y convenciones; CI recibe el contexto necesario y valida la salida estructurada antes de publicarla.",
+        "references": [
+          {
+            "title": "Memoria de proyecto",
+            "url": "https://code.claude.com/docs/en/memory",
+            "section": "CLAUDE.md; shared instructions"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Claude Code memory",
+          "url": "https://code.claude.com/docs/en/memory",
+          "section": "Referencia conceptual; EPUB capítulo 6, Q4; index_split_017.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 6 Q4 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch06-q04",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch07-q01",
+      "revision": 1,
+      "domainId": "F3",
+      "objectiveId": "F3.local",
+      "text": "A developer defines a codebase analysis procedure in .claude/commands/analyze.md. Running /analyze fills the main session with hundreds of lines of intermediate grep results and file reads. The actual analysis summary is hard to find. What is the most appropriate fix?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Move the analysis instructions to CLAUDE.md so they load with lower priority.",
+          "explanation": "The context: fork field runs the skill in an isolated sub-agent context. Intermediate exploration stays in the fork; the main session receives only the summary."
+        },
+        {
+          "id": "B",
+          "text": "Migrate the command to a skill in .claude/skills/analyze/SKILL.md and add context: fork to the frontmatter.",
+          "explanation": "The context: fork field runs the skill in an isolated sub-agent context. Intermediate exploration stays in the fork; the main session receives only the summary."
+        },
+        {
+          "id": "C",
+          "text": "Add --compact to the command file to limit output length.",
+          "explanation": "The context: fork field runs the skill in an isolated sub-agent context. Intermediate exploration stays in the fork; the main session receives only the summary."
+        },
+        {
+          "id": "D",
+          "text": "Break the command into multiple smaller commands that each run separately.",
+          "explanation": "The context: fork field runs the skill in an isolated sub-agent context. Intermediate exploration stays in the fork; the main session receives only the summary."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "The context: fork field runs the skill in an isolated sub-agent context. Intermediate exploration stays in the fork; the main session receives only the summary.",
+      "help": {
+        "id": "ccarf-help-F3",
+        "title": "Configurar trabajo reproducible",
+        "domainId": "F3",
+        "text": "Guarda convenciones compartidas en memoria de proyecto versionada, instrucciones específicas con alcance y secretos en un canal apropiado. Usa automatización no interactiva para tareas acotadas con salida verificable. Los hooks ejecutan código en eventos; una instrucción escrita no equivale a un control obligatorio.\n\nCriterio: procedimiento reutilizable y trabajo con contexto aislado resuelven necesidades distintas. Error habitual: depender de la configuración personal de un desarrollador. Ejemplo: el repositorio documenta pruebas y convenciones; CI recibe el contexto necesario y valida la salida estructurada antes de publicarla.",
+        "references": [
+          {
+            "title": "Memoria de proyecto",
+            "url": "https://code.claude.com/docs/en/memory",
+            "section": "CLAUDE.md; shared instructions"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Claude Code skills",
+          "url": "https://code.claude.com/docs/en/skills",
+          "section": "Referencia conceptual; EPUB capítulo 7, Q1; index_split_018.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 7 Q1 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch07-q01",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch07-q02",
+      "revision": 1,
+      "domainId": "F3",
+      "objectiveId": "F3.local",
+      "text": "A team needs to migrate a library used in 45+ files across the codebase. Multiple migration strategies are possible, each requiring different dependency changes. What is the appropriate first step?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Direct execution, asking Claude to migrate files one at a time.",
+          "explanation": "The task has multi-file scope and multiple valid approaches with different infrastructure implications. These are the exact criteria for plan mode. Direct execution commits to an approach before the full scope is understood."
+        },
+        {
+          "id": "B",
+          "text": "Plan mode (permissionMode: \"plan\"), allowing Claude to explore all callsites and produce a migration plan before any files are modified.",
+          "explanation": "The task has multi-file scope and multiple valid approaches with different infrastructure implications. These are the exact criteria for plan mode. Direct execution commits to an approach before the full scope is understood."
+        },
+        {
+          "id": "C",
+          "text": "A slash command that iterates through files in alphabetical order.",
+          "explanation": "The task has multi-file scope and multiple valid approaches with different infrastructure implications. These are the exact criteria for plan mode. Direct execution commits to an approach before the full scope is understood."
+        },
+        {
+          "id": "D",
+          "text": "The TDD iteration pattern, writing migration tests first.",
+          "explanation": "The task has multi-file scope and multiple valid approaches with different infrastructure implications. These are the exact criteria for plan mode. Direct execution commits to an approach before the full scope is understood."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "The task has multi-file scope and multiple valid approaches with different infrastructure implications. These are the exact criteria for plan mode. Direct execution commits to an approach before the full scope is understood.",
+      "help": {
+        "id": "ccarf-help-F3",
+        "title": "Configurar trabajo reproducible",
+        "domainId": "F3",
+        "text": "Guarda convenciones compartidas en memoria de proyecto versionada, instrucciones específicas con alcance y secretos en un canal apropiado. Usa automatización no interactiva para tareas acotadas con salida verificable. Los hooks ejecutan código en eventos; una instrucción escrita no equivale a un control obligatorio.\n\nCriterio: procedimiento reutilizable y trabajo con contexto aislado resuelven necesidades distintas. Error habitual: depender de la configuración personal de un desarrollador. Ejemplo: el repositorio documenta pruebas y convenciones; CI recibe el contexto necesario y valida la salida estructurada antes de publicarla.",
+        "references": [
+          {
+            "title": "Memoria de proyecto",
+            "url": "https://code.claude.com/docs/en/memory",
+            "section": "CLAUDE.md; shared instructions"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Claude Code skills",
+          "url": "https://code.claude.com/docs/en/skills",
+          "section": "Referencia conceptual; EPUB capítulo 7, Q2; index_split_018.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 7 Q2 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch07-q02",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch07-q03",
+      "revision": 1,
+      "domainId": "F3",
+      "objectiveId": "F3.local",
+      "text": "A developer wants a refactoring skill to show the expected target-file argument during slash-command autocomplete. Which frontmatter field provides this hint?",
+      "options": [
+        {
+          "id": "A",
+          "text": "context: fork",
+          "explanation": "C: argument-hint displays expected arguments during autocomplete. It does not enforce required arguments or prevent execution with missing input; the skill must explicitly check for missing arguments. A isolates execution, B concerns tool permissions, and D describes the skill and its activation."
+        },
+        {
+          "id": "B",
+          "text": "allowed-tools",
+          "explanation": "C: argument-hint displays expected arguments during autocomplete. It does not enforce required arguments or prevent execution with missing input; the skill must explicitly check for missing arguments. A isolates execution, B concerns tool permissions, and D describes the skill and its activation."
+        },
+        {
+          "id": "C",
+          "text": "argument-hint",
+          "explanation": "C: argument-hint displays expected arguments during autocomplete. It does not enforce required arguments or prevent execution with missing input; the skill must explicitly check for missing arguments. A isolates execution, B concerns tool permissions, and D describes the skill and its activation."
+        },
+        {
+          "id": "D",
+          "text": "description",
+          "explanation": "C: argument-hint displays expected arguments during autocomplete. It does not enforce required arguments or prevent execution with missing input; the skill must explicitly check for missing arguments. A isolates execution, B concerns tool permissions, and D describes the skill and its activation."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "C: argument-hint displays expected arguments during autocomplete. It does not enforce required arguments or prevent execution with missing input; the skill must explicitly check for missing arguments. A isolates execution, B concerns tool permissions, and D describes the skill and its activation.",
+      "help": {
+        "id": "ccarf-help-F3",
+        "title": "Configurar trabajo reproducible",
+        "domainId": "F3",
+        "text": "Guarda convenciones compartidas en memoria de proyecto versionada, instrucciones específicas con alcance y secretos en un canal apropiado. Usa automatización no interactiva para tareas acotadas con salida verificable. Los hooks ejecutan código en eventos; una instrucción escrita no equivale a un control obligatorio.\n\nCriterio: procedimiento reutilizable y trabajo con contexto aislado resuelven necesidades distintas. Error habitual: depender de la configuración personal de un desarrollador. Ejemplo: el repositorio documenta pruebas y convenciones; CI recibe el contexto necesario y valida la salida estructurada antes de publicarla.",
+        "references": [
+          {
+            "title": "Memoria de proyecto",
+            "url": "https://code.claude.com/docs/en/memory",
+            "section": "CLAUDE.md; shared instructions"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Claude Code skills",
+          "url": "https://code.claude.com/docs/en/skills",
+          "section": "Referencia conceptual; EPUB capítulo 7, Q3; index_split_018.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 7 Q3 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch07-q03",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch07-q04",
+      "revision": 1,
+      "domainId": "F3",
+      "objectiveId": "F3.local",
+      "text": "A team’s CLAUDE.md contains a 40-step security audit procedure that applies only when auditing authentication modules. The rest of the time, the procedure is irrelevant but adds to the context budget every session. What is the correct fix? The team wants to invoke the procedure explicitly on demand, rather than load it automatically when matching files are read.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Move the procedure to .claude/rules/ with a paths glob pattern matching authentication modules.",
+          "explanation": "Skills load on demand. CLAUDE.md loads every session. Task-specific procedures belong in skills, not CLAUDE.md."
+        },
+        {
+          "id": "B",
+          "text": "Create a skill in .claude/skills/security-audit/SKILL.md containing the procedure.",
+          "explanation": "Skills load on demand. CLAUDE.md loads every session. Task-specific procedures belong in skills, not CLAUDE.md."
+        },
+        {
+          "id": "C",
+          "text": "Split the CLAUDE.md into two files and import the relevant one manually.",
+          "explanation": "Skills load on demand. CLAUDE.md loads every session. Task-specific procedures belong in skills, not CLAUDE.md."
+        },
+        {
+          "id": "D",
+          "text": "Reduce the procedure to a summary to stay under the 200-line CLAUDE.md limit.",
+          "explanation": "Skills load on demand. CLAUDE.md loads every session. Task-specific procedures belong in skills, not CLAUDE.md."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "Skills load on demand. CLAUDE.md loads every session. Task-specific procedures belong in skills, not CLAUDE.md.",
+      "help": {
+        "id": "ccarf-help-F3",
+        "title": "Configurar trabajo reproducible",
+        "domainId": "F3",
+        "text": "Guarda convenciones compartidas en memoria de proyecto versionada, instrucciones específicas con alcance y secretos en un canal apropiado. Usa automatización no interactiva para tareas acotadas con salida verificable. Los hooks ejecutan código en eventos; una instrucción escrita no equivale a un control obligatorio.\n\nCriterio: procedimiento reutilizable y trabajo con contexto aislado resuelven necesidades distintas. Error habitual: depender de la configuración personal de un desarrollador. Ejemplo: el repositorio documenta pruebas y convenciones; CI recibe el contexto necesario y valida la salida estructurada antes de publicarla.",
+        "references": [
+          {
+            "title": "Memoria de proyecto",
+            "url": "https://code.claude.com/docs/en/memory",
+            "section": "CLAUDE.md; shared instructions"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Claude Code skills",
+          "url": "https://code.claude.com/docs/en/skills",
+          "section": "Referencia conceptual; EPUB capítulo 7, Q4; index_split_018.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 7 Q4 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch07-q04",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch07-q05",
+      "revision": 1,
+      "domainId": "F3",
+      "objectiveId": "F3.local",
+      "text": "A developer finds that Claude produces inconsistent output for a data normalization function. The natural language description of the normalization rule is technically accurate but produces different interpretations across attempts. Which technique is most effective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The interview pattern: have Claude ask questions about the normalization requirements.",
+          "explanation": "B: Concrete input/output examples, including edge cases, demonstrate the intended transformation when prose admits multiple interpretations. A asks for more requirements but does not demonstrate the mapping; C plans the implementation; D can still leave interpretation gaps. The example count is illustrative, not an official or universally optimal range."
+        },
+        {
+          "id": "B",
+          "text": "Two to three concrete input/output examples demonstrating the expected transformation, including edge cases.",
+          "explanation": "B: Concrete input/output examples, including edge cases, demonstrate the intended transformation when prose admits multiple interpretations. A asks for more requirements but does not demonstrate the mapping; C plans the implementation; D can still leave interpretation gaps. The example count is illustrative, not an official or universally optimal range."
+        },
+        {
+          "id": "C",
+          "text": "Plan mode, to allow Claude to design the normalization approach before implementing.",
+          "explanation": "B: Concrete input/output examples, including edge cases, demonstrate the intended transformation when prose admits multiple interpretations. A asks for more requirements but does not demonstrate the mapping; C plans the implementation; D can still leave interpretation gaps. The example count is illustrative, not an official or universally optimal range."
+        },
+        {
+          "id": "D",
+          "text": "Increasing specificity of the prose description until all edge cases are covered.",
+          "explanation": "B: Concrete input/output examples, including edge cases, demonstrate the intended transformation when prose admits multiple interpretations. A asks for more requirements but does not demonstrate the mapping; C plans the implementation; D can still leave interpretation gaps. The example count is illustrative, not an official or universally optimal range."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "B: Concrete input/output examples, including edge cases, demonstrate the intended transformation when prose admits multiple interpretations. A asks for more requirements but does not demonstrate the mapping; C plans the implementation; D can still leave interpretation gaps. The example count is illustrative, not an official or universally optimal range.",
+      "help": {
+        "id": "ccarf-help-F3",
+        "title": "Configurar trabajo reproducible",
+        "domainId": "F3",
+        "text": "Guarda convenciones compartidas en memoria de proyecto versionada, instrucciones específicas con alcance y secretos en un canal apropiado. Usa automatización no interactiva para tareas acotadas con salida verificable. Los hooks ejecutan código en eventos; una instrucción escrita no equivale a un control obligatorio.\n\nCriterio: procedimiento reutilizable y trabajo con contexto aislado resuelven necesidades distintas. Error habitual: depender de la configuración personal de un desarrollador. Ejemplo: el repositorio documenta pruebas y convenciones; CI recibe el contexto necesario y valida la salida estructurada antes de publicarla.",
+        "references": [
+          {
+            "title": "Memoria de proyecto",
+            "url": "https://code.claude.com/docs/en/memory",
+            "section": "CLAUDE.md; shared instructions"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Claude Code skills",
+          "url": "https://code.claude.com/docs/en/skills",
+          "section": "Referencia conceptual; EPUB capítulo 7, Q5; index_split_018.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 7 Q5 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch07-q05",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch09-q01",
+      "revision": 1,
+      "domainId": "F4",
+      "objectiveId": "F4.local",
+      "text": "A CI pipeline runs code review with the prompt “identify any code quality issues and flag them with appropriate severity.” The team reports the tool flags too many minor style issues and developers have stopped reading the reports, causing critical security findings to be missed. Which change most directly addresses the root cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Add “be conservative and only flag high-confidence issues” to the prompt.",
+          "explanation": "A and D add confidence-based filtering, which do not clarify the required rule categories. C reduces scope but does not fix the underlying vague instruction. B replaces intentional directives with categorical specifications."
+        },
+        {
+          "id": "B",
+          "text": "Replace the vague instruction with a numbered list of specific rule categories and explicit severity mappings for each.",
+          "explanation": "A and D add confidence-based filtering, which do not clarify the required rule categories. C reduces scope but does not fix the underlying vague instruction. B replaces intentional directives with categorical specifications."
+        },
+        {
+          "id": "C",
+          "text": "Reduce the number of files sent to the review per run.",
+          "explanation": "A and D add confidence-based filtering, which do not clarify the required rule categories. C reduces scope but does not fix the underlying vague instruction. B replaces intentional directives with categorical specifications."
+        },
+        {
+          "id": "D",
+          "text": "Add a confidence score field to the output and filter on scores above 0.8.",
+          "explanation": "A and D add confidence-based filtering, which do not clarify the required rule categories. C reduces scope but does not fix the underlying vague instruction. B replaces intentional directives with categorical specifications."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "A and D add confidence-based filtering, which do not clarify the required rule categories. C reduces scope but does not fix the underlying vague instruction. B replaces intentional directives with categorical specifications.",
+      "help": {
+        "id": "ccarf-help-F4",
+        "title": "Diseñar y validar salidas",
+        "domainId": "F4",
+        "text": "Especifica tarea, datos, ejemplos representativos y contrato de salida por separado. Representa ausencia y ambigüedad sin inventar hechos. Un esquema limita estructura; las reglas de negocio y la exactitud del contenido requieren controles adicionales.\n\nCriterio: usa salida estructurada o herramientas estrictas según el flujo y comprueba el resultado. Error habitual: confundir JSON válido con dato verdadero. Ejemplo: una fecha opcional puede ser null; una factura con total menor que cero se rechaza aunque cumpla el tipo numérico.",
+        "references": [
+          {
+            "title": "Structured outputs",
+            "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+            "section": "JSON outputs; strict tool use; validation"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Prompting best practices",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+          "section": "Referencia conceptual; EPUB capítulo 9, Q1; index_split_020.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 9 Q1 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch09-q01",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch09-q02",
+      "revision": 1,
+      "domainId": "F4",
+      "objectiveId": "F4.local",
+      "text": "A code review tool has six rule categories. Three produce accurate, trusted findings. Three generate consistent false positives. The team wants to restore developer trust in the tool overall while improving the noisy categories. What is the correct sequencing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Improve all six categories simultaneously before re-enabling any of them.",
+          "explanation": "Temporarily disable high false-positive categories while improving prompts for those categories. This restores useful feedback while criteria are improved. A delays the trust restoration. C addresses few-shot quantity, not the underlying criteria. D adds a vague modifier that does not produce categorical precision."
+        },
+        {
+          "id": "B",
+          "text": "Disable the three noisy categories, restore trust in the three accurate categories, then revise and re-enable the noisy categories one at a time.",
+          "explanation": "Temporarily disable high false-positive categories while improving prompts for those categories. This restores useful feedback while criteria are improved. A delays the trust restoration. C addresses few-shot quantity, not the underlying criteria. D adds a vague modifier that does not produce categorical precision."
+        },
+        {
+          "id": "C",
+          "text": "Reduce the number of examples in the few-shot set for the noisy categories.",
+          "explanation": "Temporarily disable high false-positive categories while improving prompts for those categories. This restores useful feedback while criteria are improved. A delays the trust restoration. C addresses few-shot quantity, not the underlying criteria. D adds a vague modifier that does not produce categorical precision."
+        },
+        {
+          "id": "D",
+          "text": "Add “skip minor style issues” to the prompt for all six categories.",
+          "explanation": "Temporarily disable high false-positive categories while improving prompts for those categories. This restores useful feedback while criteria are improved. A delays the trust restoration. C addresses few-shot quantity, not the underlying criteria. D adds a vague modifier that does not produce categorical precision."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "Temporarily disable high false-positive categories while improving prompts for those categories. This restores useful feedback while criteria are improved. A delays the trust restoration. C addresses few-shot quantity, not the underlying criteria. D adds a vague modifier that does not produce categorical precision.",
+      "help": {
+        "id": "ccarf-help-F4",
+        "title": "Diseñar y validar salidas",
+        "domainId": "F4",
+        "text": "Especifica tarea, datos, ejemplos representativos y contrato de salida por separado. Representa ausencia y ambigüedad sin inventar hechos. Un esquema limita estructura; las reglas de negocio y la exactitud del contenido requieren controles adicionales.\n\nCriterio: usa salida estructurada o herramientas estrictas según el flujo y comprueba el resultado. Error habitual: confundir JSON válido con dato verdadero. Ejemplo: una fecha opcional puede ser null; una factura con total menor que cero se rechaza aunque cumpla el tipo numérico.",
+        "references": [
+          {
+            "title": "Structured outputs",
+            "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+            "section": "JSON outputs; strict tool use; validation"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Prompting best practices",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+          "section": "Referencia conceptual; EPUB capítulo 9, Q2; index_split_020.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 9 Q2 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch09-q02",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch09-q03",
+      "revision": 1,
+      "domainId": "F4",
+      "objectiveId": "F4.local",
+      "text": "A team is implementing few-shot prompting for a code review tool that must distinguish between “genuine issues” and “local patterns the team has intentionally adopted.” They are considering 4, 6, or 10 examples. The examples for the ambiguous boundary cases should include what, in addition to input and output?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A severity score for each example, to calibrate severity classification.",
+          "explanation": "examples for ambiguous cases should show reasoning for why one action was chosen over plausible alternatives. A adds severity calibration, which is a different concern. C adds examples without necessarily clarifying the ambiguous decision boundary. D addresses output format, not the ambiguous-case decision boundary."
+        },
+        {
+          "id": "B",
+          "text": "Reasoning that explains why the output was chosen over plausible alternatives.",
+          "explanation": "examples for ambiguous cases should show reasoning for why one action was chosen over plausible alternatives. A adds severity calibration, which is a different concern. C adds examples without necessarily clarifying the ambiguous decision boundary. D addresses output format, not the ambiguous-case decision boundary."
+        },
+        {
+          "id": "C",
+          "text": "Additional examples from adjacent rule categories to improve generalization.",
+          "explanation": "examples for ambiguous cases should show reasoning for why one action was chosen over plausible alternatives. A adds severity calibration, which is a different concern. C adds examples without necessarily clarifying the ambiguous decision boundary. D addresses output format, not the ambiguous-case decision boundary."
+        },
+        {
+          "id": "D",
+          "text": "The file path and line number of the example to improve format consistency.",
+          "explanation": "examples for ambiguous cases should show reasoning for why one action was chosen over plausible alternatives. A adds severity calibration, which is a different concern. C adds examples without necessarily clarifying the ambiguous decision boundary. D addresses output format, not the ambiguous-case decision boundary."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "examples for ambiguous cases should show reasoning for why one action was chosen over plausible alternatives. A adds severity calibration, which is a different concern. C adds examples without necessarily clarifying the ambiguous decision boundary. D addresses output format, not the ambiguous-case decision boundary.",
+      "help": {
+        "id": "ccarf-help-F4",
+        "title": "Diseñar y validar salidas",
+        "domainId": "F4",
+        "text": "Especifica tarea, datos, ejemplos representativos y contrato de salida por separado. Representa ausencia y ambigüedad sin inventar hechos. Un esquema limita estructura; las reglas de negocio y la exactitud del contenido requieren controles adicionales.\n\nCriterio: usa salida estructurada o herramientas estrictas según el flujo y comprueba el resultado. Error habitual: confundir JSON válido con dato verdadero. Ejemplo: una fecha opcional puede ser null; una factura con total menor que cero se rechaza aunque cumpla el tipo numérico.",
+        "references": [
+          {
+            "title": "Structured outputs",
+            "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+            "section": "JSON outputs; strict tool use; validation"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Prompting best practices",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+          "section": "Referencia conceptual; EPUB capítulo 9, Q3; index_split_020.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 9 Q3 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch09-q03",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch11-q01",
+      "revision": 1,
+      "domainId": "F5",
+      "objectiveId": "F5.local",
+      "text": "A multi-turn support agent is handling a billing dispute. By turn 15, the agent asks the customer for their account number, even though the customer provided it in turn 2. Which of the following best explains this behavior? A trace confirms that history was progressively summarized and that the account number is missing from the resulting summary.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The model exceeded its max_tokens limit and reset the conversation.",
+          "explanation": "Progressive summarization is the mechanism; absence of a case facts block is the architectural gap. A would manifest as an error, not continued operation. C describes a hook behavior, not a summarization effect. D mischaracterizes context awareness, which reports remaining token budget, not relevance."
+        },
+        {
+          "id": "B",
+          "text": "Progressive summarization compressed the account number into a vague category description, and the case facts block was not used.",
+          "explanation": "Progressive summarization is the mechanism; absence of a case facts block is the architectural gap. A would manifest as an error, not continued operation. C describes a hook behavior, not a summarization effect. D mischaracterizes context awareness, which reports remaining token budget, not relevance."
+        },
+        {
+          "id": "C",
+          "text": "The PostToolUse hook stripped the account number from the tool result before it was processed.",
+          "explanation": "Progressive summarization is the mechanism; absence of a case facts block is the architectural gap. A would manifest as an error, not continued operation. C describes a hook behavior, not a summarization effect. D mischaracterizes context awareness, which reports remaining token budget, not relevance."
+        },
+        {
+          "id": "D",
+          "text": "The model’s context awareness feature determined the account number was no longer relevant.",
+          "explanation": "Progressive summarization is the mechanism; absence of a case facts block is the architectural gap. A would manifest as an error, not continued operation. C describes a hook behavior, not a summarization effect. D mischaracterizes context awareness, which reports remaining token budget, not relevance."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "Progressive summarization is the mechanism; absence of a case facts block is the architectural gap. A would manifest as an error, not continued operation. C describes a hook behavior, not a summarization effect. D mischaracterizes context awareness, which reports remaining token budget, not relevance.",
+      "help": {
+        "id": "ccarf-help-F5",
+        "title": "Conservar contexto útil y detectar fallos",
+        "domainId": "F5",
+        "text": "El contexto finito debe priorizar el objetivo, restricciones, decisiones y estado necesario. Guarda resultados voluminosos fuera del mensaje y pasa referencias con resúmenes trazables. La compactación es una transformación con pérdidas que exige conservar explícitamente información crítica.\n\nCriterio: mide éxito y fallos sobre entradas representativas, con límites de coste y tiempo. Error habitual: interpretar una respuesta segura como validada. Ejemplo: un trabajo conserva IDs de operaciones completadas y un checkpoint para reanudar sin repetir efectos.",
+        "references": [
+          {
+            "title": "Ingeniería de contexto",
+            "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+            "section": "The anatomy of effective context; retrieval"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Ingeniería de contexto",
+          "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+          "section": "Referencia conceptual; EPUB capítulo 11, Q1; index_split_023.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 11 Q1 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch11-q01",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch11-q02",
+      "revision": 1,
+      "domainId": "F5",
+      "objectiveId": "F5.local",
+      "text": "A codebase exploration agent is running a long multi-file analysis. After 30 turns, the agent begins referencing “typical patterns in this kind of codebase” rather than specific findings from its earlier file reads. Which mitigation most directly addresses this symptom?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase the model’s effort setting to \"max\" to improve recall.",
+          "explanation": "Scratchpad files externalize key findings to persistent state outside the context window, making them accessible even after compaction or middle-of-context drift. A affects reasoning depth, not recall. B archives the transcript but does not make findings accessible after compaction. D slows context growth but does not address the recall problem."
+        },
+        {
+          "id": "B",
+          "text": "Enable the PreCompact hook to archive transcripts before compaction fires.",
+          "explanation": "Scratchpad files externalize key findings to persistent state outside the context window, making them accessible even after compaction or middle-of-context drift. A affects reasoning depth, not recall. B archives the transcript but does not make findings accessible after compaction. D slows context growth but does not address the recall problem."
+        },
+        {
+          "id": "C",
+          "text": "Have the agent maintain a scratchpad file recording specific findings and re-read it periodically.",
+          "explanation": "Scratchpad files externalize key findings to persistent state outside the context window, making them accessible even after compaction or middle-of-context drift. A affects reasoning depth, not recall. B archives the transcript but does not make findings accessible after compaction. D slows context growth but does not address the recall problem."
+        },
+        {
+          "id": "D",
+          "text": "Reduce the number of tool calls per turn to limit context growth.",
+          "explanation": "Scratchpad files externalize key findings to persistent state outside the context window, making them accessible even after compaction or middle-of-context drift. A affects reasoning depth, not recall. B archives the transcript but does not make findings accessible after compaction. D slows context growth but does not address the recall problem."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "Scratchpad files externalize key findings to persistent state outside the context window, making them accessible even after compaction or middle-of-context drift. A affects reasoning depth, not recall. B archives the transcript but does not make findings accessible after compaction. D slows context growth but does not address the recall problem.",
+      "help": {
+        "id": "ccarf-help-F5",
+        "title": "Conservar contexto útil y detectar fallos",
+        "domainId": "F5",
+        "text": "El contexto finito debe priorizar el objetivo, restricciones, decisiones y estado necesario. Guarda resultados voluminosos fuera del mensaje y pasa referencias con resúmenes trazables. La compactación es una transformación con pérdidas que exige conservar explícitamente información crítica.\n\nCriterio: mide éxito y fallos sobre entradas representativas, con límites de coste y tiempo. Error habitual: interpretar una respuesta segura como validada. Ejemplo: un trabajo conserva IDs de operaciones completadas y un checkpoint para reanudar sin repetir efectos.",
+        "references": [
+          {
+            "title": "Ingeniería de contexto",
+            "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+            "section": "The anatomy of effective context; retrieval"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Ingeniería de contexto",
+          "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+          "section": "Referencia conceptual; EPUB capítulo 11, Q2; index_split_023.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 11 Q2 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch11-q02",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
+    },
+    {
+      "id": "book-ccaf-ch11-q03",
+      "revision": 1,
+      "domainId": "F5",
+      "objectiveId": "F5.local",
+      "text": "A coordinator agent has access to three MCP servers, each with approximately 15 tool schemas. The coordinator uses only 2-3 tools per session. Which configuration reduces per-turn context overhead most effectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reduce the number of MCP servers from three to one.",
+          "explanation": "ToolSearch loads tool schemas on demand, preventing unused schemas from consuming context on every request. A would require removing servers the agent legitimately needs. C prevents tool use entirely, which contradicts the agent’s function. D increases the ceiling but does not reduce the per-request overhead."
+        },
+        {
+          "id": "B",
+          "text": "Use ToolSearch to load tools on demand rather than preloading all schemas.",
+          "explanation": "ToolSearch loads tool schemas on demand, preventing unused schemas from consuming context on every request. A would require removing servers the agent legitimately needs. C prevents tool use entirely, which contradicts the agent’s function. D increases the ceiling but does not reduce the per-request overhead."
+        },
+        {
+          "id": "C",
+          "text": "Set tool_choice: \"none\" to prevent tool calls from occurring unnecessarily.",
+          "explanation": "ToolSearch loads tool schemas on demand, preventing unused schemas from consuming context on every request. A would require removing servers the agent legitimately needs. C prevents tool use entirely, which contradicts the agent’s function. D increases the ceiling but does not reduce the per-request overhead."
+        },
+        {
+          "id": "D",
+          "text": "Increase the context window by switching to a 1M-token model.",
+          "explanation": "ToolSearch loads tool schemas on demand, preventing unused schemas from consuming context on every request. A would require removing servers the agent legitimately needs. C prevents tool use entirely, which contradicts the agent’s function. D increases the ceiling but does not reduce the per-request overhead."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "ToolSearch loads tool schemas on demand, preventing unused schemas from consuming context on every request. A would require removing servers the agent legitimately needs. C prevents tool use entirely, which contradicts the agent’s function. D increases the ceiling but does not reduce the per-request overhead.",
+      "help": {
+        "id": "ccarf-help-F5",
+        "title": "Conservar contexto útil y detectar fallos",
+        "domainId": "F5",
+        "text": "El contexto finito debe priorizar el objetivo, restricciones, decisiones y estado necesario. Guarda resultados voluminosos fuera del mensaje y pasa referencias con resúmenes trazables. La compactación es una transformación con pérdidas que exige conservar explícitamente información crítica.\n\nCriterio: mide éxito y fallos sobre entradas representativas, con límites de coste y tiempo. Error habitual: interpretar una respuesta segura como validada. Ejemplo: un trabajo conserva IDs de operaciones completadas y un checkpoint para reanudar sin repetir efectos.",
+        "references": [
+          {
+            "title": "Ingeniería de contexto",
+            "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+            "section": "The anatomy of effective context; retrieval"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Tool search tool",
+          "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool",
+          "section": "Referencia conceptual; EPUB capítulo 11, Q3; index_split_023.html"
+        }
+      ],
+      "origin": "Libro local del usuario: Claude Certified Architect Foundations · Written by Claude Code Instructed by V.Korostyshevskiy · capítulo 11 Q3 · SHA256 36efbb5fd882a8dd459a8830496c2d6dab2152117e7fbd92031bd359e8623106",
+      "sourceUrl": "project:AnthropicCert",
+      "license": "Uso local solicitado; redistribución no verificada",
+      "language": "en",
+      "family": "book-ccaf-ch11-q03",
+      "review": "Revisión Codex 2026-10-27: cuatro opciones y clave del libro verificadas; contraste conceptual y correcciones registradas en spec 02. No oficial; sin revisión humana independiente."
     }
   ]
 }
